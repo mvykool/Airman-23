@@ -15,12 +15,34 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+
+
+.search-bar{
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+
+/*home*/
+
+
+.banner{
+  background-color: red;
+  color: white;
+  height: 15vh;
+  margin: 1.7rem;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-1{
+  margin-top: 5%;
+  margin-bottom: 1px;
+  font-weight: 600;
 }
