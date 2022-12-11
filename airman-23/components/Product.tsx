@@ -18,13 +18,13 @@ const Product = ({ product} : Product) => {
 
 
   return (
-    <div className='h-20 bg-red-400 w-60'>
+    <div className='bg-gray-200 rounded-xl shadow-lg my-4 mx-3 p-5'>
       <Link href='/'>
-        <div className='product-card'>
-        <Image loader={() => src} src={src} alt='product image' width={60} height={60}/>
+        <div>
+        <Image loader={() => src} src={src} alt='product image' width={24} height={24} className='h-24 w-24'/>
 
-          <p className='product-name'>{product.name}</p>
-          <p className='product-price'>${product.price}</p>
+          <p className='text-xs font-semibold mt-2'>{product.name}</p>
+          <p className='my-2'><span className='text-xs'>$</span>{product.price}</p>
         </div>
       </Link>
     </div>

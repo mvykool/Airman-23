@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Banner from '../components/Banner'
 import Category from '../components/Category'
-import Feed from '../components/Feed'
 import { client } from '../lib/client'
 import Product from '../components/Product'
 
@@ -26,10 +25,10 @@ export default function Home({ products}: Props) {
      <Category/>
 
      {/**latest feed */}
-
-     <Feed/>
-     <div className='products-container'>
-        { products?.map((product: any)=> <Product key={product._id} product={product} />)}
+      
+      <h2 className='ml-6 text-lg my-4 font-bold' >Latest :</h2>
+     <div className='grid grid-cols-2 xl:grid-cols-3 mx-3'>
+        { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
        </div>
     </div>
   )
