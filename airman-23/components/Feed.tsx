@@ -4,6 +4,7 @@ const Feed = () => {
   return (
     <div>
         <h2>Latest :</h2>
+        
     </div>
   )
 }
