@@ -1,10 +1,9 @@
 import React from 'react'
-import { Box} from '@chakra-ui/react'
 
 const Navbar = () => {
   return (
     <div>
-      <Box display='flex' alignItems="center" justifyContent="space-around">
+      <div className='flex h-10 justify-around items-center'>
          {/**Logo */}
 
          <div>
@@ -14,13 +13,13 @@ const Navbar = () => {
        {/**search bar */}
 
        <div>
-         <input type="text" placeholder='Search..' className='search-bar'/>
+         <input type="text" placeholder='Search..' />
        </div>
 
        {/**menu */}
 
        menu
-      </Box>
+      </div>
     </div>
   )
 }

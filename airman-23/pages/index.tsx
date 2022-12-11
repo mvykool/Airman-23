@@ -1,5 +1,7 @@
 import Head from 'next/head'
-
+import Banner from '../components/Banner'
+import Category from '../components/Category'
+import Feed from '../components/Feed'
 
 
 export default function Home() {
@@ -12,12 +14,16 @@ export default function Home() {
       </Head>
 
 
-     <div className='banner'>
-       <p className='banner-1'>New Products!</p>
-       <div>
-         <h1>Winter 2022</h1>
-       </div>
-     </div>
+     {/**banner */}
+
+     <Banner/>
+
+     {/**categories */}
+     <Category/>
+
+     {/**latest feed */}
+
+     <Feed/>
     
     </div>
   )
