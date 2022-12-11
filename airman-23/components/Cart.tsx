@@ -17,7 +17,7 @@ import getStripe from '../lib/getStripe';
 const Cart = () => {
   
   const cartRef = useRef<HTMLDivElement | null>(null);
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
+  const { user, totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
 
 
@@ -45,7 +45,7 @@ const Cart = () => {
 
 
   return (
-    <div className='cart-wrapper' ref={cartRef}>
+    <div className='wrapper' ref={cartRef}>
       <div className='relative w-56 bg-red-100 h-[100vh]'>
         <button 
         className='m-5'
@@ -114,11 +114,17 @@ const Cart = () => {
                <h3>Subtotal:</h3>
                <h3>${totalPrice}</h3>
              </div>
-             <div className='btn-container'>
-               <button className='btn' type='button' onClick={handleCheckout}>
-                Pay now
-               </button>
-             </div>
+             {user ? 
+              <div className='btn-container'>
+              <button className='btn' type='button' onClick={handleCheckout}>
+               Pay now
+              </button>
+            </div> :
+            <div>
+               <p>Sign up to buy</p>
+               <button>Log in</button>
+            </div>
+             }
           </div>
         )}
       </div>

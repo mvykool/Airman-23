@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-
+import {auth} from '../firebase'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
     const [showCart, setShowCart] = useState(false);
+     const [profile, setProfile] = useState(false)
     const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalQuantities, setTotalQuantities] = useState(0);
@@ -12,6 +14,11 @@ export const StateContext = ({ children }) => {
 
     let foundProduct;
     let index;
+
+
+  //user
+  
+  const [user] = useAuthState(auth)
 
 
  //create function for increase and decrease
@@ -99,7 +106,9 @@ export const StateContext = ({ children }) => {
         <Context.Provider
         value={{
             showCart, 
-            cartItems, 
+            cartItems,
+            profile,
+            setProfile, 
             totalPrice,
              totalQuantities,
              qty,
@@ -108,7 +117,8 @@ export const StateContext = ({ children }) => {
              onAdd,
              setShowCart,
              toggleCartItemQuantity,
-             onRemove
+             onRemove,
+             user
         }}
         >
             {children}

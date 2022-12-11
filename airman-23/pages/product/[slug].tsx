@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Head from 'next/head';
 import { AiFillStar, AiOutlineStar, AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
 import  Product  from '../../components/Product';
 import { useStateContext } from '../../context/StateContext'
@@ -37,7 +38,14 @@ const ProductDetails = ({ product, products }: Props) => {
 
   return (
     <div className='mt-20'>
+  
+    <Head>
+      <title>Air man 23 | details</title>
+    </Head>
+
+
         <div>
+
             <div>
               
               <div onClick={goBack} >GO back</div>

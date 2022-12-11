@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-.cart-wrapper{
+.wrapper{
     width: 100vw;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -14,3 +14,4 @@
     transition: all 1s ease-in-out;
   
   }
+
