@@ -27,6 +27,26 @@ export default {
             }
         },
         {
+            name: 'size',
+            title: 'Size',
+            type: 'array',
+            of: [{type: 'number'}],
+            options: {
+                list: [
+                    {
+                    value: 37,
+                    value: 38,
+                    value: 39,
+                    value: 41,
+                    value: 42,
+                    value: 43,
+                    value: 43,
+                    value: 45,
+                    }
+                ]
+            }
+        },
+        {
             name: 'topic',
             title: 'Topic',
             type: 'string',
