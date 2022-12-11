@@ -9,7 +9,7 @@ interface Product{
     image: any
     name: string
     price: number
-    slug: string
+    slug: any
 }
 
 const Product = ({ product} : Product) => {
@@ -19,7 +19,7 @@ const Product = ({ product} : Product) => {
 
   return (
     <div className='bg-gray-200 rounded-xl shadow-lg my-4 mx-3 p-5'>
-      <Link href='/'>
+      <Link href={`/product/${product.slug.current}`}>
         <div>
         <Image loader={() => src} src={src} alt='product image' width={24} height={24} className='h-24 w-24'/>
 
