@@ -18,10 +18,10 @@ const Product = ({ product} : Product) => {
 
 
   return (
-    <div>
-      <Link href={`/product/${product.slug.current}`}>
+    <div className='h-20 bg-red-400 w-60'>
+      <Link href='/'>
         <div className='product-card'>
-        <Image loader={() => src} src={src} alt='product image' width={20} height={20}/>
+        <Image loader={() => src} src={src} alt='product image' width={60} height={60}/>
 
           <p className='product-name'>{product.name}</p>
           <p className='product-price'>${product.price}</p>
