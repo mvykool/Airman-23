@@ -2,13 +2,11 @@ import React from 'react'
 import Head from 'next/head'
 import { client, urlFor } from '../../lib/client'
 import { useStateContext } from '../../context/StateContext'
-
 import { useRouter } from 'next/router'
+import Product from '../../components/Product'
 
 
-
-
-interface Product{
+interface ProductProp{
     products: any
     image: any
     name: string
@@ -17,7 +15,7 @@ interface Product{
     topic: string
 }
 
-const Topic = ({ products} : Product) => {
+const Topic = ({ products} : ProductProp) => {
 
 const router = useRouter()
 
@@ -34,21 +32,27 @@ const filtered = products.filter((item: any) => (
 ))
       
 
+//go back to previous page
+
+const goBack = () => {
+    router.push('..')
+  }
+
 console.log(filtered)
 
 return (
-    <div>
+    <div className='mt-20 h-[80vh]'>
     <Head>
         <title>Air man | {title}</title>
     </Head>
+
+    <div onClick={goBack} >GO back</div>
        <h1>{title}</h1>
 
        {filtered.length > 0 ? 
-       <div>
-        
-         {filtered.map((item:any)=> (
-            <p>{item.name}</p>
-         ))}
+       <div className='grid grid-cols-2 xl:grid-cols-3 mt-10 mx-3'>
+
+        { filtered.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
        </div> :
         "No items currently"}
     </div>
@@ -68,4 +72,4 @@ export const getServerSideProps = async () => {
      props: { products }
     }
    
-   }
+}

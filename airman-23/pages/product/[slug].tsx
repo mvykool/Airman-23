@@ -36,7 +36,7 @@ const ProductDetails = ({ product, products }: Props) => {
   }
 
   return (
-    <div>
+    <div className='mt-20'>
         <div>
             <div>
               

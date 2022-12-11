@@ -9,8 +9,7 @@ const Navbar = () => {
  const {showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
-    <div>
-      <div className='flex h-10 justify-around items-center'>
+      <div className='flex h-12 justify-around bg-white w-full items-center fixed top-0'>
          {/**Logo */}
 
          <div>
@@ -20,7 +19,7 @@ const Navbar = () => {
        {/**search bar */}
 
        <div>
-         <input type="text" placeholder='Search..' />
+         <input type="text" placeholder='Search..' className='border-b-2 focus:outline-none' />
        </div>
 
        {/**menu */}
@@ -33,8 +32,8 @@ const Navbar = () => {
       {showCart && <Cart/>}
 
       </div>
-    </div>
   )
+  
 }
 
 export default Navbar

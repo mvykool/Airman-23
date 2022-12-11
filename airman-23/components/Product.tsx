@@ -18,7 +18,7 @@ const Product = ({ product} : Product) => {
 
 
   return (
-    <div className='bg-gray-200 rounded-xl shadow-lg my-4 mx-3 p-5'>
+    <div className='bg-gray-200 rounded-2xl shadow-lg my-4 mx-2 p-5'>
       <Link href={`/product/${product.slug.current}`}>
         <div>
         <Image loader={() => src} src={src} alt='product image' width={24} height={24} className='h-24 w-24'/>
