@@ -10,6 +10,7 @@ import { urlFor } from '../lib/client';
 
 //import stripe
 
+import getStripe from '../lib/getStripe';
 
 
 
@@ -18,6 +19,28 @@ const Cart = () => {
   const cartRef = useRef<HTMLDivElement | null>(null);
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
+
+
+  //handle checkout with stripe
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    const response: any = await fetch('/api/stripe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cartItems),
+    });
+
+    if(response.statusCode === 500) return;
+    
+    const data = await response.json();
+
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  }
 
 
 
@@ -92,7 +115,7 @@ const Cart = () => {
                <h3>${totalPrice}</h3>
              </div>
              <div className='btn-container'>
-               <button className='btn' type='button'>
+               <button className='btn' type='button' onClick={handleCheckout}>
                 Pay now
                </button>
              </div>

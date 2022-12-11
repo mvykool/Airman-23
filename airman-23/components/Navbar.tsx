@@ -1,34 +1,59 @@
-import React from 'react'
+import React, { useState} from 'react'
 import { RiShoppingCartLine } from 'react-icons/ri'
 import { useStateContext } from '../context/StateContext';
 import Cart from './Cart';
+import Profile from './Profile';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+  
+
+  //set route
+
+  const router = useRouter();
 
 
+  //search using useState
+
+  const [search, setSearch] = useState('')
+
+  const handleSearch = (e: any) => {
+    e.preventDefault();
+    router.push(`/search/${search}`)
+  }
+
+  //use context
  const {showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
       <div className='flex h-12 justify-around bg-white w-full items-center fixed top-0'>
          {/**Logo */}
 
-         <div>
+         <div className='mx-2'>
             <h3>23</h3>
         </div>
        
        {/**search bar */}
 
-       <div>
-         <input type="text" placeholder='Search..' className='border-b-2 focus:outline-none' />
+       <div >
+         <form onSubmit={handleSearch} autoComplete="off">
+         <input type="search" value={search} onChange={(e) => setSearch(e.target.value)} placeholder='Search..' className='border-b-2 focus:outline-none w-48' />
+         </form>
        </div>
 
        {/**menu */}
 
-       <button type='button' className='h-6 w-6' onClick={() => setShowCart(true)}>
+        {/**profile pic, & cart */}
+
+      <Profile/>
+      
+
+       <button type='button' className='h-6 w-6 mx-2' onClick={() => setShowCart(true)}>
          <RiShoppingCartLine className='h-5 w-5'/>
-         <span className='absolute text-xs -mt-6 ml-1 bg-red-500 rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
+         <span className='absolute text-xs -mt-6 bg-red-500 rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
       </button>
 
+     
       {showCart && <Cart/>}
 
       </div>
