@@ -12,8 +12,11 @@ export const StateContext = ({ children }) => {
     const [totalQuantities, setTotalQuantities] = useState(0);
     const [qty, setQty] = useState(1);
 
+
     let foundProduct;
     let index;
+
+
 
 
   //user

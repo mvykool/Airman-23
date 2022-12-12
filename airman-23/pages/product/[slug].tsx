@@ -4,7 +4,7 @@ import { AiFillStar, AiOutlineStar, AiOutlineMinus, AiOutlinePlus  } from 'react
 import  Product  from '../../components/Product';
 import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router';
-
+import Image from 'next/image';
 import { client, urlFor } from '../../lib/client'
 
 
@@ -51,7 +51,7 @@ const ProductDetails = ({ product, products }: Props) => {
               <div onClick={goBack} >GO back</div>
 
                 <div className='image-container'>
-                  <img src={urlFor(image && image[index]).url()} className='product-detail-image'/>
+                  <Image width={60} height={60} alt='product img' src={urlFor(image && image[index]).url()} className='product-detail-image'/>
                 </div>
             </div>
      

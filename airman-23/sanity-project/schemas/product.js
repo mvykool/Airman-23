@@ -61,5 +61,5 @@ export default {
             title: 'Details',
             type: 'string',
         }
-    ]
+    ]    
 }

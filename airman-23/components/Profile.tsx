@@ -20,7 +20,7 @@ const Profile = () => {
   console.log(user)
 
   return (
-    <div ref={profileRef}>
+    <div className='wrapper' ref={profileRef}>
         <div className='bg-blue-200 fixed right-0 z-50 h-[100vh] top-0 w-80'>
           <div onClick={() => setProfile(false)}>CLose</div>
          

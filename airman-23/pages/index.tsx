@@ -28,7 +28,7 @@ export default function Home({ products}: Props) {
       
       <h2 className='ml-6 text-lg my-4 font-bold' >Latest :</h2>
      <div className='grid grid-cols-2 xl:grid-cols-3 mx-3'>
-        { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
+        { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} favorite={false} />)}
        </div>
     </div>
   )
