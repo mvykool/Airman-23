@@ -94,7 +94,7 @@ const ProductDetails = ({ product, products }: Props) => {
         <h2>You may also like</h2>
         <div className='marquee'>
             <div className='maylike-products-container track'>
-               {products.map((item: any) => (
+               {products.slice(0,2).map((item: any) => (
                 <Product key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
                ))} 
             </div>
