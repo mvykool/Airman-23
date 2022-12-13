@@ -9,12 +9,6 @@ export const topics = [
         name: 'ZOOM'
     },
     {
-        name: 'Men'
-    },
-    {
-        name: 'Women'
-    },
-    {
         name: 'Kids'
     },
     {
