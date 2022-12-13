@@ -45,7 +45,7 @@ const Profile = () => {
        <div className='flex flex-col justify-center items-center mt-36'>
         <button>Home</button>
         <button>Customer Support</button>
-       <button type='button' onClick={logOut} className='font-bold text-lg text-pink-500 cursor-pointer transition duration-150 hover:scale-110'>Log out</button>
+       <button type='button' onClick={logOut} className='font-bold text-lg text-black cursor-pointer transition duration-150 hover:scale-110'>Log out</button>
        </div>
        </div>
 
