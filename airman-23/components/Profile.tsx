@@ -2,6 +2,10 @@ import React, { useRef } from 'react'
 import { useStateContext } from '../context/StateContext';
 import { auth } from '../firebase';
 import { useRouter } from 'next/router';
+import Product from './Product';
+
+
+
 
 const Profile = () => {
 
@@ -17,7 +21,7 @@ const Profile = () => {
     router.reload()
   }
 
-  console.log(user)
+
 
   return (
     <div className='wrapper' ref={profileRef}>
@@ -47,6 +51,7 @@ const Profile = () => {
         <button>Customer Support</button>
        <button type='button' onClick={logOut} className='font-bold text-lg text-black'>Log out</button>
        </div>
+      
        </div>
 
           }
@@ -56,3 +61,4 @@ const Profile = () => {
 }
 
 export default Profile
+

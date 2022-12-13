@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { client, urlFor } from '../../lib/client'
-import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router'
 import Product from '../../components/Product'
 

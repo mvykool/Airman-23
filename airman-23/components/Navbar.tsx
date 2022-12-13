@@ -6,6 +6,7 @@ import Profile from './Profile';
 import { useRouter } from 'next/router';
 
 
+
 const Navbar = () => {
   
 
@@ -65,7 +66,7 @@ const Navbar = () => {
          (<button onClick={toLogin}
           className='border-2 p-2 rounded-md'>Log In</button>)}
 
-       {profile && <Profile/>}   
+       {profile && <Profile />}   
       
 
        <button type='button' className='h-6 w-6' onClick={() => setShowCart(true)}>
@@ -82,3 +83,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
