@@ -40,7 +40,7 @@ const Navbar = () => {
          {/**Logo */}
 
          <div className='mx-2'>
-            <h3>23</h3>
+            <h3>AM-23</h3>
         </div>
        
        {/**search bar */}
