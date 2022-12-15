@@ -1,6 +1,15 @@
 import React from 'react'
+import { client } from '../../lib/client'
 
-const blogPost = () => {
+interface postsProps {
+  posts: any
+}
+
+const blogPost = ({posts}: postsProps) => {
+
+
+  console.log(posts)
+
   return (
     <div>blogPost
 
@@ -10,8 +19,30 @@ const blogPost = () => {
 
       <h1>holaaaaaaaaaaaa</h1>
       <h1>holaaaaaaaaaaaa</h1>
+
+
+      <div>
+        {posts.map((post: any) => (
+          <div>
+            <p>{post.title}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
 
 export default blogPost
+
+//server side props
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "post"]';
+  const posts = await client.fetch(query);
+ 
+ 
+  return {
+   props: { posts }
+  }
+ 
+ }
