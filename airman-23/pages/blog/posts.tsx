@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 import { client } from '../../lib/client'
 
@@ -8,12 +9,17 @@ interface postsProps {
 const blogPost = ({posts}: postsProps) => {
 
 
+  const router = useRouter()
+
+  const goBack = () => {
+    router.push('..')
+  }
   console.log(posts)
 
   return (
     <div>blogPost
 
-
+    <div  className='mt-20 ml-5' onClick={goBack}>Go back</div>
      <h1 className='mt-20'> Blog</h1>
 
 
