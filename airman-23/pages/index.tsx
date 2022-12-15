@@ -1,15 +1,9 @@
 import Head from 'next/head'
 import Banner from '../components/Banner'
-import Category from '../components/Category'
-import { client } from '../lib/client'
-import Product from '../components/Product'
 
 
-interface Props {
-  products: any
-}
 
-export default function Home({ products}: Props) {
+export default function Home() {
   return (
     <div className='mt-20'>
       <Head>
@@ -21,28 +15,8 @@ export default function Home({ products}: Props) {
 
      <Banner/>
 
-     {/**categories */}
-     <Category/>
-
-     {/**latest feed */}
-      
-      <h2 className='ml-6 text-lg my-4 font-bold' >Latest :</h2>
-     <div className='grid grid-cols-2 xl:grid-cols-3 mx-3'>
-        { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
-       </div>
+    
     </div>
   )
 }
 
-//server side props
-
-export const getServerSideProps = async () => {
-  const query = '*[_type == "product"]';
-  const products = await client.fetch(query);
- 
- 
-  return {
-   props: { products }
-  }
- 
- }
