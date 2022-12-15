@@ -4,6 +4,7 @@ import { useStateContext } from '../context/StateContext';
 import Cart from './Cart';
 import Profile from './Profile';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 
 
@@ -54,7 +55,7 @@ const Navbar = () => {
 
        {/**menu */}
 
-        {/**profile pic, & cart */}
+        {/**profile pic, blog & cart */}
 
       {user ?
       <img 
@@ -67,13 +68,20 @@ const Navbar = () => {
           className='border-2 p-2 rounded-md'>Log In</button>)}
 
        {profile && <Profile />}   
+
+
+       {/**blog */}
+
+       <Link href={'/blog/posts'}>
+         <button>Blog</button>
+       </Link>
       
 
        <button type='button' className='h-6 w-6' onClick={() => setShowCart(true)}>
          <RiShoppingCartLine className='h-5 w-5'/>
          <span className='absolute text-xs -mt-6 bg-red-500 rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
       </button>
-
+          
      
       {showCart && <Cart/>}
 
