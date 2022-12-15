@@ -14,11 +14,7 @@ const blogPost = ({posts}: postsProps) => {
     <div>blogPost
 
 
-      <h1>holaaaaaaaaaaaa</h1>
-      <h1>holaaaaaaaaaaaa</h1> <h1>holaaaaaaaaaaaa</h1>
-
-      <h1>holaaaaaaaaaaaa</h1>
-      <h1>holaaaaaaaaaaaa</h1>
+     <h1 className='mt-20'> Blog</h1>
 
 
       <div>
