@@ -39,7 +39,10 @@ const Navbar = () => {
          {/**Logo */}
 
          <div className='mx-2'>
-            <h3>AM-23</h3>
+           <Link href={'/'} onClick={() => setOpenMenu(false)}>
+           <h3>AM-23</h3>
+       </Link>
+          
         </div>
        
        {/**search bar */}
@@ -54,22 +57,6 @@ const Navbar = () => {
 
         {/**mobile menu, blog & cart */}
        
-    
-        <div>
-          <TiThMenu  onClick={() => setOpenMenu(true)}/>
-        </div>
-         
-
-       {openMenu && <MobileMenu />}   
-
-
-       {/**blog */}
-
-       <Link href={'/blog/posts'}>
-         <button>Blog</button>
-       </Link>
-      
-
        <button type='button' className='h-6 w-6' onClick={() => setShowCart(true)}>
          <RiShoppingCartLine className='h-5 w-5'/>
          <span className='absolute text-xs -mt-6 bg-red-500 rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
@@ -77,6 +64,15 @@ const Navbar = () => {
           
      
       {showCart && <Cart/>}
+
+
+      <div>
+          <TiThMenu className='h-5 w-5'  onClick={() => setOpenMenu(true)}/>
+        </div>
+         
+
+       {openMenu && <MobileMenu />}   
+
 
       </div>
   )

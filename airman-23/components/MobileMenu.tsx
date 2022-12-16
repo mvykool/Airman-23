@@ -3,6 +3,7 @@ import { useStateContext } from '../context/StateContext';
 import { auth } from '../firebase';
 import { useRouter } from 'next/router';
 import Product from './Product';
+import Link from 'next/link';
 
 
 
@@ -19,12 +20,14 @@ const MobileMenu = () => {
   const logOut = () => {
     auth.signOut()
     router.reload()
+    setOpenMenu(false)
   }
 
    //to login
 
    const toLogin = () => {
     router.push("/login")
+    setOpenMenu(false)
   }
 
 
@@ -54,6 +57,15 @@ const MobileMenu = () => {
         {/**log out  */}
        <div className='flex flex-col justify-center items-center mt-36'>
         <button>Home</button>
+
+       {/**blog */}
+
+       <Link href={'/blog/posts'} onClick={() => setOpenMenu(false)}>
+         <button>Blog</button>
+       </Link>
+       <Link href={'/shop'} onClick={() => setOpenMenu(false)}>
+         <button>Shop</button>
+       </Link>
         <button>Customer Support</button>
        <button type='button' onClick={logOut} className='font-bold text-lg text-black'>Log out</button>
        </div>
