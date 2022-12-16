@@ -36,6 +36,8 @@ const ProductDetails = ({ product, products }: Props) => {
     router.push('..')
   }
 
+  console.log(product)
+
   return (
     <div className='mt-20'>
   

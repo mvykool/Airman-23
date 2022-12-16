@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { client } from '../../lib/client'
@@ -25,8 +26,11 @@ const blogPost = ({posts}: postsProps) => {
 
       <div>
         {posts.map((post: any) => (
-          <div>
+          <div key={post._id}>
+            <Link href={`/blog/${post.slug.current}`}>
             <p>{post.title}</p>
+            </Link>
+       
           </div>
         ))}
       </div>
