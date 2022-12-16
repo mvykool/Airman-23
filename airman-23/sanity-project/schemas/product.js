@@ -1,3 +1,5 @@
+
+
 export default {
     name: "product",
     title: "Product",
@@ -47,10 +49,11 @@ export default {
             }
         },
         {
-            name: 'topic',
-            title: 'Topic',
-            type: 'string',
-        },
+            name: 'categories',
+            title: 'Categories',
+            type: 'array',
+            of: [{type: 'reference', to: {type: 'category'}}],
+          },
         {
             name: 'price',
             title: 'Price',
