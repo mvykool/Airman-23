@@ -7,9 +7,9 @@ import Product from './Product';
 
 
 
-const Profile = () => {
+const MobileMenu = () => {
 
-  const { user, setProfile } = useStateContext();
+  const { user, setOpenMenu } = useStateContext();
   const profileRef = useRef<HTMLDivElement | null>(null);
 
   const router = useRouter()
@@ -21,14 +21,20 @@ const Profile = () => {
     router.reload()
   }
 
+   //to login
+
+   const toLogin = () => {
+    router.push("/login")
+  }
+
 
 
   return (
     <div className='wrapper' ref={profileRef}>
         <div className='bg-blue-200 fixed right-0 z-50 h-[100vh] top-0 w-80'>
-          <div onClick={() => setProfile(false)}>CLose</div>
+          <div onClick={() => setOpenMenu(false)}>CLose</div>
          
-          {user && 
+          {user ? (  
           <div>
             <div className='flex justify-center mt-20'>
             <img
@@ -54,11 +60,15 @@ const Profile = () => {
       
        </div>
 
-          }
+         ) : (
+
+          <button onClick={toLogin}
+          className='border-2 p-2 rounded-md'>Log In</button>
+         ) }
         </div>
     </div>
   )
 }
 
-export default Profile
+export default MobileMenu
 

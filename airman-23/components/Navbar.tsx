@@ -2,10 +2,12 @@ import React, { useState} from 'react'
 import { RiShoppingCartLine } from 'react-icons/ri'
 import { useStateContext } from '../context/StateContext';
 import Cart from './Cart';
-import Profile from './Profile';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
+
+import { TiThMenu } from 'react-icons/ti'
 
 
 const Navbar = () => {
@@ -28,14 +30,9 @@ const Navbar = () => {
   }
 
 
-  //to login
-
-  const toLogin = () => {
-    router.push("/login")
-  }
-
+ 
   //use context
- const {showCart, setShowCart, totalQuantities, user, profile, setProfile } = useStateContext();
+ const {showCart, setShowCart, totalQuantities, user, openMenu, setOpenMenu } = useStateContext();
 
   return (
       <div className='flex h-14 justify-around bg-white w-full items-center fixed top-0'>
@@ -55,19 +52,15 @@ const Navbar = () => {
 
        {/**menu */}
 
-        {/**profile pic, blog & cart */}
+        {/**mobile menu, blog & cart */}
+       
+    
+        <div>
+          <TiThMenu  onClick={() => setOpenMenu(true)}/>
+        </div>
+         
 
-      {user ?
-      <img 
-      onClick={() => setProfile(true)}
-      className='h-8 border-2 border-red-500 rounded-full' 
-       src={user.photoURL ? user.photoURL
-        : "https://cdn-icons-png.flaticon.com/512/6073/6073873.png" } 
-        alt="profile pic" />: 
-         (<button onClick={toLogin}
-          className='border-2 p-2 rounded-md'>Log In</button>)}
-
-       {profile && <Profile />}   
+       {openMenu && <MobileMenu />}   
 
 
        {/**blog */}
