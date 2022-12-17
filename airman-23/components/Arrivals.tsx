@@ -20,28 +20,28 @@ const Arrivals = ({ products} : Product) => {
 
 
   return (
-    <div>
+    <div className='my-10'>
 
       {/** first collection */}  
      <div  className='homeGrid mt-2'>
 
-      <div className='border-2 border-black a' >
+      <div className='a bg-white rounded-md shadow-lg' >
       <img src={urlFor(items[0].image[0]).url()} alt="" />
       </div>
 
-      <div className='border-2 border-black b' >
+      <div className='bg-white rounded-md shadow-lg b' >
       <img src={urlFor(items[1].image[0]).url()} alt=""  />
       </div>
 
-      <div className='border-2 border-black c' >
+      <div className='bg-white rounded-md shadow-lgc' >
       <img src={urlFor(items[2].image[0]).url()} alt=""/>
       </div>
        
-      <div className='border-2 border-black ] d' >
+      <div className='bg-white rounded-md shadow-lgd' >
       <img src={urlFor(items[3].image[0]).url()} alt=""  />
       </div>
 
-      <div className='border-2 border-black e' >
+      <div className='border-2 bg-white rounded-md shadow-lg e' >
       <img src={urlFor(items[4].image[0]).url()} alt="" />
       </div>
 
@@ -50,23 +50,23 @@ const Arrivals = ({ products} : Product) => {
       {/**grid two */}
 
       <div className='homeGridTwo mt-2'>
-      <div className='border-2 border-black f' >
+      <div className='bg-white rounded-md shadow-lg f' >
       <img src={urlFor(items[5].image[0]).url()} alt="" />
       </div>
 
-      <div className='border-2 border-black g' >
+      <div className='bg-white rounded-md shadow-lgg' >
       <img src={urlFor(items[6].image[0]).url()} alt=""  />
       </div>
 
-      <div className='border-2 border-black h' >
+      <div className='bg-white rounded-md shadow-lg h' >
       <img src={urlFor(items[7].image[0]).url()} alt=""/>
       </div>
        
-      <div className='border-2 border-black ] i' >
+      <div className='bg-white rounded-md shadow-lg i' >
       <img src={urlFor(items[8].image[0]).url()} alt=""  />
       </div>
 
-      <div className='border-2 border-black j' >
+      <div className='bg-white rounded-md shadow-lg j' >
       <img src={urlFor(items[9].image[0]).url()} alt="" />
       </div>
       </div>
