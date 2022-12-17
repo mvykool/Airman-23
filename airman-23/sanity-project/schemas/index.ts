@@ -4,5 +4,6 @@ import category from './category'
 import post from './post'
 import author from './author'
 import user from "./user"
+import collection from "./collection"
 
-export const schemaTypes = [product, post, author, category, blockContent, user]
+export const schemaTypes = [product, post, author, category, blockContent, user, collection]
