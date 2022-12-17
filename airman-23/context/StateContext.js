@@ -19,7 +19,6 @@ export const StateContext = ({ children }) => {
 
 
 
-
   //user
   
   const [user] = useAuthState(auth)
