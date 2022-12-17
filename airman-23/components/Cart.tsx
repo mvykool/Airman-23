@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineShopping } from 'react-icons/ai';
 import { RiCloseFill } from 'react-icons/ri'
@@ -45,8 +45,9 @@ const Cart = () => {
 
 
   return (
-    <div className='wrapper' ref={cartRef}>
-      <div className='relative w-56 bg-red-100 h-[100vh]'>
+    <>
+    <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0' onClick={()=> setShowCart(false)}/> 
+      <div className=' bg-blue-200 left-0 z-50 h-[100vh] top-0 w-48 fixed' ref={cartRef}>
         <button 
         className='m-5'
          type='button'
@@ -129,7 +130,7 @@ const Cart = () => {
         )}
       </div>
 
-    </div>
+      </>
   )
 }
 

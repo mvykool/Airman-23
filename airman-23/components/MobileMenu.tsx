@@ -33,8 +33,9 @@ const MobileMenu = () => {
 
 
   return (
-    <div className='wrapper' ref={profileRef}> 
-        <div className='relative bg-blue-200 float-right z-50 h-[100vh] top-0 w-80'>
+    <>
+    <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0' onClick={()=> setOpenMenu(false)}/> 
+        <div className=' bg-blue-200 right-0 z-50 h-[100vh] top-0 w-80 fixed' ref={profileRef}>
           <div onClick={() => setOpenMenu(false)}>CLose</div>
          
           {user ? (  
@@ -79,7 +80,8 @@ const MobileMenu = () => {
           className='border-2 p-2 rounded-md'>Log In</button>
          ) }
         </div>
-    </div>
+    
+    </>
   )
 }
 

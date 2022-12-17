@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useEffect, useRef, useState} from 'react'
 import { RiShoppingCartLine } from 'react-icons/ri'
 import { useStateContext } from '../context/StateContext';
 import Cart from './Cart';
@@ -11,7 +11,7 @@ import { TiThMenu } from 'react-icons/ti'
 
 
 const Navbar = () => {
-  
+
 
   //set route
 
@@ -29,10 +29,10 @@ const Navbar = () => {
     setSearch('')
   }
 
-
- 
   //use context
- const {showCart, setShowCart, totalQuantities, user, openMenu, setOpenMenu } = useStateContext();
+ const {showCart, setShowCart, totalQuantities, openMenu, setOpenMenu } = useStateContext();
+
+  
 
   return (
       <div className='flex h-14 justify-around bg-white w-full items-center fixed top-0'>
@@ -63,7 +63,7 @@ const Navbar = () => {
       </button>
           
      
-      {showCart && <Cart/>}
+      {showCart && <Cart />}
 
 
       <div>
