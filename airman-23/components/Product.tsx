@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useStateContext } from '../context/StateContext';
 
 import { urlFor } from '../lib/client'
+import LikeButton from './LikeButton';
 
 interface Product{
     product: any
@@ -17,6 +19,10 @@ const Product = ({ product} : Product) => {
 
     const src = urlFor(product.image && product.image[0]).url()
 
+    const { user } = useStateContext();
+
+
+   
 
     console.log(product)
 
@@ -30,6 +36,14 @@ const Product = ({ product} : Product) => {
           <p className='my-2'><span className='text-xs'>$</span>{product.price}</p>
         </div>
       </Link>
+
+      <div>
+             {user && (
+              <div>
+                <LikeButton/>
+              </div>
+             )}
+          </div>
     </div>
   )
 }

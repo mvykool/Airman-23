@@ -33,7 +33,7 @@ const MobileMenu = () => {
 
 
   return (
-    <div className='wrapper' ref={profileRef}>
+    <div className='wrapper' ref={profileRef}> 
         <div className='relative bg-blue-200 float-right z-50 h-[100vh] top-0 w-80'>
           <div onClick={() => setOpenMenu(false)}>CLose</div>
          
