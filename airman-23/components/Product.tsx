@@ -5,6 +5,7 @@ import { useStateContext } from '../context/StateContext';
 
 import { urlFor } from '../lib/client'
 import LikeButton from './LikeButton';
+import axios from 'axios';
 
 interface Product{
     product: any
@@ -22,7 +23,17 @@ const Product = ({ product} : Product) => {
     const { user } = useStateContext();
 
 
-   
+   const handleLike = async (like: boolean) => {
+    if(user) {
+      const { data } = await axios.put(`http://localhost:3000/api/like`, {
+        userId: user._id,
+        productId: product.name,
+        like
+      })
+
+      product({ ...product, likes: data.likes})
+    }
+   }
 
     console.log(product)
 
@@ -37,10 +48,14 @@ const Product = ({ product} : Product) => {
         </div>
       </Link>
 
-      <div>
+      <div className='mt-10'>
              {user && (
               <div>
-                <LikeButton/>
+                <LikeButton
+                Likes={product.likes}
+                 Like={() => handleLike(true)}
+                 Dislike={() => handleLike(false)}
+                 />
               </div>
              )}
           </div>

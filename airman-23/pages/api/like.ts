@@ -8,10 +8,24 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if(req.method === 'POST'){
-    const user = req.body;
+  if(req.method === 'PUT'){
+    const {userId, productId, like} = req.body;
 
-    client.createIfNotExists(user)
-    .then(()=> res.status(200).json('login success'))
+    const data = like ? await client
+    .patch(productId)
+    .setIfMissing({likes: []})
+    .insert('after', 'likes[-1]', [
+        {
+            _key: uuid(),
+            _ref: userId
+        }
+    ])
+    .commit()
+    : await client
+    .patch(productId)
+    .unset([`likes[_ref=="${userId}"]`])
+    .commit();
+
+    res.status(200).json(data);
   }
 }
