@@ -66,6 +66,7 @@ const MobileMenu = () => {
        <Link href={'/shop'} onClick={() => setOpenMenu(false)}>
          <button>Shop</button>
        </Link>
+        <button>Contact us</button>
         <button>Customer Support</button>
        <button type='button' onClick={logOut} className='font-bold text-lg text-black'>Log out</button>
        </div>
