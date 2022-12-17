@@ -35,7 +35,7 @@ const MobileMenu = () => {
   return (
     <>
     <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0' onClick={()=> setOpenMenu(false)}/> 
-        <div className=' bg-blue-200 right-0 z-50 h-[100vh] top-0 w-80 fixed' ref={profileRef}>
+        <div className=' bg-blue-200 right-0 z-50 h-[100vh] top-0 w-60 fixed' ref={profileRef}>
           <div onClick={() => setOpenMenu(false)}>CLose</div>
          
           {user ? (  
