@@ -35,7 +35,7 @@ const Navbar = () => {
   
 
   return (
-      <div className='flex h-14 justify-around bg-white w-full items-center fixed top-0'>
+      <div className='flex h-14 justify-around bg-white w-full items-center fixed top-0 ' >
          {/**Logo */}
 
          <div className='mx-2'>
@@ -59,7 +59,7 @@ const Navbar = () => {
        
        <button type='button' className='h-6 w-6' onClick={() => setShowCart(true)}>
          <RiShoppingCartLine className='h-5 w-5'/>
-         <span className='absolute text-xs -mt-6 bg-red-500 rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
+         <span className='absolute text-xs -mt-6 bg-[#00708C] rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
       </button>
           
      
