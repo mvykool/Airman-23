@@ -2,10 +2,15 @@ import Head from 'next/head'
 import Banner from '../components/Banner'
 import Image from 'next/image';
 import Hero from '../components/Hero';
+import { client } from '../lib/client';
+import Arrivals from '../components/Arrivals';
+
+interface Props {
+  products: any
+}
 
 
-
-export default function Home() {
+export default function Home({ products}: Props) {
   return (
     <div className='mt-20'>
       <Head>
@@ -19,9 +24,28 @@ export default function Home() {
      
      {/**banner */}
      <Banner/>
-
     
+
+    {/**arrivals */}
+
+    <div className='mx-4 justify-center flex'>
+      <Arrivals products={products}/>
+    </div>
+
+
     </div>
   )
 }
 
+//server side props
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "collection"]';
+  const products = await client.fetch(query);
+ 
+ 
+  return {
+   props: { products }
+  }
+ 
+ }
