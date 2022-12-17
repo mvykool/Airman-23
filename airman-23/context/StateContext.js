@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import {auth} from '../firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import { createOrGetUser } from "../utils";
 
 const Context = createContext();
 
@@ -22,6 +23,12 @@ export const StateContext = ({ children }) => {
   //user
   
   const [user] = useAuthState(auth)
+
+  
+
+  if(user){
+    createOrGetUser(user)
+  }
 
 
  //create function for increase and decrease
