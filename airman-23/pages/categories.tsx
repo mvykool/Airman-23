@@ -14,7 +14,7 @@ const categories = () => {
 
 
   return (
-    <div className='pb-20 bg-gray-300 pt-10'>
+    <div className='pb-20 bg-gray-200 pt-10'>
 
      <div className='mt-10 bg-white rounded-full h-10 w-10 flex justify-center items-center ml-8'>
         <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
