@@ -36,7 +36,7 @@ const Navbar = () => {
 
 //lock scrolling when modals are opened 
 
-console.log(openMenu)
+
 if (typeof window !== "undefined") {
   let body = window.document.body;
 

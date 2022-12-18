@@ -2,6 +2,7 @@ import React from 'react'
 import { MdLocalShipping } from 'react-icons/md'
 import { FaMoneyBillAlt } from 'react-icons/fa'
 import { MdSupportAgent } from 'react-icons/md'
+import Link from 'next/link'
 
 
 const Cards = () => {
@@ -18,11 +19,11 @@ const Cards = () => {
             <h1 className='text-[#00708C] font-semibold flex text-xl items-center'>Domestic free shiping</h1>
 
             </div>
-        <div>
+        <Link href={'/shipping'}>
             <button className='text-white font-semibold h-10 bg-[#00708c] w-full rounded-b-sm'>
                     Check more info
             </button>
-        </div>
+        </Link>
 
         </div>
 
