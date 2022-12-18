@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { AiOutlineMinus, AiOutlinePlus, AiOutlineShopping } from 'react-icons/ai';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { TbShoppingCart } from 'react-icons/tb'
 import { RiCloseFill } from 'react-icons/ri'
 import { TiDeleteOutline } from 'react-icons/ti';
 
@@ -17,7 +18,7 @@ import getStripe from '../lib/getStripe';
 const Cart = () => {
   
   const cartRef = useRef<HTMLDivElement | null>(null);
-  const { user, totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
+  const { user, totalPrice, totalQuantities, cartItems, setShowCart, showCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
 
 
@@ -42,33 +43,40 @@ const Cart = () => {
     stripe.redirectToCheckout({ sessionId: data.id });
   }
 
+  //lock scroll when modal is opened
+
+  if(showCart){
+    document.body.style.position = 'fixed'
+    document.body.style.overflow = 'hidden'
+  }
+  
 
 
   return (
     <>
     <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0' onClick={()=> setShowCart(false)}/> 
-      <div className=' bg-blue-200 left-0 z-50 h-[100vh] top-0 w-48 fixed' ref={cartRef}>
+      <div className=' bg-white p-2 left-0 z-50 h-[100vh] top-0 w-50 fixed' ref={cartRef}>
         <button 
         className='m-5'
          type='button'
           onClick={() => setShowCart(false)}
           >
           <RiCloseFill className='h-7 w-7 absolute right-4'/>
-          <div className='mt-10'>
-          <span className='mx-2'>Your cart</span>
-          <span className='text-red-500 font-semibold'>({totalQuantities} items)</span>
+          <div className='mt-16'>
+          <span className='mx-2'>Your cart has</span>
+          <span className='text-[#00708c] font-semibold '>({totalQuantities} items)</span>
           </div>
         </button>
 
         {cartItems.length < 1 && (
           <div className='mt-5'>
-            <AiOutlineShopping size={150}  className='flex mx-auto'/>
-            <h3 className='font-bold text-sm mb-5 mx-5'>Your shopping bag is empty</h3>
+            <TbShoppingCart size={120}  className='flex mx-auto my-10'/>
+            <h3 className='font-bold text-sm mb-5 mx-5'>No items in your cart yet</h3>
             <Link href="/">
               <button
               type='button'
               onClick={() => setShowCart(false)}
-              className="flex mx-auto mt-10 p-2 bg-red-600 text-white rounded-md"
+              className="flex mx-auto mt-10 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md"
               >
                 Continue Shopping
               </button>

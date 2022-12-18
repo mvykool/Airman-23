@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef} from 'react'
 import { useStateContext } from '../context/StateContext';
 import { auth } from '../firebase';
 import { useRouter } from 'next/router';
@@ -12,9 +12,10 @@ import { MdCategory, MdArticle, MdContacts, MdSupportAgent, MdLogout } from 'rea
 
 
 
+
 const MobileMenu = () => {
 
-  const { user, setOpenMenu } = useStateContext();
+  const { user, setOpenMenu, openMenu } = useStateContext();
   const profileRef = useRef<HTMLDivElement | null>(null);
 
   const router = useRouter()
@@ -23,7 +24,7 @@ const MobileMenu = () => {
 
   const logOut = () => {
     auth.signOut()
-    router.reload()
+    router.push("/login")
     setOpenMenu(false)
   }
 
@@ -34,12 +35,17 @@ const MobileMenu = () => {
     setOpenMenu(false)
   }
 
+    //lock scroll when modal is opened
+
+
+
+console.log(openMenu)
 
 
   return (
     <>
-    <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0 ' onClick={()=> setOpenMenu(false)}/> 
-        <div className=' bg-white right-0 z-50 h-[100vh] top-0 w-60 fixed' ref={profileRef}>
+    <div className='fixed bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0 ' onClick={()=> setOpenMenu(false)}/> 
+        <div className=' bg-white scrollLock right-0 z-50 h-[100%] top-0 w-60 fixed' ref={profileRef}>
           <div className='w-full bg-[#00708C] pb-10'>
           <div className='p-3' onClick={() => setOpenMenu(false)}>
             <RiCloseFill className='text-white text-2xl' />
@@ -69,18 +75,18 @@ const MobileMenu = () => {
        </div>
         
         {/**menu  */}
-       <div className='flex flex-col ml-10 gap-8 mt-20'>
+       <div className='flex flex-col ml-10 gap-5 mt-20'>
        <Link href={`/`} onClick={() => setOpenMenu(false)}>
          <div className='flex items-center space-x-2'>
           <AiFillHome className='text-xl text-[#00708C]'/>
-         <button className='text-xl font-semibold text-[#00708C]'>Home</button>
+         <button className='text-xl  font-semibold text-[#00708C]'>Home</button>
          </div>
        </Link>
 
        {/**categories */}
        <div className='flex items-center space-x-2'>
          <MdCategory className='text-xl text-[#00708C]'/>
-         <button className='text-xl font-semibold text-[#00708C]'>Categories</button> 
+         <button className='text-xl  font-semibold text-[#00708C]'>Categories</button> 
        </div>
 
        {/**blog */}
@@ -88,7 +94,7 @@ const MobileMenu = () => {
        <Link href={'/blog/posts'} onClick={() => setOpenMenu(false)}>
          <div className='flex  items-center space-x-2'>
            <MdArticle className='text-xl text-[#00708C]'/>
-           <button className='text-xl font-semibold text-[#00708C]'>Blog</button>
+           <button className='text-xl  font-semibold text-[#00708C]'>Blog</button>
          </div>
        </Link>
 
@@ -96,7 +102,7 @@ const MobileMenu = () => {
        <Link href={'/shop'} onClick={() => setOpenMenu(false)}>
          <div className='flex items-center space-x-2'>
            <RiShoppingBagFill className='text-xl text-[#00708C]'/>
-           <button className='text-xl font-semibold text-[#00708C]'>Shop</button>
+           <button className='text-xl   font-semibold text-[#00708C]'>Shop</button>
          </div>
        </Link>
 
@@ -109,13 +115,13 @@ const MobileMenu = () => {
        {/**customer support */} 
        <div className='flex  items-center space-x-2'> 
          <MdSupportAgent className='text-xl text-[#00708C]' />
-         <button className='text-xl font-semibold text-[#00708C]'> Support</button>
+         <button className='text-xl  font-semibold text-[#00708C]'> Support</button>
        </div>
 
        {/**log out */} 
        <div className='flex  items-center space-x-2'> 
        <MdLogout className='text-xl text-[#00708C]'/>
-       <button type='button' onClick={logOut} className='text-xl font-semibold text-[#00708C]'>Log out</button>
+       <button type='button' onClick={logOut} className='text-xl  font-semibold text-[#00708C]'>Log out</button>
        </div>
        </div>
 

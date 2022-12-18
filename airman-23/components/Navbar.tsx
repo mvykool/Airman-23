@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState} from 'react'
+import React, {  useState} from 'react'
 import { RiShoppingCartLine } from 'react-icons/ri'
 import { useStateContext } from '../context/StateContext';
 import Cart from './Cart';
@@ -31,8 +31,27 @@ const Navbar = () => {
 
   //use context
  const {showCart, setShowCart, totalQuantities, openMenu, setOpenMenu } = useStateContext();
+ 
 
-  
+
+//lock scrolling when modals are opened 
+
+console.log(openMenu)
+if (typeof window !== "undefined") {
+  let body = window.document.body;
+
+ if(openMenu === true){
+  body.style.position = 'fixed'
+  body.style.overflow = 'hidden'
+}else if(showCart === true){
+  body.style.position = 'fixed'
+  body.style.overflow = 'hidden'
+}else {
+  body.style.position = 'relative'
+  body.style.overflow = 'auto'
+}
+}
+
 
   return (
       <div className='flex h-14 justify-around bg-white w-full items-center fixed top-0 ' >
@@ -72,7 +91,7 @@ const Navbar = () => {
          
 
        {openMenu && <MobileMenu />}   
-
+           
 
       </div>
   )

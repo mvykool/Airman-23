@@ -69,9 +69,11 @@ export default function Home({ products, bannerData}: Props) {
 
     </div>
 
-    <hr className='h-1 bg-[#00708c] mx-8 my-20'/>
-
     {/**Blog banner */}
+
+    <div className='ml-8 mt-20'>
+      <h1 className='font-semibold border-b-4 border-[#00708C] w-20'>Blog  💻</h1>
+    </div>
 
     <BlogBanner/>
 
