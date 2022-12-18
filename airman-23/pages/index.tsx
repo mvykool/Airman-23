@@ -5,13 +5,17 @@ import { client } from '../lib/client';
 import Arrivals from '../components/Arrivals';
 import Cards from '../components/Cards';
 import BlogBanner from '../components/BlogBanner';
+import HeroBanner from '../components/HeroBanner';
+import SecondHeroBanner from '../components/SecondHeroBanner';
+import ThridBanner from '../components/ThridBanner';
 
 interface Props {
   products: any
+  bannerData: any
 }
 
 
-export default function Home({ products}: Props) {
+export default function Home({ products, bannerData}: Props) {
   return (
     <div className='mt-20 pb-10 bg-gray-200'>
       <Head>
@@ -24,7 +28,7 @@ export default function Home({ products}: Props) {
     <Hero/>
      
      {/**banner */}
-     <Banner/>
+     <Banner />
     
 
     {/**arrivals */}
@@ -32,6 +36,16 @@ export default function Home({ products}: Props) {
     <div className='mx-8 justify-center flex'>
       <Arrivals products={products}/>
     </div>
+
+
+    {/**hero banner */}
+
+    <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
+
+
+     <SecondHeroBanner heroBanner={bannerData.length && bannerData[1]}/>
+
+     <ThridBanner heroBanner={bannerData.length && bannerData[2]}/>
 
     <hr className='h-1 bg-[#00708c] mx-8 my-10'/>
     
@@ -59,10 +73,14 @@ export default function Home({ products}: Props) {
 export const getServerSideProps = async () => {
   const query = '*[_type == "collection"]';
   const products = await client.fetch(query);
+
+
+ const bannerQuery = '*[_type == "banner"]';
+ const bannerData = await client.fetch(bannerQuery);
  
  
   return {
-   props: { products }
+   props: { products, bannerData }
   }
  
  }

@@ -144,8 +144,8 @@ export const getStaticProps = async ({ params: { slug }}: any) => {
     const colQuery = '*[_type == "collection"]';
 
 
-    const product = await client.fetch(query && queryCol);
-    const products = await client.fetch(productsQuery && colQuery);
+    const product = await client.fetch(query || queryCol);
+    const products = await client.fetch(productsQuery || colQuery);
    
     return {
      props: { products, product }
