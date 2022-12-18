@@ -38,19 +38,30 @@ export default function Home({ products, bannerData}: Props) {
     </div>
 
 
-    {/**hero banner */}
+    {/**hero banner with discounts*/}
 
+    <div className='ml-8 my-8'>
+      <h1 className='font-semibold border-b-4 border-[#00708C] w-28'>Discounts 🔥</h1>
+    </div>
+
+    <div className='mx-3'>
     <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
 
-     <SecondHeroBanner heroBanner={bannerData.length && bannerData[1]}/>
+    <SecondHeroBanner heroBanner={bannerData.length && bannerData[1]}/>
 
      <ThridBanner heroBanner={bannerData.length && bannerData[2]}/>
 
-    <hr className='h-1 bg-[#00708c] mx-8 my-10'/>
+    </div>
+
     
 
     {/**Cards */}
+
+    <div className='ml-8 mt-20'>
+      <h1 className='font-semibold border-b-4 border-[#00708C] w-24'>Policies ✏️</h1>
+    </div>
+
 
     <div className='mx-8'>
 

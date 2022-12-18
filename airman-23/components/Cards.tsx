@@ -6,7 +6,7 @@ import { MdSupportAgent } from 'react-icons/md'
 
 const Cards = () => {
   return (
-    <div className='mt-20'>
+    <div className='mt-10'>
         {/**card 1 */}
         <div className='bg-white mb-10 rounded-sm shadow-lg'>
             <div className='p-4 flex justify-between ' >
