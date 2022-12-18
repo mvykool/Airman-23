@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { client, urlFor } from '../../lib/client'
-import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router'
 import Product from '../../components/Product'
 
@@ -23,7 +22,7 @@ const router = useRouter()
 let title: string = router.query.topic as string;
 
 
-console.log(title)
+
 
 
 
@@ -35,10 +34,10 @@ const filtered = products.filter((item: any) => (
 //go back to previous page
 
 const goBack = () => {
-    router.push('..')
+    router.back()
   }
 
-console.log(filtered)
+
 
 return (
     <div className='mt-20 h-[80vh]'>

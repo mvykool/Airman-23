@@ -84,10 +84,10 @@ console.log(openMenu)
        </Link>
 
        {/**categories */}
-       <div className='flex items-center space-x-2'>
+       <Link href={{ pathname: `/categories`}} onClick={() => setOpenMenu(false)} className='flex items-center space-x-2'>
          <MdCategory className='text-xl text-[#00708C]'/>
          <button className='text-xl  font-semibold text-[#00708C]'>Categories</button> 
-       </div>
+       </Link>
 
        {/**blog */}
 
@@ -128,7 +128,7 @@ console.log(openMenu)
        {/**footer */}
 
        <div className='absolute bottom-0 w-full bg-gray-300 p-5'>
-         <h2 className='flex justify-center'>Airman-23  v1.0.0</h2>
+         <h2 className='flex justify-center text-gray-500'>Airman-23 | v1.0.0</h2>
        </div>
       
 

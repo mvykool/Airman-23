@@ -54,7 +54,7 @@ if (typeof window !== "undefined") {
 
 
   return (
-      <div className='flex h-14 justify-around bg-white w-full items-center fixed top-0 ' >
+      <div className='flex h-14 justify-around bg-white w-full  items-center fixed z-30 top-0 ' >
          {/**Logo */}
 
          <div className='mx-2'>
