@@ -33,7 +33,7 @@ const categories = () => {
         {topics.map((item: any) => (
           <Link href={{ pathname: `/category/${item.name}`}} key={item.name} className='my-2 relative'>
              <p className='w-full z-10 absolute bg-[var(--bg-wrapper)] text-lg text-white flex justify-center p-4'>{item.name}</p>
-            <img src={item.image} alt='cat-pic' />
+            <img src={item.image} alt='cat-pic' className='h-[35vh] w-full' />
            </Link>
         ))}
       </div>

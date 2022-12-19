@@ -25,9 +25,9 @@ const shop = ({ products}: Props) => {
       <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
     </div>
 
-    <div className='my-10 flex bg-[#00708c] justify-center p-4 mx-8'>
-      <h1 className='text-xl text-white font-semibold'>Shop 🛍️</h1>
-    </div>
+    <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C]'>
+      <h1 className='font-bold text-white text-2xl'>Shop</h1>
+      </div>
 
 
      {/**categories */}

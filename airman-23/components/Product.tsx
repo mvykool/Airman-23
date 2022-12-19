@@ -27,7 +27,7 @@ const Product = ({ product} : Product) => {
     console.log(productData)
 
   return (
-    <div className='bg-white rounded-2xl shadow-lg my-4 mx-2 p-5'>
+    <div className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5'>
       <Link href={`/product/${productData.slug.current}`}>
         <div>
         <div className='flex justify-center m-2'> 

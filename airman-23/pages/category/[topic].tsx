@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { client, urlFor } from '../../lib/client'
 import { useRouter } from 'next/router'
 import Product from '../../components/Product'
+import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 
 
 interface ProductProp{
@@ -40,13 +41,20 @@ const goBack = () => {
 
 
 return (
-    <div className='mt-20 h-[80vh]'>
+    <div className='pt-10 bg-gray-200 pb-20 '>
     <Head>
         <title>Air man | {title}</title>
     </Head>
 
-    <div onClick={goBack} >GO back</div>
-       <h1>{title}</h1>
+<div className='mt-10 bg-white rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+  <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
+</div>
+
+<div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C]'>
+  <h1 className='font-bold text-white text-2xl'>{title}</h1>
+  </div>
+
+
 
        {filtered.length > 0 ? 
        <div className='grid grid-cols-2 xl:grid-cols-3 mt-10 mx-3'>
