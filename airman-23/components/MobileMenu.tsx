@@ -53,7 +53,7 @@ console.log(openMenu)
          
           {user ? (  
       
-            <div className='flex justify-center mt-5 items-center'>
+            <div className='flex mx-4 mt-5 items-center'>
             <img
             src={user.photoURL ? user.photoURL
              : "https://cdn-icons-png.flaticon.com/512/6073/6073873.png" } alt="profile pic"

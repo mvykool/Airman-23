@@ -4,6 +4,7 @@ import { client } from '../lib/client'
 import Category from '../components/Category'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 import router from 'next/router'
+import Head from 'next/head'
 
 
 interface Props {
@@ -21,7 +22,11 @@ const shop = ({ products}: Props) => {
   return (
     <div className='pt-10 bg-gray-200 pb-10'>
 
-    <div className='mt-10 bg-white rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+    <Head>
+      <title>Air man 23 | Shop</title>
+    </Head>   
+
+    <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
       <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
     </div>
 

@@ -3,6 +3,7 @@ import router from 'next/router'
 import React from 'react'
 import { topics } from '../utils/topics'
 import {MdOutlineKeyboardBackspace} from 'react-icons/md'
+import Head from 'next/head';
 
 const categories = () => {
 
@@ -16,7 +17,13 @@ const categories = () => {
   return (
     <div className='pb-20 bg-gray-200 pt-10'>
 
-     <div className='mt-10 bg-white rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+
+    <Head>
+      <title>Air man 23 | Catagories</title>
+    </Head>
+
+
+     <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
         <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
       </div>
 

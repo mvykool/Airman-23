@@ -46,7 +46,7 @@ return (
         <title>Air man | {title}</title>
     </Head>
 
-<div className='mt-10 bg-white rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+<div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
   <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
 </div>
 
