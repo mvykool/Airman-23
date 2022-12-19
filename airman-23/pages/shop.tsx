@@ -26,7 +26,7 @@ const shop = ({ products}: Props) => {
     </div>
 
     <div className='my-10 flex bg-[#00708c] justify-center p-4 mx-8'>
-      <h1 className='text-xl text-white font-semibold'>Shop</h1>
+      <h1 className='text-xl text-white font-semibold'>Shop 🛍️</h1>
     </div>
 
 
@@ -36,7 +36,7 @@ const shop = ({ products}: Props) => {
 
          {/**latest feed */}
       
-      <h2 className='ml-6 text-lg my-4 font-bold' >Latest :</h2>
+      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14' >Latest</h2>
      <div className='grid grid-cols-2 xl:grid-cols-3 mx-3'>
         { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
        </div>
