@@ -87,26 +87,28 @@ const Cart = () => {
         <div className='product-container'>
           {cartItems.length >= 1 && cartItems.map((item: any) => (
             <div className='product' key={item._id}>
-              <img src={urlFor(item.image && item.image[0]).url()} 
-              className='cart-product-image'/>
-                <div className='item-desc'>
+                <div className='flex justify-center mx-2 bg-[#00708c] shadow-md rounded-sm my-5'>
+                <img src={urlFor(item.image && item.image[0]).url()} 
+              className='h-24 w-24'/>
+                </div>
+                <div className='mx-2'>
                   <div className='flex-top'>
-                    <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h5 className='text-sm font-semibold my-5' >{item.name}</h5>
+                    <h4 className='font-bold'><span className='text-green-600'>$</span>{item.price}</h4>
                   </div> 
 
-                  <div className='flex-bottom'>
+                  <div className=' mt-2 flex justify-between mx-2'>
                        <div>
-                       <p className="quantity-desc">
-                       <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec')} ><AiOutlineMinus /></span>
+                       <p className="flex space-x-3 items-center my-5">
+                       <span className="text-white bg-black p-1 rounded-sm" onClick={() => toggleCartItemQuantity(item._id, 'dec')} ><AiOutlineMinus /></span>
                        <span className="num">{item.quantity}</span>
-                       <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc')} ><AiOutlinePlus /></span>
+                       <span className="text-white bg-black p-1 rounded-sm" onClick={() => toggleCartItemQuantity(item._id, 'inc')} ><AiOutlinePlus /></span>
                       </p>
                        </div>
 
                        <button
                        type='button'
-                       className='remove-item'
+                       className='text-2xl text-red-600'
                        onClick={() => onRemove(item)}
                        >
                           <TiDeleteOutline/>
@@ -118,20 +120,22 @@ const Cart = () => {
           ))}
         </div>
         {cartItems.length >= 1 && (
-          <div className='cart-bottom'>
-             <div className='total'>
-               <h3>Subtotal:</h3>
-               <h3>${totalPrice}</h3>
+          <div className='mx-2'>
+             <div >
+               <h5 className='text-sm font-semibold my-2'>Subtotal:</h5>
+               <h3 className='font-bold'><span className='text-green-600'>$</span>{totalPrice}</h3>
              </div>
              {user ? 
               <div className='btn-container'>
-              <button className='btn' type='button' onClick={handleCheckout}>
+              <button  className="flex mt-10 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md" type='button' onClick={handleCheckout}>
                Pay now
               </button>
             </div> :
             <div>
-               <p>Sign up to buy</p>
-               <button>Log in</button>
+               <p className='text-sm font-semibold mt-10'>Sign up to buy</p>
+               <Link href={'/login'}    onClick={() => setShowCart(false)}>
+               <button  className="flex mt-5 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md">Log in</button>
+               </Link>
             </div>
              }
           </div>
