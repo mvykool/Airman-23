@@ -68,8 +68,10 @@ console.log(openMenu)
           
          ) : (
 
-          <button onClick={toLogin}
-          className='border-2 p-2 rounded-md'>Log In</button>
+          <div className='flex justify-center'>
+            <button onClick={toLogin}
+          className='font-semibold  p-2 rounded-md text-[#00807c] bg-white'>Log In</button>
+          </div>
          ) }
        
        </div>
