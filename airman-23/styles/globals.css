@@ -24,6 +24,14 @@ body{
   
 }
 
+.login{
+  background-image: url('https://houseofheat.co/app/uploads/2022/03/air-jordan-1-high-denim-dm9036-104-release-date-8.jpg');
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .homeGrid {
   display: grid; 
   grid-template-columns: 1fr 0.5fr 0.5fr; 
