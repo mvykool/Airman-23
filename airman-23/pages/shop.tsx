@@ -2,6 +2,8 @@ import React from 'react'
 import Product from '../components/Product'
 import { client } from '../lib/client'
 import Category from '../components/Category'
+import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+import router from 'next/router'
 
 
 interface Props {
@@ -9,9 +11,23 @@ interface Props {
   }
 
 const shop = ({ products}: Props) => {
+
+   //go back
+
+   const goBack = () => {
+    router.back()
+  }
+
   return (
-    <div>
-        <h1 className='mt-20'>Shop</h1>
+    <div className='pt-10 bg-gray-200 pb-10'>
+
+    <div className='mt-10 bg-white rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+      <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
+    </div>
+
+    <div className='my-10 flex bg-[#00708c] justify-center p-4 mx-8'>
+      <h1 className='text-xl text-white font-semibold'>Shop</h1>
+    </div>
 
 
      {/**categories */}
