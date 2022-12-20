@@ -115,10 +115,10 @@ console.log(openMenu)
        </Link>
 
        {/**customer support */} 
-       <div className='flex  items-center space-x-2'> 
+       <Link href={'/support'} onClick={() => setOpenMenu(false)} className='flex  items-center space-x-2'> 
          <MdSupportAgent className='text-xl text-[#00708C]' />
          <button className='text-xl  font-semibold text-[#00708C]'> Support</button>
-       </div>
+       </Link>
 
        {/**log out */} 
        <div className='flex  items-center space-x-2'> 
