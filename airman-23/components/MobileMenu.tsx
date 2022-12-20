@@ -109,10 +109,10 @@ console.log(openMenu)
        </Link>
 
        {/**contact us */}
-       <div className='flex  items-center space-x-2'> 
+       <Link href={'/contact'} onClick={() => setOpenMenu(false)} className='flex  items-center space-x-2'> 
         <MdContacts className='text-xl text-[#00708C]'/>
         <button className='text-xl font-semibold text-[#00708C]'>Contact us</button>
-       </div>
+       </Link>
 
        {/**customer support */} 
        <div className='flex  items-center space-x-2'> 

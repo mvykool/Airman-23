@@ -15,9 +15,9 @@ const blogPost = ({posts}: postsProps) => {
   const router = useRouter()
 
   const goBack = () => {
-    router.push('..')
+    router.back()
   }
-  console.log(posts)
+
 
   return (
     <div className='pt-10 bg-gray-200 pb-10'>
