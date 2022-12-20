@@ -4,6 +4,8 @@ import { client, urlFor } from '../../lib/client'
 import { useRouter } from 'next/router'
 import Product from '../../components/Product'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+import { FaSearch } from 'react-icons/fa'
+import Link from 'next/link'
 
 
 interface ProductProp{
@@ -71,7 +73,24 @@ return (
 
             { filteredCol.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
            </div> )
-         : ('not item found') }
+         : (
+          <div className='my-5 mx-8'>
+            <p className='text-[#00708c] font-semibold text-lg'>Seems like we don't have that item in the shop at the moment :c ...</p>
+            <div className='flex my-5 items-center space-x-3'>
+              <FaSearch className='text-[#00708c] text-2xl my-5'/>
+              <p className='text-[#00708c] text-4xl my-5'>?</p>
+            </div>
+            <p className='text-[#00708c] my-5 font-bold'>If you would like to request for a specific pair of sneakers, let us know in our contact from! 👇</p>
+            <div className='flex space-x-3'>
+            <Link href={'/contact'} className='p-2 text-white bg-[#00708c] rounded-md'>
+             Contact us!
+            </Link>
+            <Link href={'/'} className='p-2 text-[#00708c] border-2 border-[#00708c] rounded-md'>
+             Back to Home
+            </Link>
+            </div>
+          </div>
+         ) }
        </div>
     </div>
   )
