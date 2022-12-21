@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useState} from 'react'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+import { validate } from '../utils/validate'
 
 const contact = () => {
 
@@ -111,6 +112,3 @@ const contact = () => {
 
 export default contact
 
-function validate(values: { name: string; email: string; message: string }) {
-  throw new Error('Function not implemented.')
-}

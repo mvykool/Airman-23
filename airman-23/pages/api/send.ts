@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import sgMail from '@sendgrid/mail'
 
-sgMail.setApiKey('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')
+sgMail.setApiKey(process.env.SENDGRID_KEY!)
 
 type Data = {
     success: boolean
@@ -25,3 +25,4 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         }
     }
 }
+
