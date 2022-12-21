@@ -1,10 +1,37 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useState} from 'react'
+import React, { useState, useRef} from 'react'
+import emailjs from '@emailjs/browser';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 
 
+
 const contact = () => {
+ 
+  //email js
+
+  const [result, setResult] = useState(false)
+
+  const form = useRef<HTMLFormElement>(null);
+
+
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+  
+    if (form.current) {
+      emailjs.sendForm('service_li998zs', 'template_owr2bld', form.current, 'YznX3U0AWopqVewR_')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
+
+      form.current!.reset(); // Reset the form
+      setResult(true)
+};
 
  
 
@@ -33,12 +60,18 @@ const contact = () => {
       <h1 className='font-bold text-[#00708c] text-2xl'>Contact us</h1>
       </div>
 
-    <div className='flex justify-center'>  
-    <form className='flex flex-col justify-center p-3 my-2'>
+    <div className='flex flex-col mx-8 justify-center'>  
+    <div>
+      {result ? 
+      <div className='mx-2 bg-white rounded-md p-2'>
+        <p className='text-green-500 font-semibold'>Your message has been successfully sent</p>
+      </div> 
+      : null}
+    </div>
+    <form ref={form} className='flex flex-col justify-center p-3 my-2' onSubmit={sendEmail}>
           <label className='bg-black w-20 font-semibold rounded-md flex justify-center p-1 my-4 text-white'>Name</label>
           <input
           type="text"
-         
           name='name'
           id='name'
           placeholder='Your Name'
@@ -54,12 +87,11 @@ const contact = () => {
           <label className='bg-black w-20 font-semibold rounded-md flex justify-center p-1 my-4 text-white'>Message</label>
           <input
           type="text"
-       
           name='message'
           id='message'
           placeholder='Message' 
           className='px-2 pt-2 pb-36 rounded-md outline-none'/>
-          <button className='my-5 rounded-md cursor-pointer bg-black text-white font-bold p-1' type='submit'>Submit</button>
+          <button className='my-5 rounded-md cursor-pointer bg-black text-white font-bold p-1' type='submit'  value='send'>Submit</button>
     </form>
    </div>
 </div>
