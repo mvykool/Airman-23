@@ -2,52 +2,11 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useState} from 'react'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
-import { validate } from '../utils/validate'
+
 
 const contact = () => {
 
-  const [values, setValues] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-
-  const [ errors, setErrors ] = useState<{ name?: string; email?: string; message?: string}>({})
-
-  const handleSubmit =  async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const errors = validate(values)
-    const isError = Object.keys(errors).length
-    if(isError && isError > 0) {
-      setErrors(errors)
-      return
-    }
-    try {
-       const res = await fetch('/api/send', 
-       {
-        method: 'POST',
-        headers: {
-          'Content-Type' : 'application/json',
-        },
-        body: JSON.stringify(values),
-       })
-
-       if(!res.ok){
-         setValues({ name: '', message: '', email: ''})
-       }
-
-    }catch (error){
-     console.error(error)
-    }
-    console.log(values)
-  }
-
-
-  const onChange = (
-    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    setValues((prev) => ({...prev, [e.target.name]: e.target.value}))
-  }
+ 
 
    //go back
 
@@ -75,12 +34,11 @@ const contact = () => {
       </div>
 
     <div className='flex justify-center'>  
-    <form className='flex flex-col justify-center p-3 my-2' onSubmit={handleSubmit}>
+    <form className='flex flex-col justify-center p-3 my-2'>
           <label className='bg-black w-20 font-semibold rounded-md flex justify-center p-1 my-4 text-white'>Name</label>
           <input
           type="text"
-          value={values.name}
-          onChange={onChange}
+         
           name='name'
           id='name'
           placeholder='Your Name'
@@ -88,8 +46,7 @@ const contact = () => {
           <label className='bg-black w-20 font-semibold rounded-md flex justify-center p-1 my-4 text-white'>Email</label>
           <input
           type="text"
-          onChange={onChange}
-          value={values.email}
+         
           name='email'
           id='email'
           placeholder='Email Address'
@@ -97,8 +54,7 @@ const contact = () => {
           <label className='bg-black w-20 font-semibold rounded-md flex justify-center p-1 my-4 text-white'>Message</label>
           <input
           type="text"
-          value={values.message}
-          onChange={onChange}
+       
           name='message'
           id='message'
           placeholder='Message' 
