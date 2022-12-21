@@ -33,6 +33,12 @@ const contact = () => {
       setResult(true)
 };
 
+//hide result
+
+setTimeout(() => {
+  setResult(false)
+}, 4000);
+
  
 
    //go back
@@ -63,8 +69,13 @@ const contact = () => {
     <div className='flex flex-col mx-8 justify-center'>  
     <div>
       {result ? 
-      <div className='mx-2 bg-white rounded-md p-2'>
-        <p className='text-green-500 font-semibold'>Your message has been successfully sent</p>
+      <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0 left-0 flex justify-center items-center'>
+        <div className='mx-4 flex flex-col bg-white rounded-md p-8 fixed text-green-500 font-semibold'>
+         <p>Your message has been successfully sent.</p> 
+         <hr className='w-full my-4'/>
+        <h3>I will be reaching you back within 24-48</h3>
+
+        </div>
       </div> 
       : null}
     </div>
