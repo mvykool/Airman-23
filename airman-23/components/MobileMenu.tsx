@@ -2,8 +2,8 @@ import React, { useRef} from 'react'
 import { useStateContext } from '../context/StateContext';
 import { auth } from '../firebase';
 import { useRouter } from 'next/router';
-import Product from './Product';
 import Link from 'next/link';
+import Image from 'next/image';
 import { RiCloseFill, RiShoppingBagFill } from 'react-icons/ri'
 import {AiFillHome} from 'react-icons/ai'
 import { MdCategory, MdArticle, MdContacts, MdSupportAgent, MdLogout } from 'react-icons/md'
@@ -39,7 +39,7 @@ const MobileMenu = () => {
 
 
 
-console.log(openMenu)
+console.log(user)
 
 
   return (
@@ -54,7 +54,9 @@ console.log(openMenu)
           {user ? (  
       
             <div className='flex mx-4 mt-5 items-center'>
-            <img
+            <Image
+            width={50}
+            height={50}
             src={user.photoURL ? user.photoURL
              : "https://cdn-icons-png.flaticon.com/512/6073/6073873.png" } alt="profile pic"
              className='h-12 border-4 rounded-full border-green-400'
