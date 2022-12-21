@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import sgMail from '@sendgrid/mail'
 
+sgMail.setApiKey('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')
+
 type Data = {
     success: boolean
 }
