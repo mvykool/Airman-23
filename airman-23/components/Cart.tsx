@@ -58,7 +58,7 @@ const Cart = () => {
 
       <div className=' bg-white scrollLock right-0 z-50 h-[100%] top-0 w-60 fixed' ref={cartRef}>
         <button 
-        className='m-5'
+        className='m-3'
          type='button'
           onClick={() => setShowCart(false)}
           >
@@ -72,7 +72,7 @@ const Cart = () => {
         {cartItems.length < 1 && (
           <div className='mt-5'>
             <TbShoppingCart size={120}  className='flex mx-auto my-10'/>
-            <h3 className='font-bold text-sm mb-5 mx-5'>No items in your cart yet</h3>
+            <h3 className='font-bold text-sm mb-5 ml-9'>No items in your cart yet</h3>
             <Link href="/">
               <button
               type='button'

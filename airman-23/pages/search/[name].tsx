@@ -6,6 +6,7 @@ import Product from '../../components/Product'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 import { FaSearch } from 'react-icons/fa'
 import Link from 'next/link'
+import ProductCol from '../../components/ProductCol'
 
 
 interface ProductProp{
@@ -48,7 +49,7 @@ const goBack = () => {
 return (
     <div className='pt-10 bg-gray-200 pb-40'>
     <Head>
-        <title>Air man | {query}</title>
+        <title>Air man 23 | {query}</title>
     </Head>
 
     <div className='mt-10 bg-white rounded-full shadow-md h-10 w-10 flex justify-center items-center ml-8'>
@@ -71,7 +72,7 @@ return (
          ? ( 
             <div className='grid grid-cols-2 xl:grid-cols-3 mt-10 mx-3'>
 
-            { filteredCol.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
+            { filteredCol.map((product: any)=> <ProductCol key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
            </div> )
          : (
           <div className='my-5 mx-8'>

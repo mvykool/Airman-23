@@ -41,7 +41,7 @@ const goBack = () => {
 
 
 return (
-    <div className='pt-10 bg-gray-200 pb-20 '>
+    <div className='pt-10 bg-gray-200 pb-40 '>
     <Head>
         <title>Air man 23 | {title}</title>
     </Head>
@@ -60,8 +60,11 @@ return (
        <div className='grid grid-cols-2 xl:grid-cols-3 mt-10 mx-3'>
 
         { filtered.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
-       </div> :
-        "No items currently"}
+       </div> : (
+        <div className='mx-8 mt-20 pb-40'>
+          <h1 className='font-semibold mx-4 text-lg'>No items of this category currently in stock</h1>
+        </div>
+       )}
     </div>
   )
 }

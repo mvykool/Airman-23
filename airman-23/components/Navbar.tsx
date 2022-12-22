@@ -78,7 +78,7 @@ if (typeof window !== "undefined") {
        
        <button type='button' className='h-6 w-6' onClick={() => setShowCart(true)}>
          <RiShoppingCartLine className='h-5 w-5'/>
-         <span className='absolute text-xs -mt-6 bg-[#00708C] rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
+         <span className='absolute text-xs pt-[1px] -mt-6 bg-[#00708C] rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
       </button>
           
      

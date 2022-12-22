@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import Head from 'next/head';
-import { AiFillStar, AiOutlineStar, AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
-import  Product  from '../../components/Product';
+import { AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
 import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
+import ProductCol from '../../components/ProductCol';
 
 
 interface Props{
@@ -82,7 +82,18 @@ const ProductDetails = ({ product, products }: Props) => {
         </div>
       </div>
 
+      <div className='mx-8'>
+        <h2 className='border-b-4 border-[#00708c] w-36 font-semibold'>You may also like</h2>
+        <div>
+            <div className='flex my-5'>
+               {products.slice(0,2).map((item: any) => (
+                <ProductCol key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
+               ))} 
+            </div>
 
+        </div>
+
+      </div>
 </div>
   
   )

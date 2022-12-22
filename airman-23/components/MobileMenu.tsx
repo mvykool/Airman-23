@@ -50,12 +50,12 @@ console.log(user)
         <div className=' bg-white scrollLock right-0 z-50 h-[100%] top-0 w-60 fixed' ref={profileRef}>
           <div className='w-full bg-[#00708C] pb-10'>
           <div className='p-3' onClick={() => setOpenMenu(false)}>
-            <RiCloseFill className='text-white text-2xl' />
+            <RiCloseFill className='text-white h-7 w-7 absolute right-4' />
           </div>
          
           {user ? (  
       
-            <div className='flex mx-4 mt-5 items-center'>
+            <div className='flex mx-4 mt-7 items-center'>
             <Image
             width={50}
             height={50}
