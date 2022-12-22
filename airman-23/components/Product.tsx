@@ -31,7 +31,7 @@ const Product = ({ product} : Product) => {
       <Link href={`/product/${productData.slug.current}`}>
         <div>
         <div className='flex justify-center m-2'> 
-        <Image loader={() => src} src={src} alt='product image' width={24} height={24} className='h-24 w-24'/>
+        <Image loader={() => src} src={src} alt='product image' width={40} height={40} className='h-24 w-24'/>
         </div>
           <p className='text-sm font-semibold mt-4'>{productData.name}</p>
           <p className='my-2 font-bold'><span className='text-xs text-green-600 mx-1'>$</span>{productData.price}</p>
