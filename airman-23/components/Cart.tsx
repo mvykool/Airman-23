@@ -54,8 +54,9 @@ const Cart = () => {
 
   return (
     <>
-    <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0' onClick={()=> setShowCart(false)}/> 
-      <div className=' bg-white p-2 left-0 z-50 h-[100vh] top-0 w-50 fixed' ref={cartRef}>
+      <div className='fixed bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0' onClick={()=> setShowCart(false)}/> 
+
+      <div className=' bg-white scrollLock right-0 z-50 h-[100%] top-0 w-60 fixed' ref={cartRef}>
         <button 
         className='m-5'
          type='button'

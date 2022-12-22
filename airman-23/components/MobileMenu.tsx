@@ -45,6 +45,8 @@ console.log(user)
   return (
     <>
     <div className='fixed bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0 ' onClick={()=> setOpenMenu(false)}/> 
+
+    
         <div className=' bg-white scrollLock right-0 z-50 h-[100%] top-0 w-60 fixed' ref={profileRef}>
           <div className='w-full bg-[#00708C] pb-10'>
           <div className='p-3' onClick={() => setOpenMenu(false)}>
