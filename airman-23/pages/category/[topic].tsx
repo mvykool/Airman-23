@@ -43,7 +43,7 @@ const goBack = () => {
 return (
     <div className='pt-10 bg-gray-200 pb-20 '>
     <Head>
-        <title>Air man | {title}</title>
+        <title>Air man 23 | {title}</title>
     </Head>
 
 <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
