@@ -12,8 +12,8 @@ const BlogBanner = ({posts}: any) => {
     </div>  
     
 
-    <div className='mx-8 space-x-2'>
-        {posts.slice(0,1).map((post: any) => (
+    <div className='mx-8'>
+        {posts.slice(0,2).map((post: any) => (
           <div key={post._id}>
             <BlogCard post={post}/>
           </div>
@@ -21,7 +21,7 @@ const BlogBanner = ({posts}: any) => {
     </div>
     
     <div className='my-8'>
-      <Link className='ml-8 font-semibold underline' href={'/blog/posts'} >Go to blog!</Link>
+      <Link className='ml-9 font-semibold underline text-gray-600' href={'/blog/posts'} >Read more</Link>
     </div>
   </div>
   )
