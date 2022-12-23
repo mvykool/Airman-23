@@ -63,7 +63,7 @@ const page = ({post}: Props) => {
 
         <div className='mt-10 flex space-x-3'>
           <h3 className='text-gray-400'>Go to the original blog</h3>
-          <Link className='text-green-500' href={'https://www.theringer.com/nba/2020/5/4/21246027/air-jordan-1-nike-michael-jordan-sneaker-king-legacy-the-last-dance'}>Here</Link>
+         
         </div>
        </section>
 
