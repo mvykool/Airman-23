@@ -9,20 +9,22 @@ interface Props{
 
 const BlogCard = ({post}: Props) => {
   return (
-    <div>
-    <Link href={`/blog/${post.slug.current}`}>
-      <div>
-      <p className='font-bold absolute text-white'>{post.title}</p>
+    <div className='py-10'>
+    <Link href={`/blog/${post.slug.current}`} className='my-2 relative'>
+      
+      <p className=' p-4 font-bold absolute text-white bg-[var(--bg-wrapper)] w-full h-full rounded-md'>{post.title}</p>
 
        <Image
-        width={150}
-        height={150}
+        width={200}
+        height={200}
         alt='blog-pic'
         src={urlFor(post.mainImage.asset).url()}
-        className='h-52 w-52'
+        className='h-52 w-52 rounded-md'
         /> 
-      </div>
+     <button className='text-xs font-semibold bg-white absolute -mt-14 ml-3 p-2 rounded-xl'>Read more</button>
+
     </Link>
+
 
   </div>
   )
