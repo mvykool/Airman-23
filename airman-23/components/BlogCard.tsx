@@ -9,7 +9,7 @@ interface Props{
 
 const BlogCard = ({post}: Props) => {
   return (
-    <div key={post._id}>
+    <div>
     <Link href={`/blog/${post.slug.current}`}>
       <div>
       <p className='font-bold absolute text-white'>{post.title}</p>

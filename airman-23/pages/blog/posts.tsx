@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 import BlogCard from '../../components/BlogCard'
-import { client, urlFor } from '../../lib/client'
+import { client} from '../../lib/client'
 
 interface postsProps {
   posts: any
@@ -41,7 +39,9 @@ const blogPost = ({posts}: postsProps) => {
 
       <div className='flex mx-8 space-x-2'>
         {posts.map((post: any) => (
-          <BlogCard post={post} />
+          <div key={post._id}>
+            <BlogCard post={post} />
+          </div>
         ))}
       </div>
     </div>
