@@ -72,7 +72,7 @@ console.log(user)
           
          ) : (
 
-          <div className='flex justify-center'>
+          <div className='flex justify-center mt-5'>
             <button onClick={toLogin}
           className='font-semibold  p-2 rounded-md text-[#00807c] bg-white'>Log In</button>
           </div>

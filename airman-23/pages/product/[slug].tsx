@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
+import ProductCol from '../../components/ProductCol';
 
 
 interface Props{
@@ -83,12 +84,12 @@ const ProductDetails = ({ product, products }: Props) => {
       </div>
 
 
-      <div className='mx-8'>
+      <div className='mx-6'>
         <h2 className='border-b-4 border-[#00708c] w-36 font-semibold'>You may also like</h2>
         <div>
             <div className='flex my-5'>
                {products.slice(0,2).map((item: any) => (
-                <Product key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
+                <ProductCol key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
                ))} 
             </div>
 
@@ -130,10 +131,10 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug }}: any) => {
     const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-    const productsQuery = '*[_type == "product"]';
+    const colQuery = '*[_type == "collection"]';
 
     const product = await client.fetch(query);
-    const products = await client.fetch(productsQuery);
+    const products = await client.fetch(colQuery);
    
     return {
      props: { products, product }

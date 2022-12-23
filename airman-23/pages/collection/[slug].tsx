@@ -86,7 +86,7 @@ const ProductDetails = ({ product, products }: Props) => {
         <h2 className='border-b-4 border-[#00708c] w-36 font-semibold'>You may also like</h2>
         <div>
             <div className='flex my-5'>
-               {products.slice(0,4).map((item: any) => (
+               {products.slice(0,2).map((item: any) => (
                 <ProductCol key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
                ))} 
             </div>
@@ -129,11 +129,12 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug }}: any) => {
     const queryCol = `*[_type == "collection" && slug.current == '${slug}'][0]`;
-    const colQuery = '*[_type == "collection"]';
+    const productsQuery = '*[_type == "product"]';
+
 
 
     const product = await client.fetch( queryCol);
-    const products = await client.fetch(colQuery);
+    const products = await client.fetch(productsQuery);
    
     return {
      props: { products, product }
