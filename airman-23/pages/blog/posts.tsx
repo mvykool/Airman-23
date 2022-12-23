@@ -30,7 +30,7 @@ const blogPost = ({posts}: postsProps) => {
       <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
     </div>
 
-    <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C]'>
+    <div className='flex justify-center mx-8 py-10 rounded-lg my-10 bg-[#00708C]'>
       <h1 className='font-bold text-white text-2xl'>Blog</h1>
       </div>
 
