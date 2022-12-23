@@ -12,10 +12,11 @@ import ThridBanner from '../components/ThridBanner';
 interface Props {
   products: any
   bannerData: any
+  posts: any
 }
 
 
-export default function Home({ products, bannerData}: Props) {
+export default function Home({ products, bannerData, posts}: Props) {
   return (
     <div className='mt-20 pb-10 bg-gray-200'>
       <Head>
@@ -75,7 +76,7 @@ export default function Home({ products, bannerData}: Props) {
       <h1 className='font-semibold border-b-4 border-[#00708C] w-20'>Blog 📓</h1>
     </div>
 
-    <BlogBanner/>
+    <BlogBanner posts={posts}/>
 
     </div>
   )
@@ -86,6 +87,10 @@ export default function Home({ products, bannerData}: Props) {
 export const getServerSideProps = async () => {
   const query = '*[_type == "collection"]';
   const products = await client.fetch(query);
+ 
+  const postQuery = '*[_type == "post"]';
+  const posts = await client.fetch(postQuery);
+   
 
 
  const bannerQuery = '*[_type == "banner"]';
@@ -93,7 +98,7 @@ export const getServerSideProps = async () => {
  
  
   return {
-   props: { products, bannerData }
+   props: { products, bannerData, posts }
   }
  
  }

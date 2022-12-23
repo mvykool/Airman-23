@@ -63,7 +63,7 @@ const page = ({post}: Props) => {
 
         <div className='mt-10 flex space-x-3'>
           <h3 className='text-gray-400'>Go to the original blog</h3>
-         
+          <Link className='text-green-500' href={`${post.link}`}>Here</Link>
         </div>
        </section>
 
