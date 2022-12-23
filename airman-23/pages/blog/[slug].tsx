@@ -4,6 +4,9 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
 import { useRouter } from 'next/router';
+import { PortableText } from '@portabletext/react';
+import { RichTextComponents } from '../../components/RichTextComponent';
+import Link from 'next/link';
 
 interface Props{
    post: any
@@ -19,7 +22,7 @@ const page = ({post}: Props) => {
     }
 
 
-    console.log(post.author._ref)
+    console.log(post)
 
   return (
     <div className='pt-10 bg-gray-200 pb-20'>
@@ -38,8 +41,10 @@ const page = ({post}: Props) => {
        <img src={urlFor(post.mainImage.asset).url()} className='h-[30vh] w-full' alt="" />
 
        {/**date and author */}
-       <div className='my-20'>
+       <div className='my-10 text-sm text-gray-500 mx-10 flex justify-center space-x-3 items-center'>
+        <Image width={50} height={50} src={urlFor(post.author.image).url()} alt={post.author.name} className='rounded-full h-7 w-7' />
         <p>{post.author.name}</p>
+        <p>|</p>
         <p>{ new Date(post._createdAt).toLocaleDateString
             ("en-US", {
                 day: 'numeric',
@@ -48,6 +53,21 @@ const page = ({post}: Props) => {
             })}
         </p>
        </div>
+
+       {/**body */}
+
+       
+       <section className='mx-8 bg-white rounded-lg p-4'>
+        <PortableText value={post.body}  components={RichTextComponents} />
+          {/**link to the post */}
+
+        <div className='mt-10 flex space-x-3'>
+          <h3 className='text-gray-400'>Go to the original blog</h3>
+          <Link className='text-green-500' href={'https://www.theringer.com/nba/2020/5/4/21246027/air-jordan-1-nike-michael-jordan-sneaker-king-legacy-the-last-dance'}>Here</Link>
+        </div>
+       </section>
+
+     
     </div>
   )
 }

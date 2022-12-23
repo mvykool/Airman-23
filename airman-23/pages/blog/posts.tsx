@@ -40,7 +40,7 @@ const blogPost = ({posts}: postsProps) => {
       <div className='flex mx-8 space-x-2'>
         {posts.map((post: any) => (
           <div key={post._id}>
-            <BlogCard post={post} />
+            <BlogCard post={post}/>
           </div>
         ))}
       </div>
