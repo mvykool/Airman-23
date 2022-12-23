@@ -22,7 +22,7 @@ const blogPost = ({posts}: postsProps) => {
 
 
   return (
-    <div className='pt-10 bg-gray-200 pb-10'>
+    <div className='pt-10 bg-gray-200 pb-20'>
 
     <Head>
       <title>Air man 23 | Blog</title>
@@ -32,9 +32,9 @@ const blogPost = ({posts}: postsProps) => {
       <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
     </div>
 
-    <div className='flex justify-center mx-8 py-10 rounded-lg my-10 bg-[#00708C]'>
-      <h1 className='font-bold text-white text-2xl'>Blog</h1>
-      </div>
+   
+      <h1 className='font-bold text-black border-b-4 w-44 border-[#00708c] text-2xl my-10 mx-8'>Air man's Blog</h1>
+     
 
 
       <div className='flex mx-8 space-x-2'>
