@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
-import { client } from '../../lib/client'
+import { client, urlFor } from '../../lib/client'
 
 interface postsProps {
   posts: any
@@ -17,6 +18,8 @@ const blogPost = ({posts}: postsProps) => {
   const goBack = () => {
     router.back()
   }
+
+  console.log(posts)
 
 
   return (
@@ -35,11 +38,20 @@ const blogPost = ({posts}: postsProps) => {
       </div>
 
 
-      <div>
+      <div className='flex mx-8 space-x-2'>
         {posts.map((post: any) => (
           <div key={post._id}>
             <Link href={`/blog/${post.slug.current}`}>
-            <p>{post.title}</p>
+              <div>
+               <Image
+                width={150}
+                height={150}
+                alt='blog-pic'
+                src={urlFor(post.mainImage.asset).url()}
+                className='h-52 w-52'
+                /> 
+               <p>{post.title}</p>
+              </div>
             </Link>
        
           </div>
