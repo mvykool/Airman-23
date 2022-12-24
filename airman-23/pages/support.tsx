@@ -1,10 +1,71 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useState} from 'react'
 import { MdOutlineKeyboardBackspace, MdSupportAgent } from 'react-icons/md'
+import axios from 'axios'
 
 
 const support = () => {
+
+   const [email, setEmail] = useState('')
+   const [name, setName] = useState('')
+
+   //chat engine API
+
+   function getOrCreateUser(callback: (arg0: any) => any){
+    axios.put(
+      'https://api.chatengine.io/users/',
+      {
+        
+          "username": name,
+          "secret": email,
+      },
+      {headers: {'Private-Key': 'e506bd15-bfd3-4664-93dd-3928faac9653'}}
+
+    )
+    .then(r => callback(r.data))
+    .catch(error => {
+      // handle the error here
+      console.log(error)
+    })
+   }
+
+
+   function getOrCreateChat(callback: (arg0: any) => any){
+    axios.put(
+      'https://api.chatengine.io/chats/',
+      {
+        
+          "username": ['Maicol Hernandez', name],
+          "is_direct_chat": true
+      },
+      {headers: {'Private-Key': 'e506bd15-bfd3-4664-93dd-3928faac9653'}}
+
+    )
+    .then(r => callback(r.data))
+    .catch(error => {
+      // handle the error here
+      console.log(error)
+    })
+   }
+
+   //handleSubmit
+
+  function handleSubmit(e: any) {
+    e.preventDefault();
+
+    getOrCreateUser(
+      user => {
+        getOrCreateChat(
+          chat => console.log('success', chat)
+        )
+      }
+    )
+
+    setEmail('')
+    setName('')
+  } 
+
 
    //go back
 
@@ -46,11 +107,25 @@ const support = () => {
      </div>
 
      <div className='mx-8 my-10 bg-white rounded-lg shadow-md pt-5 pb-20'>
-      <form className='flex flex-col mx-6'>
-        <label className='font-semibold m-3'>Name</label>
-        <input type="text" placeholder='Name' className='border-2 border-[#00708c]  p-2 rounded-md outline-none mb-5' required />
-        <label className='font-semibold m-3'>Email Address</label>
-        <input type='email' placeholder='Email Address' required className='border-2 border-[#00708c] p-2 rounded-md outline-none mb-5'/>
+      <form 
+      onSubmit={handleSubmit}
+      className='flex flex-col mx-6'>
+        <label className='font-semibold my-3'>Name</label>
+
+        <input 
+        type="text"
+        onChange={e => setName(e.target.value)}
+        placeholder='Name'
+        className='border-2 border-[#00708c]  p-2 rounded-md outline-none mb-5'
+        required />
+
+
+        <label className='font-semibold mx-1 my-3'>Email Address</label>
+        <input
+         onChange={e => setEmail(e.target.value)}
+         type='email'
+         placeholder='Email Address'
+         required className='border-2 border-[#00708c] p-2 rounded-md outline-none mb-5'/>
 
         <button type='submit' className='bg-[#004e61] p-3 rounded-md mx-8 font-semibold text-white my-5'>Get started</button>
       </form>
