@@ -4,6 +4,7 @@ import React from 'react'
 import { topics } from '../utils/topics'
 import {MdOutlineKeyboardBackspace} from 'react-icons/md'
 import Head from 'next/head';
+import Image from 'next/image'
 
 const categories = () => {
 
