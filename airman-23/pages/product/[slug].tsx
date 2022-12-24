@@ -35,7 +35,7 @@ const ProductDetails = ({ product, products }: Props) => {
   const router = useRouter()
 
   const goBack = () => {
-    router.push('..')
+    router.back()
   }
 
   return (

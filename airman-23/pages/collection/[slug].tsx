@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
 import ProductCol from '../../components/ProductCol';
+import Product from '../../components/Product';
 
 
 interface Props{
@@ -36,6 +37,8 @@ const ProductDetails = ({ product, products }: Props) => {
   const goBack = () => {
     router.back( )
   }
+
+
 
 
   return (
@@ -86,7 +89,7 @@ const ProductDetails = ({ product, products }: Props) => {
         <div>
             <div className='flex my-5'>
                {products.slice(0,2).map((item: any) => (
-                <ProductCol key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
+                <Product key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
                ))} 
             </div>
 
