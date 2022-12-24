@@ -88,17 +88,17 @@ const Cart = () => {
         <div className='product-container'>
           {cartItems.length >= 1 && cartItems.map((item: any) => (
             <div className='product' key={item._id}>
-                <div className='flex justify-center mx-2 bg-[#00708c] shadow-md rounded-sm my-5'>
+                <div className='flex justify-center mx-6 bg-[#00708c] shadow-md rounded-sm my-5'>
                 <img src={urlFor(item.image && item.image[0]).url()} 
               className='h-24 w-24'/>
                 </div>
-                <div className='mx-2'>
+                <div className='mx-8'>
                   <div className='flex-top'>
                     <h5 className='text-sm font-semibold my-5' >{item.name}</h5>
                     <h4 className='font-bold'><span className='text-green-600'>$</span>{item.price}</h4>
                   </div> 
 
-                  <div className=' mt-2 flex justify-between mx-2'>
+                  <div className=' mt-2 flex justify-between'>
                        <div>
                        <p className="flex space-x-3 items-center my-5">
                        <span className="text-white bg-black p-1 rounded-sm" onClick={() => toggleCartItemQuantity(item._id, 'dec')} ><AiOutlineMinus /></span>
@@ -121,7 +121,7 @@ const Cart = () => {
           ))}
         </div>
         {cartItems.length >= 1 && (
-          <div className='mx-2'>
+          <div className='mx-8'>
              <div >
                <h5 className='text-sm font-semibold my-2'>Subtotal:</h5>
                <h3 className='font-bold'><span className='text-green-600'>$</span>{totalPrice}</h3>
