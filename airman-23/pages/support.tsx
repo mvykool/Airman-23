@@ -84,18 +84,20 @@ const support = () => {
        <title>Air man 23 | Support</title>
      </Head>   
  
-     <div className='w-full bg-[#00708c] h-[42vh] pt-10'>
+     <div className='w-full bg-[#00708c] h-[44vh] pt-10'>
      <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
        <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
      </div>
  
-     <div className='flex justify-center text-center mx-8 p-5 rounded-lg my-5'>
+     <div className='flex justify-center text-center mx-8 p-5 rounded-lg my-4'>
        <h1 className='font-bold text-white text-2xl'>Welcome to our chat support 24/7</h1>
        </div>
 
 
        <div className='flex justify-center text-white text-5xl'>
-      <MdSupportAgent/>
+        <div className='p-4 rounded-full border-2 border-white '>
+          <MdSupportAgent/>
+        </div>
      </div>
 
      </div>
