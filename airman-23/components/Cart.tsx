@@ -64,7 +64,7 @@ const Cart = () => {
           >
           <RiCloseFill className='h-7 w-7 absolute right-4'/>
           <div className='mt-16'>
-          <span className='mx-2'>Your cart has</span>
+          <span className='mx-4'>Your cart has</span>
           <span className='text-[#00708c] font-semibold '>({totalQuantities} items)</span>
           </div>
         </button>
@@ -72,12 +72,12 @@ const Cart = () => {
         {cartItems.length < 1 && (
           <div className='mt-5'>
             <TbShoppingCart size={120}  className='flex mx-auto my-10'/>
-            <h3 className='font-bold text-sm mb-5 ml-9'>No items in your cart yet</h3>
+            <h3 className='font-bold text-sm mb-5 ml-10'>No items in your cart yet</h3>
             <Link href="/">
               <button
               type='button'
               onClick={() => setShowCart(false)}
-              className="flex mx-auto mt-10 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md"
+              className="flex mx-auto mt-10 py-2 px-4 text-sm bg-[#00708c] text-white font-semibold rounded-md"
               >
                 Continue Shopping
               </button>

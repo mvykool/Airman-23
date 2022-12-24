@@ -22,7 +22,6 @@ const page = ({post}: Props) => {
     }
 
 
-    console.log(post)
 
   return (
     <div className='pt-10 bg-gray-200 pb-20'>

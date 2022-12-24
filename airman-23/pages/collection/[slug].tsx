@@ -37,7 +37,6 @@ const ProductDetails = ({ product, products }: Props) => {
     router.back( )
   }
 
-  console.log(product)
 
   return (
     <div className='bg-gray-200 pb-10'>

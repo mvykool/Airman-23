@@ -39,7 +39,7 @@ const MobileMenu = () => {
 
 
 
-console.log(user)
+
 
 
   return (

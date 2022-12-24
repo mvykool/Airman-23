@@ -25,8 +25,6 @@ let title: string = router.query.topic as string;
 
 
 
-
-
 const filtered = products.filter((item: any) => (
     item.topic === title
 ))

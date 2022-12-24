@@ -24,7 +24,6 @@ const ProductCol = ({ product} : Product) => {
     const { user } = useStateContext();
 
 
-    console.log(productData)
 
   return (
     <div className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5'>

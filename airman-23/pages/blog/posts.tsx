@@ -18,7 +18,7 @@ const blogPost = ({posts}: postsProps) => {
     router.back()
   }
 
-  console.log(posts)
+
 
 
   return (
@@ -37,7 +37,7 @@ const blogPost = ({posts}: postsProps) => {
      
 
 
-      <div className='mx-8 space-x-2'>
+      <div className='mx-8'>
         {posts.map((post: any) => (
           <div key={post._id}>
             <BlogCard post={post}/>

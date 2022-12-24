@@ -38,8 +38,6 @@ const ProductDetails = ({ product, products }: Props) => {
     router.push('..')
   }
 
-  console.log(product)
-
   return (
     <div className='bg-gray-200 pb-10'>
   
