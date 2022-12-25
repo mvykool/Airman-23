@@ -58,7 +58,7 @@ const Cards = () => {
 
             </div>
         <div>
-           <Link href={'/support'}>
+           <Link href={'/support/chat'}>
            <button className='text-white font-semibold h-10 bg-[#00708c] w-full rounded-b-sm'>
                     Ask any question!
             </button>

@@ -70,3 +70,21 @@ body{
   background: rgb(0,112,140);
 background: linear-gradient(180deg, rgba(0,112,140,1) 13%, rgba(113,175,191,1) 62%, rgba(255,255,255,1) 100%);
 }
+
+.message{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  height: 50px;
+  margin: 5px;
+
+}
+
+.send{
+  background-color: rgb(0, 102, 255);
+}
+
+.received{
+  background-color: grey;
+}
