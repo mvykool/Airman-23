@@ -19,74 +19,7 @@ export const StateContext = ({ children }) => {
     let foundProduct;
     let index;
 
-    //uiser and chat state
-
-    const [userChat, setUserChat] = useState(null)
-    const [chat, setChat] = useState(null)
- 
- 
-    const [email, setEmail] = useState('')
-    const [name, setName] = useState('')
- 
    
-    const form = useRef()
- 
-    //chat engine API
- 
-    function getOrCreateUser(callback ){
-     axios.put(
-       'https://api.chatengine.io/users/',
-       {
-         
-           "username": name,
-           "secret": email,
-       },
-       {headers: {'Private-Key': 'e506bd15-bfd3-4664-93dd-3928faac9653'}}
- 
-     )
-     .then(r => callback(r.data))
-     .catch(error => {
-       // handle the error here
-       console.log(error)
-     })
-    }
- 
- 
-    function getOrCreateChat(callback){
-     axios.put(
-       'https://api.chatengine.io/chats/',
-       {
-         
-           "username": ['Maicol Hernandez', name],
-           "is_direct_chat": true
-       },
-       {headers: {'Private-Key': 'e506bd15-bfd3-4664-93dd-3928faac9653'}}
- 
-     )
-     .then(r => callback(r.data))
-     .catch(error => {
-       // handle the error here
-       console.log(error)
-     })
-    }
- 
-    //handleSubmit
- 
-   function handleSubmit(e) {
-     e.preventDefault();
- 
-     getOrCreateUser(
-       user => {
-         setUserChat(user)
-         getOrCreateChat(
-           chat => setChat(chat)
-         )
-       }
-     )
- 
-      form.current.reset(); 
-   }  
-
 
 
   //user
@@ -198,10 +131,7 @@ export const StateContext = ({ children }) => {
              toggleCartItemQuantity,
              onRemove,
              user,
-             setEmail,
-             setName,
-             handleSubmit,
-             form
+            
         }}
         >
             {children}
