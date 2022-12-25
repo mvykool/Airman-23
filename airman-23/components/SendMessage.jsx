@@ -32,11 +32,11 @@ const sendMessage = async (e) => {
  }
 
   return (
-    <form ref={form} onSubmit={sendMessage} className='mx-2 mt-2 flex justify-center items-center'>
+    <form ref={form} onSubmit={sendMessage} className='mt-1 flex justify-center items-center'>
         <input
         onChange={(e) => setInput(e.target.value)}
         value={input}
-        className='p-2 my-2 rounded-sm out' 
+        className='p-2 my-2 rounded-sm outline-none' 
         type="text"
         placeholder='send message' />
         <button className='text-white bg-green-500 p-2 rounded-sm' type='submit' >send</button>  
