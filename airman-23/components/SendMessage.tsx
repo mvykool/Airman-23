@@ -1,6 +1,7 @@
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import React, {useState, useRef} from 'react'
 import { auth, db } from '../firebase'
+import {HiPaperAirplane} from 'react-icons/hi'
 
 
 interface Props{
@@ -37,14 +38,16 @@ const sendMessage = async (e: any) => {
  }
 
   return (
-    <form ref={form} onSubmit={sendMessage} className='mt-1'>
+    <form ref={form} onSubmit={sendMessage} className='mt-1 mb-14 flex justify-center items-center'>
         <input
         onChange={(e) => setInput(e.target.value)}
         value={input}
-        className='p-2 my-2 rounded-sm outline-none' 
+        className='p-2 my-2 w-full ml-2 rounded-sm outline-none' 
         type="text"
         placeholder='send message' />
-        <button className='text-white bg-green-500 p-2 rounded-sm' type='submit' >send</button>  
+        <button className='text-white mr-2 bg-green-500 py-3 px-4 rounded-sm' type='submit' >
+          <HiPaperAirplane className='rotate-45 text-xl'/>
+          </button>  
     </form>
   )
 }
