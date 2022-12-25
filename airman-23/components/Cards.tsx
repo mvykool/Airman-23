@@ -58,9 +58,11 @@ const Cards = () => {
 
             </div>
         <div>
-            <button className='text-white font-semibold h-10 bg-[#00708c] w-full rounded-b-sm'>
+           <Link href={'/support'}>
+           <button className='text-white font-semibold h-10 bg-[#00708c] w-full rounded-b-sm'>
                     Ask any question!
             </button>
+           </Link>
         </div>
 
         </div>
