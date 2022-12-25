@@ -129,7 +129,7 @@ const support = () => {
          placeholder='Email Address'
          required className='border-2 border-[#00708c] p-2 rounded-md outline-none mb-5'/>
 
-        <button type='submit' className='bg-[#004e61] p-3 rounded-md mx-8 font-semibold text-white my-5'>Get started</button>
+        <button type='submit' className='bg-[#004e61] p-3 rounded-md mx-9 font-semibold text-white my-5'>Get started</button>
       </form>
      </div>
  </div>
