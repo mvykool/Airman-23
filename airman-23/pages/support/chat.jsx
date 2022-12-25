@@ -43,16 +43,15 @@ const Chat = () => {
       <title>Air man 23 | Support</title>
     </Head>   
 
-    <div className='my-8 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+    <div className='my-6 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
       <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
     </div>
-
-    <div className='flex justify-center mb-5'>
-      <h1 className='font-bold text-[#00708c] text-xl'>Welcome to Airman-23 suppport</h1>
+ 
+    <div className='mx-2 bg-white h-[55vh] rounded-md relative overflow-scroll'>
+    <div className='flex justify-center mb-5 bg-[#00708c] py-4 rounded-t-md'>
+      <h1 className='font-bold text-white text-lg'>Welcome to Airman-23 suppport</h1>
     </div>
 
- 
-    <div className='mx-2 bg-white h-[50vh] rounded-md'>
         {/**chat messange */}
         {messages && messages.map((message) => (
             <Message  key={message.id} message={message} />
