@@ -2,11 +2,14 @@ import Image from 'next/image'
 import React from 'react'
 import { auth } from '../firebase'
 
+interface Props{
+  message: any
+  key: any
+}
 
-
-const Message = ({message}) => {
+const Message = ({message, key}: Props) => {
  
-  const messageClass = message.uid === auth.currentUser.uid
+  const messageClass = message.uid === auth.currentUser!.uid
   ? `send`
   : `received`
 

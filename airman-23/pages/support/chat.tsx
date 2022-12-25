@@ -10,13 +10,13 @@ import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 const Chat = () => {
  
     const [messages, setMessages] = useState([]);
-    const scroll = useRef();
+    const scroll = useRef<HTMLFormElement>(null);
 
  
     useEffect(() => {
         const q  = query(collection(db, 'messages'), orderBy("timestamp"))
         const unsubcribe = onSnapshot(q, (querySnapshot) => {
-          let messages = []
+          let messages: any = []
           querySnapshot.forEach((doc) => {
               messages.push({...doc.data(), id: doc.id})
           })
@@ -53,7 +53,7 @@ const Chat = () => {
     </div>
 
         {/**chat messange */}
-        {messages && messages.map((message) => (
+        {messages && messages.map((message: any) => (
             <Message  key={message.id} message={message} />
         ))}
         

@@ -2,16 +2,21 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import React, {useState, useRef} from 'react'
 import { auth, db } from '../firebase'
 
-const SendMessage = ({scroll}) => {
+
+interface Props{
+  scroll: any
+}
+
+const SendMessage = ({scroll}: Props) => {
 
 const [input, setInput] = useState("")
 
 
-const form = useRef();
+const form = useRef<HTMLFormElement>(null);
 
-const sendMessage = async (e) => {
+const sendMessage = async (e: any) => {
     e.preventDefault()
-    const {uid, displayName, photoURL } = auth.currentUser 
+    const {uid, displayName, photoURL } = auth.currentUser!;
     setInput('')
     if(input === ""){
         alert("Please enter a valid message")
@@ -32,7 +37,7 @@ const sendMessage = async (e) => {
  }
 
   return (
-    <form ref={form} onSubmit={sendMessage} className='mt-1 flex justify-center items-center'>
+    <form ref={form} onSubmit={sendMessage} className='mt-1'>
         <input
         onChange={(e) => setInput(e.target.value)}
         value={input}
