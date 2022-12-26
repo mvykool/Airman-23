@@ -49,11 +49,11 @@ const ProductDetails = ({ product, products }: Props) => {
     <div>
       <div className='pt-10 relative'>
         <div className='flex justify-center '>
-        <div className='mt-10 absolute bg-white shadow-md rounded-full h-10 w-10 flex left-3 items-center'>
+        <div className='mt-10 absolute bg-white shadow-md rounded-full h-10 w-10 flex left-7 items-center'>
         <MdOutlineKeyboardBackspace className='text-xl mx-auto' onClick={goBack}/>
       </div>
         {/**card */}
-         <div className='absolute bg-white bottom-36 py-2 px-4 rounded-md shadow-2xl right-3'>
+         <div className='absolute bg-white shadow-2xl top-28 py-1 px-3 rounded-md right-3'>
          <h1 className='my-5 text-md font-bold text-[#00708c]'>{name}</h1>
        <div className='flex items-center justify-between '> 
        <p className="font-bold text-2xl my-4"><span className='text-green-600'>$</span>{price}</p>
@@ -77,7 +77,7 @@ const ProductDetails = ({ product, products }: Props) => {
       
         
           <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold'>Details</h4>
-          <p className='my-3'>{details}</p>
+          <p className='my-4'>{details}</p>
            
            {/**second image */}
           <div className='my-10 flex justify-center'>
