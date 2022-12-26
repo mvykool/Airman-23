@@ -64,7 +64,7 @@ const MobileMenu = () => {
              className='h-12 border-4 rounded-full border-green-400'
              />
             <div className='flex flex-col'>
-               <h2 className='mx-auto font-bold text-white text-md'>{user.displayName ? user.displayName : "Demo User "}🏀</h2>
+               <h2 className='mx-auto font-bold text-white text-md'>{user.displayName ? user.displayName : "Demo User "} 🏀</h2>
               <p className='mx-3 text-gray-300 text-xs cursor-pointer'>{user.email ? user.email : "demouser@hotmail.com"}</p>
             </div>
       

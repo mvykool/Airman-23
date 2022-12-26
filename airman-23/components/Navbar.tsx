@@ -5,7 +5,7 @@ import Cart from './Cart';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
-
+import Image from 'next/image';
 
 import { TiThMenu } from 'react-icons/ti'
 
@@ -59,7 +59,7 @@ if (typeof window !== "undefined") {
 
          <div className='mx-2'>
            <Link href={'/'} onClick={() => setOpenMenu(false)}>
-           <h3>AM-23</h3>
+           <Image src={'/fireball.png'} alt='logo' width={35} height={35} />
        </Link>
           
         </div>
