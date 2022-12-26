@@ -119,7 +119,7 @@ const MobileMenu = () => {
        </Link>
 
        {/**customer support */} 
-       <Link href={'/support'} onClick={() => setOpenMenu(false)} className='flex  items-center space-x-2'> 
+       <Link href={'/support/chat'} onClick={() => setOpenMenu(false)} className='flex  items-center space-x-2'> 
          <MdSupportAgent className='text-xl text-[#00708C]' />
          <button className='text-xl  font-semibold text-[#00708C]'> Support</button>
        </Link>
