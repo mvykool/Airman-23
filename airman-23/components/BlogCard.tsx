@@ -12,7 +12,7 @@ const BlogCard = ({post}: Props) => {
     <div className='py-2'>
     <div className='my-2 relative'>
       
-      <p className=' p-4 font-bold absolute text-white bg-[var(--bg-wrapper)] w-full h-full rounded-md'>{post.title}</p>
+      <p className=' p-4 font-bold absolute text-white bg-[var(--bg-blog)] w-full h-full rounded-md'>{post.title}</p>
 
        <Image
         width={200}
