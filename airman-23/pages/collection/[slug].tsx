@@ -49,26 +49,50 @@ const ProductDetails = ({ product, products }: Props) => {
     </Head>
 
 
-        <div>
-            <div className='bg-[#00708c] py-10'>
-              
-            <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
-            <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
-             </div>
+    <div>
+      <div className='pt-10 relative'>
+        <div className='flex justify-center '>
+        <div className='mt-10 absolute bg-white shadow-md rounded-full h-10 w-10 flex left-7 items-center'>
+        <MdOutlineKeyboardBackspace className='text-xl mx-auto' onClick={goBack}/>
+      </div>
+        {/**card */}
+         <div className='absolute bg-white shadow-2xl top-28 py-1 px-3 rounded-md right-3'>
+         <h1 className='my-5 text-md font-bold text-[#00708c]'>{name}</h1>
+       <div className='flex items-center justify-between '> 
+       <p className="font-bold text-2xl my-4"><span className='text-green-600'>$</span>{price}</p>
+         <button type="button" className="p-2 rounded-md bg-[#00708c] text-white font-semibold shadow-md" onClick={handleBuyNow} >Buy Now</button>
+       </div>
+         </div>
 
-                <div className='flex justify-center'>
-                  <Image width={220} height={220} alt='product img' src={urlFor(image && image[index]).url()}/>
-                </div>
-            </div>
+         {/**bg image */}
+          <Image
+          className='w-full h-[50vh]'
+          width={220}
+          height={220} 
+          alt='product img'
+          src={urlFor(image && image[1]).url()}/>
+        </div>
+      </div>
      
 
            
            <div className="mx-8">
-          <h1 className='my-5 text-2xl font-bold text-[#00708c]'>{name}</h1>
+      
         
           <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold'>Details</h4>
-          <p className='my-3'>{details}</p>
-          <p className="font-bold text-2xl my-4"><span className='text-green-600'>$</span>{price}</p>
+          <p className='my-4'>{details}</p>
+           
+           {/**second image */}
+          <div className='my-10 flex justify-center'>
+           <Image
+          width={220}
+          height={220} 
+          alt='product img'
+          src={urlFor(image && image[index]).url()}/>
+          </div>
+
+         {/**qtny and add to cart */}
+          <div className="flex space-x-6 my-10  items-end">
           <div >
             <h3 className='my-5 font-semibold border-b-4 border-[#00708c] w-20'>Quantity</h3>
             <p className="my-6 flex space-x-3 items-center">
@@ -77,17 +101,19 @@ const ProductDetails = ({ product, products }: Props) => {
               <span className="text-white bg-black p-1 rounded-sm"  onClick={incQty} ><AiOutlinePlus /></span>
             </p>
           </div>
-          <div className="flex space-x-4 my-10">
-            <button type="button" className="p-2 rounded-md border-2 border-[#00708c] shadow-sm bg-white font-semibold text-[#00708c]" onClick={() => onAdd(product, qty)}>Add to Cart</button>
-            <button type="button" className="p-2 rounded-md bg-[#00708c] text-white font-semibold shadow-md" onClick={handleBuyNow} >Buy Now</button>
+            <button type="button" className="p-2 my-5  rounded-md border-2 border-[#00708c] shadow-sm bg-white font-semibold text-[#00708c]" onClick={() => onAdd(product, qty)}>Add to Cart</button>
+    
           </div>
         </div>
       </div>
 
-      <div className='mx-8'>
-        <h2 className='border-b-4 border-[#00708c] w-36 font-semibold'>You may also like</h2>
+
+      
+
+      <div className='py-5 bg-[#00708c]'>
+        <h2 className='ml-6 text-white w-36 font-semibold my-5'>You may also like</h2>
         <div>
-            <div className='flex my-5'>
+            <div className='grid  grid-cols-2 mx-3'>
                {products.slice(0,2).map((item: any) => (
                 <Product key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
                ))} 
