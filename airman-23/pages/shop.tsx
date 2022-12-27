@@ -41,7 +41,7 @@ const shop = ({ products}: Props) => {
 
          {/**latest feed */}
       
-      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14' >Latest</h2>
+      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14' >Shop</h2>
      <div className='grid grid-cols-2 xl:grid-cols-3 mx-3'>
         { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
        </div>
