@@ -114,7 +114,7 @@ const ProductDetails = ({ product, products }: Props) => {
         <h2 className='ml-6 text-white w-36 font-semibold my-5'>You may also like</h2>
         <div>
             <div className='grid  grid-cols-2 mx-3'>
-               {products.slice(0,2).map((item: any) => (
+               {products.slice(0,4).map((item: any) => (
                 <Product key={item._id} product={item} image={undefined} name={''} price={0} slug={''} />
                ))} 
             </div>
