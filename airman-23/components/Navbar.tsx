@@ -59,7 +59,7 @@ if (typeof window !== "undefined") {
 
          <div className='mx-2'>
            <Link href={'/'} onClick={() => setOpenMenu(false)}>
-           <Image src={'/fireball.png'} alt='logo' width={35} height={35} className='md:h-14 w-14'  />
+           <Image src={'/fireball.png'} alt='logo' width={35} height={35} className='md:h-14 md:w-14'  />
        </Link>
           
         </div>

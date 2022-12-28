@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Sidebar from './Sidebar';
 
 interface Props{
     children: any
@@ -20,9 +21,16 @@ const Layout = ({ children }: Props) => {
       <header>
         <Navbar/>
       </header>
-      <main className='main-container'>
+
+     <div className='flex'>
+     <section>
+      <Sidebar/>
+     </section>
+
+      <main className='md:px-28 flex justify-center overflow-x-hidden'>
         {children}
       </main>
+     </div>
       <footer>
         <Footer/>
       </footer>
