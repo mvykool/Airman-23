@@ -28,7 +28,9 @@ export default function Home({ products, bannerData, posts}: Props) {
     <Hero/>
      
      {/**banner */}
-     <Banner />
+    <div className='md:flex md:justify-center'>
+    <Banner />
+    </div>
     
 
     {/**arrivals */}
@@ -40,11 +42,11 @@ export default function Home({ products, bannerData, posts}: Props) {
 
     {/**hero banner with discounts*/}
 
-    <div className='ml-8 my-8'>
+    <div className='ml-8 my-8 md:flex md:justify-center'>
       <h1 className='font-semibold border-b-4 border-[#00708C] w-28'>Discounts 🔥</h1>
     </div>
 
-    <div className='mx-3'>
+    <div className='mx-3 md:flex md:justify-center'>
     <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
 
@@ -58,12 +60,12 @@ export default function Home({ products, bannerData, posts}: Props) {
 
     {/**Cards */}
 
-    <div className='ml-8 mt-20'>
+    <div className='ml-8 mt-20 md:flex md:justify-center'>
       <h1 className='font-semibold border-b-4 border-[#00708C] w-24'>Policies ✏️</h1>
     </div>
 
 
-    <div className='mx-8'>
+    <div className='mx-8 md:flex md:justify-center'>
 
       <Cards/>
 
@@ -71,11 +73,13 @@ export default function Home({ products, bannerData, posts}: Props) {
 
     {/**Blog banner */}
 
-    <div className='ml-8 mt-20'>
+    <div className='ml-8 mt-20 md:flex md:justify-center'>
       <h1 className='font-semibold border-b-4 border-[#00708C] w-20'>Blog 📓</h1>
     </div>
 
-    <BlogBanner posts={posts}/>
+   <div className='md:flex md:justify-center'>
+   <BlogBanner posts={posts}/>
+   </div>
 
     </div>
   )
