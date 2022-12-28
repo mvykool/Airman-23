@@ -10,7 +10,7 @@ interface Props{
 const BlogCard = ({post}: Props) => {
   return (
     <div className='py-2'>
-    <div className='my-2 relative'>
+    <div className='my-2 relative md:w-[25vw]'>
       
       <p className=' p-4 font-bold absolute text-white bg-[var(--bg-blog)] w-full h-full rounded-md'>{post.title}</p>
 

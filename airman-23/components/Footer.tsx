@@ -66,8 +66,8 @@ const Footer = () => {
       </div>
        </div>
 
-       <hr className='my-8 w-full' />
-      <div className='flex justify-between'> 
+       <hr className='my-8 w-[100vw]' />
+      <div className='flex justify-between md:justify-around'> 
          <div>
           <p className='text-white font-bold'>Airman-23&copy;</p>
          </div>

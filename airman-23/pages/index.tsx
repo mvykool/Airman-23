@@ -74,7 +74,7 @@ export default function Home({ products, bannerData, posts}: Props) {
     {/**Blog banner */}
 
     <div className='ml-8 mt-20 md:flex md:justify-center'>
-      <h1 className='font-semibold border-b-4 border-[#00708C] w-20'>Blog 📓</h1>
+      <h1 className='font-semibold border-b-4 md:text-2xl border-[#00708C] w-24 md:w-36'>Blog 📓</h1>
     </div>
 
    <div className='md:flex md:justify-center'>

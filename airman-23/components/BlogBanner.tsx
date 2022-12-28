@@ -7,12 +7,12 @@ const BlogBanner = ({posts}: any) => {
     <div >
     <div className='bg-[#00708C] md:w-[50VW]  mx-8 my-14 p-5 rounded-lg'>
     <div className='flex justify-center m-3'>
-      <h1 className='font-bold text-white text-lg'>What's new in the blog?</h1>
+      <h1 className='font-bold text-white text-lg md:text-2xl'>What's new in the blog?</h1>
     </div>
     </div>  
     
 
-    <div className='mx-8'>
+    <div className='mx-8 md:flex md:space-x-4 md:justify-evenly'>
         {posts.slice(0,2).map((post: any) => (
           <div key={post._id}>
             <BlogCard post={post}/>
