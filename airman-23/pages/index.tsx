@@ -42,11 +42,11 @@ export default function Home({ products, bannerData, posts}: Props) {
 
     {/**hero banner with discounts*/}
 
-    <div className='ml-8 my-8 md:flex md:justify-center'>
-      <h1 className='font-semibold border-b-4 border-[#00708C] w-28'>Discounts 🔥</h1>
+    <div className='ml-8 my-8 md:my-14 md:flex md:justify-center'>
+      <h1 className='font-semibold border-b-4 md:text-2xl border-[#00708C] w-28 md:w-40'>Discounts 🔥</h1>
     </div>
 
-    <div className='mx-3 md:flex md:justify-center'>
+    <div className='mx-3 md:flex md:justify-center md:mx-40 md:flex-wrap'>
     <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
 

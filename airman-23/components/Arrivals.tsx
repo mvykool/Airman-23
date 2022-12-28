@@ -20,7 +20,7 @@ const Arrivals = ({ products} : Product) => {
 
 
   return (
-    <div className='my-10 md:w-[40vw]'>
+    <div className='my-10 md:w-[45vw]'>
 
       {/** first collection */}  
      <div  className='homeGrid mt-2'>
