@@ -25,12 +25,7 @@ body{
   margin-top: -9vh;
 }
 
-@media only screen
-and (min-width : 1224px) {
-   .hero{
-    height: 60vh;
-   }
-}
+
  
 
 .login{
