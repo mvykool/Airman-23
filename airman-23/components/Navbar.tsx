@@ -61,7 +61,7 @@ if (typeof window !== "undefined") {
 
 
   return (
-      <div className='flex md:h-20 h-14 justify-around md:justify-between md:px-10 md:pt-2 md:pb-2 bg-white w-full  items-center fixed z-30 top-0 ' >
+      <div className='flex md:shadow-md md:h-20 h-14 justify-around md:justify-between md:px-10 md:pt-2 md:pb-2 bg-white w-full  items-center fixed z-30 top-0 ' >
          {/**Logo */}
 
          <div className='mx-2'>
@@ -100,7 +100,9 @@ if (typeof window !== "undefined") {
       <div className='block md:hidden'>
           <TiThMenu className='h-5 w-5 block md:hidden'  onClick={() => setOpenMenu(true)}/>
         </div>
-        
+         
+
+
 
        {/**social media */}
 
