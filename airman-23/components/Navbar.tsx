@@ -13,6 +13,7 @@ import { TiThMenu } from 'react-icons/ti'
 import { ImFacebook2 } from 'react-icons/im'
 import { FaTwitterSquare, FaTiktok, FaSearch } from 'react-icons/fa'
 import { RiInstagramFill} from 'react-icons/ri'
+import Head from 'next/head';
 
 
 
@@ -61,13 +62,14 @@ if (typeof window !== "undefined") {
 
 
   return (
-      <div className='flex md:shadow-md md:h-20 h-14 justify-around md:justify-between md:px-10 md:pt-2 md:pb-2 bg-white w-full  items-center fixed z-30 top-0 ' >
+      <div className='flex shadow-md md:h-20 h-14 justify-around md:justify-between md:px-10 md:pt-2 md:pb-2 bg-white w-full  items-center fixed z-30 top-0 ' >
+
          {/**Logo */}
 
          <div className='mx-2'>
            <Link href={'/'} onClick={() => setOpenMenu(false)}>
             <div className='md:flex md:items-center md:space-x-3'>
-             <p className='hidden md:block md:text-xl'>Air man-23</p> 
+             <p className='hidden md:block md:text-3xl logo-font'>Air man-23</p> 
             <Image src={'/fireball.png'} alt='logo' width={35} height={35} className='md:h-10 md:w-10'  />
             </div>
        </Link>

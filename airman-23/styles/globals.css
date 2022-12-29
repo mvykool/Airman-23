@@ -15,6 +15,11 @@ body{
 }
 
 
+.logo-font{
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 1px;
+}
+
 
 .hero{
   background-image: url('https://images.unsplash.com/photo-1552066344-2464c1135c32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');

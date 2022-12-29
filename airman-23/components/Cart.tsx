@@ -56,7 +56,7 @@ const Cart = () => {
     <>
       <div className='fixed bg-[var(--bg-wrapper)] z-40 w-full md:bg-transparent h-screen top-0' onClick={()=> setShowCart(false)}/> 
 
-      <div className=' bg-white pb-10 h-full right-0 z-50  overflow-y-auto top-0 w-60 md:w-[18vw] fixed md:shadow-2xl' ref={cartRef}>
+      <div className=' bg-white pb-10 h-full right-0 z-50  overflow-y-auto top-0 w-60 md:w-[19vw] fixed md:shadow-2xl' ref={cartRef}>
         <button 
         className='m-3'
          type='button'
