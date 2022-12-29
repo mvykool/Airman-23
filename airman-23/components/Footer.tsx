@@ -5,7 +5,7 @@ import { SiTiktok } from 'react-icons/si'
 
 const Footer = () => {
   return (
-    <div className='w-full bg-[#00708C] p-5 '>
+    <div className='w-full bg-[#00708C] p-5 overflow-hidden '>
        <div className='flex justify-around'>
        <div>
         <h2 className='text-white font-semibold'>Follow us</h2>
