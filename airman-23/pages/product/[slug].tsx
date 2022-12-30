@@ -48,12 +48,12 @@ const ProductDetails = ({ product, products }: Props) => {
 
     <div>
       <div className='pt-10 relative'>
-      <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+      <div className='hidden mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 md:flex justify-center items-center ml-8' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 
         <div className='flex justify-center '>
-        <div className='mt-10 md:hidden bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+        <div className='absolute left-1 mt-10 md:hidden bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
         {/**card */}

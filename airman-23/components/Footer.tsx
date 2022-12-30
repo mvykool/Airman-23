@@ -25,21 +25,27 @@ const Footer = () => {
       </div>
 
       <div className='flex flex-col ml-10'>
-        <h2 className='text-white font-semibold flex justify-center pb-5'>Links</h2>
-         <div className='flex space-x-4 text-gray-300'>
+    
+       <div className='flex space-x-10'>
+         <h2 className='text-white font-semibold flex justify-center pb-5'>Links </h2>
+
+        <h2 className='text-white font-semibold flex justify-center pb-5'>more</h2>
+       </div>
+       
+         <div className='flex space-x-5 text-gray-300'>
          <ul className='flex flex-col gap-5'>
           <li>
-            <Link href='/' className='underline'>
+            <Link href='/home' className='underline'>
               Home
             </Link>
           </li>
           <li>
-            <Link href='/'  className='underline'>
+            <Link href='/shop'  className='underline'>
               Shop
             </Link>
           </li>
           <li>
-            <Link href='/'  className='underline'>
+            <Link href='/contact'  className='underline'>
               Contact us
             </Link>
           </li>
@@ -47,17 +53,17 @@ const Footer = () => {
 
          <ul className='flex flex-col gap-5'>
          <li>
-            <Link href='/'  className='underline' >
+            <Link href='/blog'  className='underline' >
               Blog
             </Link>
           </li>
           <li>
-            <Link href='/'  className='underline'>
+            <Link href='/categories'  className='underline'>
               Categories
             </Link>
           </li>
           <li>
-            <Link href='/'  className='underline'>
+            <Link href='/support'  className='underline'>
               Support
             </Link>
           </li>
