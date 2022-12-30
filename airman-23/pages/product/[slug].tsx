@@ -57,7 +57,7 @@ const ProductDetails = ({ product, products }: Props) => {
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
         {/**card */}
-         <div className='absolute bg-white shadow-2xl top-20 md:top-40 md:w-[30vw] md:right-36 py-1 px-3 md:px-10 md:py-2 rounded-md w-[60vw] right-3'>
+         <div className='absolute bg-white shadow-2xl top-20 md:top-40 md:w-[25vw] md:right-72 py-1 px-3 md:px-10 md:py-4 rounded-md w-[60vw] right-3'>
          <h1 className='my-5 text-base md:text-lg font-bold text-[#00708c]'>{name}</h1>
        <div className='flex items-center justify-between '> 
        <p className="font-bold text-2xl my-4"><span className='text-green-600'>$</span>{price}</p>

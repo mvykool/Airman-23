@@ -29,7 +29,7 @@ const Arrivals = ({ products} : Product) => {
       <img src={urlFor(items[0].image[0]).url()} alt="" />
       </Link>
 
-      <Link href={`/collection/${items[0].slug.current}`} className='bg-white md:-ml-3  rounded-sm shadow-lg b flex items-center' >
+      <Link href={`/collection/${items[1].slug.current}`} className='bg-white md:-ml-3  rounded-sm shadow-lg b flex items-center' >
       <img  src={urlFor(items[1].image[0]).url()} alt=""  />
       </Link>
 
