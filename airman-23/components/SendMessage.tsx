@@ -38,7 +38,7 @@ const sendMessage = async (e: any) => {
  }
 
   return (
-    <form ref={form} onSubmit={sendMessage} className='mt-1 mb-14 flex justify-center items-center'>
+    <form ref={form} onSubmit={sendMessage} className='mt-1 md:w-[60vw] md:ml-[15%] md:mr-20 mb-14 flex justify-center items-center'>
         <input
         onChange={(e) => setInput(e.target.value)}
         value={input}
