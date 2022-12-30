@@ -122,7 +122,7 @@ const ProductDetails = ({ product, products }: Props) => {
 
       
 
-      <div className='py-5 bg-[#00708c] md:w-screen md:pr-[20%]'>
+      <div className='py-5 bg-gradient md:w-screen md:pr-[20%] md:pb-20'>
         <h2 className='ml-6 md:ml-52 md:text-lg md:w-40 md:my-10 text-white w-36 font-semibold my-5'>You may also like</h2>
         <div className='md:flex md:justify-center'>
             <div className='grid  grid-cols-2 md:grid-cols-4 mx-3'>

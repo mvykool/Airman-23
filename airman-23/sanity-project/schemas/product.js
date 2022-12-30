@@ -59,17 +59,6 @@ export default {
             type: 'number',
         },
         {
-            name: 'likes',
-            title: 'Likes',
-            type: 'array',
-            of: [
-              {
-                type: 'reference',
-                to: [{ type: 'user' }],
-              },
-            ],
-          },
-        {
             name: 'details',
             title: 'Details',
             type: 'string',

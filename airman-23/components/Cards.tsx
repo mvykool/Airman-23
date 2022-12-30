@@ -48,7 +48,7 @@ const Cards = () => {
             </div>
 
             </div>
-        <Link href={'/shipping'}>
+        <Link href={'/refund'}>
             <button className='text-white font-semibold h-10 md:h-14 bg-[#00708c] w-full rounded-b-sm'>
                     Check more info
             </button>

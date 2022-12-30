@@ -38,10 +38,10 @@ body{
  
 
 .login{
-  background-image: url('https://houseofheat.co/app/uploads/2022/03/air-jordan-1-high-denim-dm9036-104-release-date-8.jpg');
+  background-image: url('https://blog.solebox.com/wp-content/uploads/2021/04/WEB_1051538-Air-Jordan-1-Retro-High-OG-hyper-royal-white-lt-smoke-grey-1-scaled.jpg');
   width: 100vw;
-  background-position: center;
-  background-size: cover;
+  background-position:center;
+  background-size:cover;
   background-repeat: no-repeat;
 }
 
@@ -82,7 +82,7 @@ body{
 
 .bg-gradient{
   background: rgb(0,112,140);
-background: linear-gradient(180deg, rgba(0,112,140,1) 13%, rgba(113,175,191,1) 62%, rgba(255,255,255,1) 100%);
+background: linear-gradient(180deg, rgba(0,112,140,1) 13%, rgba(113,175,191,1) 62%, rgba(229,231,235,1) 100%);
 }
 
 .message{
