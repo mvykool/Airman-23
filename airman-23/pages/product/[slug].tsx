@@ -81,13 +81,13 @@ const ProductDetails = ({ product, products }: Props) => {
            
            <div className="mx-8">
       
-        <div className='md:flex md:justify-center md:items-center'>
+        <div className='md:flex md:justify-center md:space-x-3 md:items-center'>
 
           <div>
             <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-20 md:w-20 md:my-10 md:text-2xl'>Details</h4>
 
        
-          <p className='my-4 arrival  md:text-lg md:w-[40vw] md:px-20'>{details}</p>
+          <p className='my-4 arrival md:bg-white md:py-5 md:text-lg md:w-[40vw] md:px-8 md:rounded-lg md:shadow-xl'>{details}</p>
           </div>
            
            {/**second image */}
