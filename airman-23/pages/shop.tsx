@@ -20,7 +20,7 @@ const shop = ({ products}: Props) => {
   }
 
   return (
-    <div className='pt-10 bg-gray-200 pb-10'>
+    <div className='pt-10 bg-gray-200 pb-10 w-screen md:pr-[20%]'>
 
     <Head>
       <title>Air man 23 | Shop</title>

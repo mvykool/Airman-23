@@ -37,14 +37,14 @@ const Chat = () => {
 
 
   return (
-  <div className='pt-10 justify-end bg-gray-200  flex flex-center flex-col md:w-screen'>
+  <div className='pt-10 justify-end bg-gray-200  flex flex-center flex-col w-screen'>
 
     <Head>
       <title>Air man 23 | Support</title>
     </Head>   
 
    
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+    <div className='my-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div> 
 

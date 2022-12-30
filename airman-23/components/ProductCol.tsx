@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useStateContext } from '../context/StateContext';
 
 import { urlFor } from '../lib/client'
 
@@ -21,7 +20,6 @@ const ProductCol = ({ product} : Product) => {
     const [productData, setProduct] = useState(product)
     const src = urlFor(productData.image && productData.image[0]).url()
 
-    const { user } = useStateContext();
 
 
 

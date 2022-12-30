@@ -52,7 +52,7 @@ const contact = () => {
 
 
   return (
-    <div className='pt-10 bg-gradient pb-10 md:w-screen'>
+    <div className='pt-10 bg-gradient pb-10 w-screen'>
 
     <Head>
       <title>Air man 23 | Contact</title>
