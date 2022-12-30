@@ -47,22 +47,22 @@ const goBack = () => {
 
 
 return (
-    <div className='pt-10 bg-gray-200 pb-40'>
+    <div className='pt-10 bg-gray-200 pb-40 md:h-full md:w-screen'>
     <Head>
         <title>Air man 23 | {query}</title>
     </Head>
 
-    <div className='mt-10 bg-white rounded-full shadow-md h-10 w-10 flex justify-center items-center ml-8'>
-      <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
-    </div>
+    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+        <MdOutlineKeyboardBackspace className='text-xl' />
+      </div>
     
-      <div className='ml-8 my-10 text-2xl flex items-center space-x-3'>
+      <div className='ml-8 md:ml-20 my-10 text-2xl flex items-center space-x-3'>
        <p className=''>Results of :</p> 
       <h1 className='font-bold'>{query}</h1>
       </div>
      
 
-       <div>
+       <div className='md:flex md:justify-center md:mr-[20%]'>
        {filtered.length > 0 ? 
        <div className='grid grid-cols-2 xl:grid-cols-3 mt-10 mx-3'>
 

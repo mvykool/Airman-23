@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Cards = () => {
   return (
-    <div className='mt-10 md:w-[60vw] md:flex md:space-x-5'>
+    <div className='mt-10 md:w-[60vw] md:flex md:justify-center md:space-x-5'>
         {/**card 1 */}
         <div className='bg-white mb-10 rounded-sm shadow-lg'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >

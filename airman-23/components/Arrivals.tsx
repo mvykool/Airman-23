@@ -25,11 +25,11 @@ const Arrivals = ({ products} : Product) => {
       {/** first collection */}  
      <div  className='homeGrid mt-2'>
 
-      <Link href={`/collection/${items[0].slug.current}`} className='a md:w-[96%] bg-white rounded-sm shadow-lg flex items-center' >
+      <Link href={`/collection/${items[0].slug.current}`} className='a md:w-[97%] bg-white rounded-sm shadow-lg flex items-center' >
       <img src={urlFor(items[0].image[0]).url()} alt="" />
       </Link>
 
-      <Link href={`/collection/${items[1].slug.current}`} className='bg-white md:-ml-3  rounded-sm shadow-lg b flex items-center' >
+      <Link href={`/collection/${items[0].slug.current}`} className='bg-white md:-ml-3  rounded-sm shadow-lg b flex items-center' >
       <img  src={urlFor(items[1].image[0]).url()} alt=""  />
       </Link>
 
@@ -62,7 +62,7 @@ const Arrivals = ({ products} : Product) => {
       <img src={urlFor(items[6].image[0]).url()} alt=""  />
       </Link>
 
-      <Link href={`/collection/${items[7].slug.current}`} className='bg-white rounded-sm shadow-lg h flex items-center' >
+      <Link href={`/collection/${items[7].slug.current}`} className='bg-white md:w-[97%] rounded-sm shadow-lg h flex items-center' >
       <img src={urlFor(items[7].image[0]).url()} alt=""/>
       </Link>
        
@@ -70,7 +70,7 @@ const Arrivals = ({ products} : Product) => {
       <img src={urlFor(items[8].image[0]).url()} alt=""  />
       </Link>
 
-      <Link href={`/collection/${items[9].slug.current}`} className='bg-white rounded-sm shadow-lg j flex items-center' >
+      <Link href={`/collection/${items[9].slug.current}`} className='bg-white  rounded-sm shadow-lg j flex items-center' >
       <img src={urlFor(items[9].image[0]).url()} alt="" />
       </Link>
 

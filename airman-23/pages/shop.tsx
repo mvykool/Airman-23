@@ -30,7 +30,7 @@ const shop = ({ products}: Props) => {
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 
-    <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C] md:mx-20'>
+    <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C] md:mx-20 '>
       <h1 className='font-bold text-white text-2xl'>Shop</h1>
       </div>
 
@@ -42,7 +42,7 @@ const shop = ({ products}: Props) => {
          {/**latest feed */}
       
       <div className='md:flex md:justify-center'>
-      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14 md:w-[18%] md:text-center md:text-2xl' >Shop</h2>
+      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14 md:w-[18%] md:text-center md:text-2xl md:mt-20' >Shop</h2>
       </div>
 
      <div className='md:flex md:justify-center'>
