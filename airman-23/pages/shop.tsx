@@ -26,11 +26,11 @@ const shop = ({ products}: Props) => {
       <title>Air man 23 | Shop</title>
     </Head>   
 
-    <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
       <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
     </div>
 
-    <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C]'>
+    <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C] md:mx-20'>
       <h1 className='font-bold text-white text-2xl'>Shop</h1>
       </div>
 
@@ -41,10 +41,15 @@ const shop = ({ products}: Props) => {
 
          {/**latest feed */}
       
-      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14' >Shop</h2>
-     <div className='grid grid-cols-2 xl:grid-cols-3 mx-3'>
+      <div className='md:flex md:justify-center'>
+      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14 md:w-[18%] md:text-center md:text-2xl' >Shop</h2>
+      </div>
+
+     <div className='md:flex md:justify-center'>
+     <div className='grid grid-cols-2 xl:grid-cols-3 mx-3 md:px-10'>
         { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
        </div>
+     </div>
     </div>
   )
 }
