@@ -58,9 +58,9 @@ const contact = () => {
       <title>Air man 23 | Contact</title>
     </Head>   
 
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
-      <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
-    </div>
+    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+        <MdOutlineKeyboardBackspace className='text-xl' />
+      </div>
 
    <div className='md:flex md:justify-center md:mr-[20%]'>
    <div className='flex justify-center mx-8 p-5 rounded-lg mt-10 mb-5 bg-white md:w-[50vw]'>
