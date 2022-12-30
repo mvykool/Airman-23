@@ -51,7 +51,7 @@ const categories = () => {
 
       <div className='hidden md:block'>
          
-      <div className='flex pl-[10%] mt-28'>
+      <div className='flex pl-[8%] mt-28'>
       <div className='flex flex-wrap space-x-5] mx-20'>
       {topics.map((item: any) => (
           <Link href={{ pathname: `/category/${item.name}`}} key={item.name} className='my-2 relative w-[30vw] mx-2'>

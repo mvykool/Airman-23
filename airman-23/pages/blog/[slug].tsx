@@ -29,19 +29,22 @@ const page = ({post}: Props) => {
       <title>{post.title}</title>
     </Head>   
 
-    <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
-      <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
-    </div> 
-
+    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+        <MdOutlineKeyboardBackspace className='text-xl' />
+      </div>
+      
      {/**title */}
-       <div className='my-10 mx-8 text-xl text-center p-2 font-bold border-b-4 border-[#00708c]'>
-           <h1>{post.title}</h1>
+       <div className='my-10 md:my-16 mx-8 text-xl text-center p-2 font-bold border-b-4 border-[#00708c]'>
+           <h1 className='md:text-2xl'>{post.title}</h1>
        </div>
-       <img src={urlFor(post.mainImage.asset).url()} className='h-[30vh] w-full' alt="" />
+
+       {/**image */}
+         
+       <Image width={1000} height={1000} src={urlFor(post.mainImage.asset).url()} className='h-[30vh] w-full md:h-[60vh] md:w-[75vw] md:flex md:justify-center md:ml-[5%] md:rounded-md md:shadow-lg' alt="picture" />
 
        {/**date and author */}
        <div className='my-10 text-sm text-gray-500 mx-10 flex justify-center space-x-3 items-center'>
-        <Image width={50} height={50} src={urlFor(post.author.image).url()} alt={post.author.name} className='rounded-full h-7 w-7' />
+        <Image width={100} height={100} src={urlFor(post.author.image).url()} alt={post.author.name} className='rounded-full h-7 w-7' />
         <p>{post.author.name}</p>
         <p>|</p>
         <p>{ new Date(post._createdAt).toLocaleDateString
@@ -56,7 +59,7 @@ const page = ({post}: Props) => {
        {/**body */}
 
        
-       <section className='mx-8 bg-white rounded-lg p-4'>
+       <section className='mx-8 md:mx-52 md:px-10 md:py-12 bg-white rounded-lg p-4'>
         <PortableText value={post.body}  components={RichTextComponents} />
           {/**link to the post */}
 

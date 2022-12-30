@@ -21,7 +21,7 @@ const BlogBanner = ({posts}: any) => {
     </div>
     
     <div className='my-8'>
-      <Link className='ml-9 font-semibold underline text-gray-600' href={'/blog/posts'} >Read more</Link>
+      <Link className='ml-9 md:ml-16 font-semibold underline text-gray-600' href={'/blog/posts'} >Read more</Link>
     </div>
   </div>
   )
