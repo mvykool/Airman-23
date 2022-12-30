@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Cards = () => {
   return (
-    <div className='mt-10 md:w-[50vw] md:flex md:space-x-3'>
+    <div className='mt-10 md:w-[60vw] md:flex md:space-x-5'>
         {/**card 1 */}
         <div className='bg-white mb-10 rounded-sm shadow-lg'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >
@@ -19,7 +19,7 @@ const Cards = () => {
 
            </div>
 
-            <div className='md:flex md:justify-center md:my-5 md:text-center'>
+            <div className='md:flex md:justify-center md:mt-10 md:text-center'>
             <h1 className='text-[#00708C] font-semibold flex text-xl items-center'>Domestic free shipping</h1>
             </div>
 
@@ -43,7 +43,7 @@ const Cards = () => {
 
            </div>
               
-           <div className='md:flex md:justify-center md:my-5 md:text-center'>
+           <div className='md:flex md:justify-center md:mt-10 md:text-center'>
             <h1 className='text-[#00708C] font-semibold flex text-xl items-center'>100% refund guarantee</h1>
             </div>
 
@@ -68,7 +68,7 @@ const Cards = () => {
 
            </div>
               
-           <div className='md:flex md:justify-center md:my-5 md:text-center'>
+           <div className='md:flex md:justify-center md:mt-10 md:text-center'>
             <h1 className='text-[#00708C] font-semibold flex text-xl items-center'>24/7 Customer Support</h1>
             </div>
 

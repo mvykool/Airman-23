@@ -24,7 +24,7 @@ const categories = () => {
     </Head>
 
 
-     <div className='mt-10 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
+     <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8'>
         <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
       </div>
 
@@ -37,13 +37,29 @@ const categories = () => {
 
       {/**display categories */}
 
-      <div className='flex flex-col justify-center mx-8'>
+      <div className='flex md:hidden flex-col justify-center mx-8'>
         {topics.map((item: any) => (
           <Link href={{ pathname: `/category/${item.name}`}} key={item.name} className='my-2 relative'>
              <p className='w-full z-10 absolute bg-[var(--bg-wrapper)] text-lg text-white flex justify-center p-4'>{item.name}</p>
             <img src={item.image} alt='cat-pic' className='h-[35vh] w-full' />
            </Link>
         ))}
+      </div>
+
+      {/**desktop view */}
+
+      <div className='hidden md:block'>
+         
+      <div className='flex pl-[10%] mt-28'>
+      <div className='flex flex-wrap space-x-5] mx-20'>
+      {topics.map((item: any) => (
+          <Link href={{ pathname: `/category/${item.name}`}} key={item.name} className='my-2 relative w-[30vw] mx-2'>
+             <p className='w-full z-10 absolute bg-[var(--bg-wrapper)] text-lg text-white flex justify-center p-4'>{item.name}</p>
+            <img src={item.image} alt='cat-pic' className='h-[35vh] md:h-[40vh] w-full' />
+           </Link>
+        ))}
+      </div>
+      </div>
       </div>
     </div>
   )
