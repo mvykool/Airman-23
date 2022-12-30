@@ -28,7 +28,7 @@ const categories = () => {
         <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
       </div>
 
-      <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C]'>
+      <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C] md:mx-20'>
 
      
 

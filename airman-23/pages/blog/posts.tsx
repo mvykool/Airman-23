@@ -28,9 +28,9 @@ const blogPost = ({posts}: postsProps) => {
       <title>Air man 23 | Blog</title>
     </Head>   
 
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 w-10 flex justify-center items-center ml-8'>
-      <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
-    </div>
+    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8'>
+        <MdOutlineKeyboardBackspace className='text-xl' onClick={goBack}/>
+      </div>
 
    
      <div className='md:flex md:justify-center'>
