@@ -20,12 +20,12 @@ const Arrivals = ({ products} : Product) => {
 
 
   return (
-    <div className='my-10 md:w-[40vw]'>
+    <div className='my-10 md:w-[70vw]'>
 
       {/** first collection */}  
      <div  className='homeGrid mt-2'>
 
-      <Link href={`/collection/${items[0].slug.current}`} className='a md:w-[97%] bg-white rounded-sm shadow-lg flex items-center' >
+      <Link href={`/collection/${items[0].slug.current}`} className='a md:w-[96%] bg-white rounded-sm shadow-lg flex items-center' >
       <img src={urlFor(items[0].image[0]).url()} alt="" />
       </Link>
 
@@ -45,11 +45,15 @@ const Arrivals = ({ products} : Product) => {
       <img src={urlFor(items[4].image[0]).url()} alt="" />
       </Link>
 
+      <div className='hidden md:flex md:justify-center md:items-center md:mt-40'>
+        <h3 className='r border-b-4 px-2 border-[#00708c] text-4xl arrival-text logo-font'>Latest</h3>
+      </div>
+
       </div>
 
       {/**grid two */}
 
-      <div className='homeGridTwo mt-2'>
+      <div className='homeGridTwo mt-2 md:ml-[1%]'>
       <Link href={`/collection/${items[5].slug.current}`} className='bg-white rounded-sm shadow-lg f flex items-center' >
       <img src={urlFor(items[5].image[0]).url()} alt="" />
       </Link>
@@ -69,7 +73,14 @@ const Arrivals = ({ products} : Product) => {
       <Link href={`/collection/${items[9].slug.current}`} className='bg-white rounded-sm shadow-lg j flex items-center' >
       <img src={urlFor(items[9].image[0]).url()} alt="" />
       </Link>
+
+      <div className='hidden md:flex md:justify-center md:items-center md:mt-40'>
+        <h3 className='r border-b-4 px-2 border-[#00708c] text-4xl arrival-text logo-font'>Releases</h3>
       </div>
+
+
+      </div>
+
     </div>
   )
 }

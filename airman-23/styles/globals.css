@@ -20,6 +20,10 @@ body{
   letter-spacing: 1px;
 }
 
+.arrival-text{
+  letter-spacing: 2px;
+}
+
 
 .hero{
   background-image: url('https://images.unsplash.com/photo-1552066344-2464c1135c32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
@@ -51,6 +55,8 @@ body{
     "a d e"
    
 }
+
+
 
 .homeGridTwo {
   display: grid; 
@@ -96,3 +102,30 @@ background: linear-gradient(180deg, rgba(0,112,140,1) 13%, rgba(113,175,191,1) 6
 .received{
   background-color: grey;
 }
+
+/* media queries for the grid*/
+
+@media only screen
+and (min-width : 1224px) {
+  .homeGrid {
+    display: grid; 
+    grid-template-columns: 1fr 0.5fr 0.5fr 1.5fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 6px 6px; 
+    grid-template-areas: 
+      "a b c r"
+      "a d e r"
+     
+  }
+
+  .homeGridTwo {
+    display: grid; 
+    grid-template-columns: 1.5fr 0.5fr 0.5fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 6px 6px; 
+    grid-template-areas: 
+      "r f g h"
+      "r i j h"; 
+  } 
+}
+ 
