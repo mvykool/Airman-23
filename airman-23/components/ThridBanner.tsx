@@ -8,11 +8,11 @@ interface Props{
 
 const ThridBanner = ({heroBanner}: Props)  => {
   return (
-    <div className='mx-5 bg-[#ACBCCF] rounded-sm my-10 md:w-[28vw]'>
+    <div className='mx-5 bg-[#ACBCCF] rounded-sm my-10 md:w-[22vw]'>
        <div className='md:px-5'>
             <div className='flex justify-between mx-5 pt-2'>
           <div className='mt-5'>
-            <img src={urlFor(heroBanner.image).url()} alt="img" className='h-28 md:h-40 mt-10 md:mt-4' />
+            <img src={urlFor(heroBanner.image).url()} alt="img" className='h-28 md:h-32 mt-10 ' />
           </div>
 
             <div className='mt-5'>
@@ -20,14 +20,14 @@ const ThridBanner = ({heroBanner}: Props)  => {
              <h1 className='text-lg flex justify-center font-bold text-black'>{heroBanner.largeText1}</h1>
 
 
-           <div className='ml-14 mb-6 mt-7 md:mt-2  line'>
+           <div className='ml-14 mb-6 mt-7 md:mt-8  line'>
             <p className='text-gray-600 ml-3 line-through'>${heroBanner.discount}</p>
            <p className='text-white text-xl md:text-2xl'>${heroBanner.largeText2}!</p>
            </div>
 
            <div>
           <Link href={`/product/${heroBanner.product}`}>
-            <button className='ml-10 -mt-10 mb-5 p-2 md:p-3 bg-black text-white rounded-sm' type='button'>{heroBanner.buttonText}</button>
+            <button className='ml-10 -mt-10 md:mt-2 mb-5 p-2 bg-black text-white rounded-sm' type='button'>{heroBanner.buttonText}</button>
           </Link>
          
         </div>
