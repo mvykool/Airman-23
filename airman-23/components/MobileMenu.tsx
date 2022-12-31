@@ -139,10 +139,12 @@ const MobileMenu = () => {
        </Link>
 
        {/**log out */} 
-       <div className='flex  items-center space-x-2'> 
-       <MdLogout className='text-xl text-[#00708C]'/>
-       <button type='button' onClick={logOut} className='text-xl  font-semibold text-[#00708C]'>Log out</button>
-       </div>
+       {user ? (
+        <div className='flex  items-center space-x-2'> 
+        <MdLogout className='text-xl text-[#00708C]'/>
+        <button type='button' onClick={logOut} className='text-xl  font-semibold text-[#00708C]'>Log out</button>
+        </div>
+       ): ( null)}
        </div>
 
        {/**footer */}
