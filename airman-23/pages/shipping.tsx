@@ -2,6 +2,19 @@ import Head from 'next/head'
 import router from 'next/router'
 import React from 'react'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+import { motion} from 'framer-motion'
+
+/**framer motion variants */
+
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.3}
+  }
+}
+
+
+
 
 const shipping = () => {
 
@@ -28,7 +41,12 @@ const shipping = () => {
         <h1 className='text-xl text-white font-semibold'>Shipping Policy</h1>
       </div>
         
-        <div className='bg-white mx-8 md:mx-[20%] md:px-6 md:py-12 rounded-sm shadow-sm py-10'>
+        <motion.div
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+        className='bg-white mx-8 md:mx-[20%] md:px-6 md:py-12 rounded-sm shadow-sm py-10'>
           <h1 className='text-md mx-5 font-semibold'> Thank you for visiting and shopping at Airman-23.</h1>
         <p className='text-md p-3'>
      Domestic Shipping Policy
@@ -133,7 +151,7 @@ const shipping = () => {
            </p>
       
     
-        </div>
+        </motion.div>
     </div>
   )
 }

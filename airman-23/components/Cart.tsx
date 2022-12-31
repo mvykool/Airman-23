@@ -7,7 +7,17 @@ import { TiDeleteOutline } from 'react-icons/ti';
 
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
+import { motion} from 'framer-motion'
 
+/**framer motion variants */
+ 
+const sectionVariant = {
+  hidden : { opacity: 0, x: 10},
+  show: { opacity: 1, x:0,
+  transition: { duration: 0.5, delay: 0.1}
+  }
+} 
+  
 
 //import stripe
 
@@ -50,13 +60,17 @@ const Cart = () => {
     document.body.style.overflow = 'hidden'
   }
   
-
+ 
 
   return (
     <>
       <div className='fixed bg-[var(--bg-wrapper)] z-40 w-full md:bg-transparent h-screen top-0' onClick={()=> setShowCart(false)}/> 
 
-      <div className=' bg-white pb-10 h-full right-0 z-50  overflow-y-auto top-0 w-60 md:w-[19vw] fixed md:shadow-2xl' ref={cartRef}>
+      <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       animate='show'
+      className=' bg-white pb-10 h-full right-0 z-50  overflow-y-auto top-0 w-60 md:w-[19vw] fixed md:shadow-2xl' ref={cartRef}>
         <button 
         className='m-3'
          type='button'
@@ -77,7 +91,7 @@ const Cart = () => {
               <button
               type='button'
               onClick={() => setShowCart(false)}
-              className="flex mx-auto mt-10 py-2 px-4 text-sm bg-[#00708c] text-white font-semibold rounded-md md:px-5 md:py-3 md:text-lg"
+              className="flex mx-auto mt-10 py-2 px-4 text-sm bg-[#00708c] text-white font-semibold rounded-md md:px-5 md:py-3 md:text-lg hover:scale-105 duration-200"
               >
                 Continue Shopping
               </button>
@@ -101,15 +115,15 @@ const Cart = () => {
                   <div className=' mt-2 flex justify-between'>
                        <div>
                        <p className="flex space-x-3 items-center my-5">
-                       <span className="text-white bg-black p-1 rounded-sm" onClick={() => toggleCartItemQuantity(item._id, 'dec')} ><AiOutlineMinus /></span>
+                       <span className="text-white bg-black p-1 rounded-sm hover:bg-gray-700 cursor-pointer" onClick={() => toggleCartItemQuantity(item._id, 'dec')} ><AiOutlineMinus /></span>
                        <span className="num">{item.quantity}</span>
-                       <span className="text-white bg-black p-1 rounded-sm" onClick={() => toggleCartItemQuantity(item._id, 'inc')} ><AiOutlinePlus /></span>
+                       <span className="text-white bg-black p-1 rounded-sm hover:bg-gray-700 cursor-pointer" onClick={() => toggleCartItemQuantity(item._id, 'inc')} ><AiOutlinePlus /></span>
                       </p>
                        </div>
 
                        <button
                        type='button'
-                       className='text-2xl text-red-600'
+                       className='text-2xl text-red-600 hover:scale-105 duration-200'
                        onClick={() => onRemove(item)}
                        >
                           <TiDeleteOutline/>
@@ -128,20 +142,20 @@ const Cart = () => {
              </div>
              {user ? 
               <div className='btn-container'>
-              <button  className="flex mt-10 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md" type='button' onClick={handleCheckout}>
+              <button  className="flex mt-10 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md hover:scale-105 duration-200" type='button' onClick={handleCheckout}>
                Pay now
               </button>
             </div> :
             <div>
                <p className='text-sm font-semibold mt-10'>Sign up to buy</p>
                <Link href={'/login'}    onClick={() => setShowCart(false)}>
-               <button  className="flex mt-5 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md">Log in</button>
+               <button  className="flex mt-5 py-2 px-4 text-sm bg-[#00708c] text-white rounded-md hover:scale-105 duration-200">Log in</button>
                </Link>
             </div>
              }
           </div>
         )}
-      </div>
+      </motion.div>
 
       </>
   )

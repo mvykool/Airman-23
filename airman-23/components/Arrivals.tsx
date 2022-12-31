@@ -14,6 +14,13 @@ const sectionVariant = {
   }
 }
 
+const textVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.1}
+  }
+}
+
 
 interface Product{
     products: any
@@ -96,9 +103,14 @@ const Arrivals = ({ products} : Product) => {
       </Link>
       </motion.div>
 
-      <div className='hidden md:flex md:justify-center md:items-center md:mt-40'>
+      <motion.div 
+        variants={textVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+      className='hidden md:flex md:justify-center md:items-center md:mt-40'>
         <h3 className='r border-b-4 px-2 border-[#00708c] text-4xl arrival-text logo-font'>Latest</h3>
-      </div>
+      </motion.div>
 
       </div>
 
@@ -167,9 +179,14 @@ const Arrivals = ({ products} : Product) => {
       </Link>
       </motion.div>
 
-      <div className='hidden md:flex md:justify-center md:items-center md:mt-40'>
+      <motion.div 
+        variants={textVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+      className='hidden md:flex md:justify-center md:items-center md:mt-40'>
         <h3 className='r border-b-4 px-2 border-[#00708c] text-4xl arrival-text logo-font'>Releases</h3>
-      </div>
+      </motion.div>
 
 
       </div>

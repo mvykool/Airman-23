@@ -3,9 +3,18 @@ import { useRouter } from 'next/router'
 import React, { useState, useRef} from 'react'
 import emailjs from '@emailjs/browser';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+import { motion} from 'framer-motion'
 
+/**framer motion variants */
 
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.5}
+  }
+}
 
+ 
 const contact = () => {
  
   //email js
@@ -49,7 +58,7 @@ const contact = () => {
     router.back()
   }
 
-
+ 
 
   return (
     <div className='pt-10 bg-gradient md:h-screen pb-10 w-screen'>
@@ -84,7 +93,12 @@ const contact = () => {
       : null}
     </div> 
 
-      <div className='md:flex md:justify-center md:mr-[20%]'>
+      <motion.div
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+      className='md:flex md:justify-center md:mr-[20%]'>
       <form ref={form} className='flex flex-col justify-center p-3 my-2 md:w-[35vw]' onSubmit={sendEmail}>
           <label className='bg-black w-20 font-semibold rounded-md flex justify-center p-1 my-4 text-white'>Name</label>
           <input
@@ -108,9 +122,9 @@ const contact = () => {
           id='message'
           placeholder='Message' 
           className='px-2 pt-2 pb-36 rounded-md outline-none'/>
-          <button className='my-5 rounded-md cursor-pointer bg-black text-white font-bold p-1' type='submit'  value='send'>Submit</button>
+          <button className='my-5 rounded-md cursor-pointer bg-black text-white font-bold p-1 hover:bg-gray-800 hover:scale-105 duration-300' type='submit'  value='send'>Submit</button>
     </form>
-      </div>
+      </motion.div>
 
    </div>
 </div>

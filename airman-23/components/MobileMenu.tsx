@@ -7,7 +7,17 @@ import Image from 'next/image';
 import { RiCloseFill, RiShoppingBagFill } from 'react-icons/ri'
 import {AiFillHome} from 'react-icons/ai'
 import { MdCategory, MdArticle, MdContacts, MdSupportAgent, MdLogout } from 'react-icons/md'
+import { motion} from 'framer-motion'
 
+/**framer motion variants */
+ 
+const sectionVariant = {
+  hidden : { opacity: 0, x: 10},
+  show: { opacity: 1, x:0,
+  transition: { duration: 0.5, delay: 0.1}
+  }
+} 
+  
 
 
 
@@ -47,7 +57,11 @@ const MobileMenu = () => {
     <div className='fixed bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0 ' onClick={()=> setOpenMenu(false)}/> 
 
     
-        <div className=' bg-white scrollLock right-0 z-50 h-[100%] top-0 w-60 fixed' ref={profileRef}>
+        <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       animate='show'
+        className=' bg-white scrollLock right-0 z-50 h-[100%] top-0 w-60 fixed' ref={profileRef}>
           <div className='w-full bg-[#00708C] pb-10'>
           <div className='p-3' onClick={() => setOpenMenu(false)}>
             <RiCloseFill className='text-white h-7 w-7 absolute right-4' />
@@ -138,7 +152,7 @@ const MobileMenu = () => {
        </div>
       
 
-        </div>
+        </motion.div>
     
     </>
   )

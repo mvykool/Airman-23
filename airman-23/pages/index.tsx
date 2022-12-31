@@ -8,6 +8,7 @@ import BlogBanner from '../components/BlogBanner';
 import HeroBanner from '../components/HeroBanner';
 import SecondHeroBanner from '../components/SecondHeroBanner';
 import ThridBanner from '../components/ThridBanner';
+import ScrollToTop from '../components/ScrollTop';
 
 interface Props {
   products: any
@@ -70,6 +71,8 @@ export default function Home({ products, bannerData, posts}: Props) {
       <Cards/>
 
     </div>
+
+    <ScrollToTop/>
 
     {/**Blog banner */}
 

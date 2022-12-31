@@ -3,17 +3,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion} from 'framer-motion'
 
+import { urlFor } from '../lib/client'
+
 /**framer motion variants */
  
 const sectionVariant = {
   hidden : { opacity: 0},
   show: { opacity: 1,
-  transition: { duration: 1, delay: 0.5}
-  }
+  transition: { duration: 1, delay: 0.3}
+  } 
 }
-  
+   
 
-import { urlFor } from '../lib/client'
 
 
 

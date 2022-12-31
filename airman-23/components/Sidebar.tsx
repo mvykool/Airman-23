@@ -58,7 +58,7 @@ const Sidebar = () => {
 
     <div className='flex justify-center mt-5'>
       <button onClick={toLogin}
-    className='font-semibold  p-2 rounded-md text-[#00807c] bg-white'>Log In</button>
+    className='font-semibold  p-2 rounded-md text-[#00807c] bg-white hover:bg-gray-200 duration-200 hover:scale-105 cursor-pointer'>Log In</button>
     </div>
    ) }
  

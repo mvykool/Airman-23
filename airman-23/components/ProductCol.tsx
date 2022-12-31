@@ -11,7 +11,7 @@ const sectionVariant = {
   show: { opacity: 1,
   transition: { duration: 1, delay: 0.5}
   }
-}
+} 
   
 
 
@@ -39,7 +39,7 @@ const ProductCol = ({ product} : Product) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-    className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5'>
+    className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5 hover:scale-110 hover:shadow-2xl duration-300'>
    
         <div>
         <div className='flex justify-center m-2'> 
