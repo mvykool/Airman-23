@@ -51,7 +51,7 @@ const ProductDetails = ({ product, products }: Props) => {
 
     <div className='md:flex md:justify-around md:space-x-12 md:pl-10'>
       <div className='pt-10 relative'>
-      <div className='hidden mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 md:flex justify-center items-center ml-8 md:-ml-12' onClick={goBack}>
+      <div className='hidden mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 md:flex justify-center items-center ml-8 md:-ml-20' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 

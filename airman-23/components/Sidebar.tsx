@@ -39,7 +39,7 @@ const Sidebar = () => {
       <div className='mt-20 bg-[#00708c] py-10 relative'>
       {user ? (  
       
-      <div className='flex mx-4 mt-7 items-center ml-8'>
+      <div className='flex mx-4 items-center ml-8'>
       <Image
       width={50}
       height={50}

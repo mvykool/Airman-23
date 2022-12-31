@@ -42,7 +42,7 @@ const shop = ({ products}: Props) => {
          {/**latest feed */}
       
       <div className='md:flex md:justify-center'>
-      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14 md:w-[18%] md:text-center md:text-2xl md:mt-20' >Shop</h2>
+      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14 md:w-[18%] md:text-center md:text-2xl md:mt-20' >In Stock</h2>
       </div>
 
      <div className='md:flex md:justify-center'>
