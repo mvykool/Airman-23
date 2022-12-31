@@ -36,7 +36,6 @@ interface Props{
 const ProductDetails = ({ product, products }: Props) => {
 
 
-
    const { image } = product || {};
    const { name } = product || {};
    const { details } = product || {};
@@ -102,12 +101,16 @@ const ProductDetails = ({ product, products }: Props) => {
        whileInView="show"
        viewport={{ once: true }}
           >
-          <Image
-          className='w-screen h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
-          width={600}
-          height={1000} 
-          alt='product img'
-          src={urlFor(image[1]).url()}/>
+          {image ? (
+            <Image
+            className='w-screen h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
+            width={600}
+            height={1000} 
+            alt='product img'
+            src={urlFor(image && image[1]).url()}/>
+          ) : (
+            'no image'
+          )}
           </motion.div>
         </div>
       </div>
@@ -134,13 +137,17 @@ const ProductDetails = ({ product, products }: Props) => {
            
            {/**second image */}
           <div className='my-5 flex justify-center md:my-2'>
-           <Image
-          width={500}
-          height={500}
-          alt='product img'
-          src={urlFor(image[0]).url()}
-          className=' md:mr-10 md:h-64 md:w-64'
-          />
+         { image ? (
+            <Image
+            width={500}
+            height={500}
+            alt='product img'
+            src={urlFor(image && image[index]).url()}
+            className=' md:mr-10 md:h-64 md:w-64'
+            />
+         ) : (
+          'no image'
+         )}
           </div>
 
         </div>
