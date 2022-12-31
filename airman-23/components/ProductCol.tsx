@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-
 import { urlFor } from '../lib/client'
+import { motion} from 'framer-motion'
 
+/**framer motion variants */
+ 
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.5}
+  }
+}
+  
 
 
 interface Product{
@@ -25,7 +34,12 @@ const ProductCol = ({ product} : Product) => {
 
   return (
     <Link href={`/collection/${productData.slug.current}`}>
-    <div className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5'>
+    <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+    className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5'>
    
         <div>
         <div className='flex justify-center m-2'> 
@@ -35,7 +49,7 @@ const ProductCol = ({ product} : Product) => {
           <p className='my-2 font-bold'><span className='text-xs text-green-600 mx-1'>$</span>{productData.price}</p>
         </div>
      
-    </div>
+    </motion.div>
     </Link>
   )
 }

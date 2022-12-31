@@ -8,10 +8,10 @@ import { motion} from 'framer-motion'
 const sectionVariant = {
   hidden : { opacity: 0},
   show: { opacity: 1,
-  transition: { duration: 1, delay: 0.7}
+  transition: { duration: 1, delay: 0.5}
   }
 }
- 
+  
 
 import { urlFor } from '../lib/client'
 
