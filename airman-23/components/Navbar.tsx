@@ -32,7 +32,8 @@ const Navbar = () => {
 
   const handleSearch = (e: any) => {
     e.preventDefault();
-    router.push(`/search/${search}`)
+    let query = search.toLowerCase();
+    router.push(`/search/${query}`)
 
     setSearch('')
   }

@@ -36,7 +36,7 @@ const filteredCol = productsCol.filter((item: any) => (
     item.name.toLowerCase().includes(query)
 ))
 
-    
+    console.log(filtered)
 
 
 //go back to previous page
@@ -76,17 +76,17 @@ return (
            </div> )
          : (
           <div className='my-5 mx-8'>
-            <p className='text-[#00708c] font-semibold text-lg'>Seems like we don't have that item in the shop at the moment :c ...</p>
+            <p className='text-[#00708c] font-semibold text-lg'>Seems like we don't have that item in the shop at the moment ...</p>
             <div className='flex my-5 items-center space-x-3'>
               <FaSearch className='text-[#00708c] text-2xl my-5'/>
               <p className='text-[#00708c] text-4xl my-5'>?</p>
             </div>
-            <p className='text-[#00708c] my-5 font-bold'>If you would like to request for a specific pair of sneakers, let us know in our contact from! 👇</p>
+            <p className='text-[#00708c] my-5 font-bold'>If you would like to request for a specific pair of sneakers, let us know in our contact from! </p>
             <div className='flex space-x-3'>
-            <Link href={'/contact'} className='p-2 text-white bg-[#00708c] rounded-md'>
+            <Link href={'/contact'} className='p-2 text-white bg-[#00708c] rounded-md hover:scale-105 duration-200'>
              Contact us!
             </Link>
-            <Link href={'/'} className='p-2 text-[#00708c] border-2 border-[#00708c] rounded-md'>
+            <Link href={'/'} className='p-2 text-[#00708c] border-2 border-[#00708c] rounded-md hover:scale-105 duration-200'>
              Back to Home
             </Link>
             </div>
