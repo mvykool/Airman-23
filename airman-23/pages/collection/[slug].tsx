@@ -107,7 +107,7 @@ const ProductDetails = ({ product, products }: Props) => {
           width={600}
           height={1000} 
           alt='product img'
-          src={urlFor(image && image[1]).url()}/>
+          src={urlFor(image[1]).url()}/>
           </motion.div>
         </div>
       </div>
@@ -138,7 +138,7 @@ const ProductDetails = ({ product, products }: Props) => {
           width={500}
           height={500}
           alt='product img'
-          src={urlFor(image && image[index]).url()}
+          src={urlFor(image[0]).url()}
           className=' md:mr-10 md:h-64 md:w-64'
           />
           </div>
