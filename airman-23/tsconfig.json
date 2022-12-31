@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sanity-project/schemas/product.js", "sanity-project/schemas/post.js", "context/StateContext.js", "lib/getStripe.js", "lib/client.js", "pages/support/chatSupport.jsx", "components/Chat.jsx", "pages/support/chat.tsx", "components/Message.tsx", "components/SendMessage.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sanity-project/schemas/product.ts", "sanity-project/schemas/post.js", "context/StateContext.js", "lib/getStripe.ts", "lib/client.ts", "pages/support/chatSupport.jsx", "components/Chat.jsx", "pages/support/chat.tsx", "components/Message.tsx", "components/SendMessage.tsx"],
   "exclude": ["node_modules"]
 }

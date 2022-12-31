@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useRef } from "react";
 import {auth} from '../firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { createOrGetUser } from "../utils";
-import axios from 'axios'
+
 
 
 const Context = createContext();
