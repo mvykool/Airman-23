@@ -138,13 +138,13 @@ const ProductDetails = ({ product, products }: Props) => {
            {/**second image */}
           <div className='my-5 flex justify-center'>
          { image ? (
-            <Image
-            width={500}
-            height={500}
-            alt='product img'
-            src={urlFor(image && image[index]).url()}
-            className=' md:mr-10 md:h-64 md:w-64'
-            />
+          <Image
+          width={500}
+          height={500}
+          alt='product img'
+          src={urlFor(image && image[index]).url()}
+          className=' md:mr-10 md:h-40 md:w-40'
+          />
          ) : (
           'no image'
          )}
