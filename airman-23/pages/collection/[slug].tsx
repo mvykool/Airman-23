@@ -100,16 +100,16 @@ const ProductDetails = ({ product, products }: Props) => {
        whileInView="show"
        viewport={{ once: true }}
           >
-         { image ? (
-           <Image
-           className='w-screen h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
-           width={600}
-           height={1000} 
-           alt='product img'
-           src={urlFor(image && image[1]).url()}/>
-         ) : (
-           'no img'
-         )}
+         {image ? (
+            <Image
+            className='w-screen h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
+            width={600}
+            height={1000} 
+            alt='product img'
+            src={urlFor(image && image[1]).url()}/>
+          ) : (
+            'no image'
+          )}
           </motion.div>
         </div>
       </div>
@@ -136,16 +136,16 @@ const ProductDetails = ({ product, products }: Props) => {
            
            {/**second image */}
           <div className='my-5 flex justify-center'>
-         { image ? (
+          { image ? (
             <Image
             width={500}
             height={500}
             alt='product img'
             src={urlFor(image && image[index]).url()}
-            className=' md:mr-10 md:h-40 md:w-40'
+            className=' md:mr-10 md:h-64 md:w-64'
             />
          ) : (
-           'no img'
+          'no image'
          )}
           </div>
 
