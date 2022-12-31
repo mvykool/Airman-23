@@ -5,14 +5,16 @@ import { MdSupportAgent } from 'react-icons/md'
 import Link from 'next/link'
 import { motion} from 'framer-motion'
 
+
 /**framer motion variants */
 
 const sectionVariant = {
   hidden : { opacity: 0},
   show: { opacity: 1,
-  transition: { duration: 1, delay: 0.5}
+  transition: { duration: 0.5, delay: 0.5}
   }
 }
+
 
 
 const Cards = () => {

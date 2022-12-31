@@ -7,10 +7,12 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 import { useStateContext } from '../../context/StateContext';
+import Link from 'next/link';
+
 
 const Chat = () => {
 
-   const { user} = useStateContext()
+
  
     const [messages, setMessages] = useState([]);
     const scroll = useRef<HTMLFormElement>(null);
@@ -36,13 +38,13 @@ const Chat = () => {
     router.back()
   }
 
-  if(!user){
-    router.push('/login')
-  }
+  const {user} = useStateContext()
 
-
+  
   return (
-  <div className='pt-10 justify-end bg-gray-200  flex flex-center flex-col w-screen'>
+<>
+{ user ? (
+    <div className='pt-10 justify-end bg-gray-200  flex flex-center flex-col w-screen'>
 
     <Head>
       <title>Air man 23 | Support</title>
@@ -70,6 +72,20 @@ const Chat = () => {
     <span ref={scroll}>
     </span>
   </div>
+) : (
+  <div className='bg-gray-200 w-screen md:flex md:justify-center h-screen md:pr-[20%] '>
+  <div className='flex justify-center items-center '>
+ <div className=' bg-white mt-[50%] md:mt-1 py-20 px-10 md:px-20 rounded-lg shadow-xl flex-col'>
+ <h1 className='text-[#00708c]  text-lg md:text-2xl'>In order to go to customer service, you need to login</h1>
+
+<Link href={'/login'} className='justify-center flex mt-10'>
+    <button className='py-4 px-5 rounded-md shadow-md text-white bg-[#00708c] hover:scale-105 duration-300'>Login now</button>
+</Link>
+ </div>
+  </div>
+</div>
+)}
+</>
   )
 }
 

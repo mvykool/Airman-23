@@ -36,7 +36,7 @@ const filteredCol = productsCol.filter((item: any) => (
     item.name.toLowerCase().includes(query)
 ))
 
-    console.log(filtered)
+  
 
 
 //go back to previous page
