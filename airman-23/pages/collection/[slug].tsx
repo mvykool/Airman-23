@@ -35,9 +35,9 @@ interface Props{
 
 const ProductDetails = ({ product, products }: Props) => {
 
-   const { image, name, details, price } = product;
+   const {  name, details, price } = product;
 
-   const images = product && product.image;
+   const { image } = product || {};
 
    const [index, setIndex] = useState(0);
 
@@ -104,7 +104,7 @@ const ProductDetails = ({ product, products }: Props) => {
           width={600}
           height={1000} 
           alt='product img'
-          src={urlFor(images && images[1]).url()}/>
+          src={urlFor(image && image[1]).url()}/>
           </motion.div>
         </div>
       </div>
@@ -135,7 +135,7 @@ const ProductDetails = ({ product, products }: Props) => {
           width={500}
           height={500}
           alt='product img'
-          src={urlFor(images && images[index]).url()}
+          src={urlFor(image && image[index]).url()}
           className=' md:mr-10 md:h-64 md:w-64'
           />
           </div>
