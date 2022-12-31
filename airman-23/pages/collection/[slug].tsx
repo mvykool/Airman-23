@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import Head from 'next/head';
-import {  AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
+import { AiFillStar, AiOutlineStar, AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
 import  Product  from '../../components/Product';
 import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
+import ProductCol from '../../components/ProductCol';
 import { motion} from 'framer-motion'
 import ScrollToTop from '../../components/ScrollTop';
 
@@ -100,7 +101,7 @@ const ProductDetails = ({ product, products }: Props) => {
        whileInView="show"
        viewport={{ once: true }}
           >
-         {image ? (
+          {image ? (
             <Image
             className='w-screen h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
             width={600}
@@ -136,7 +137,7 @@ const ProductDetails = ({ product, products }: Props) => {
            
            {/**second image */}
           <div className='my-5 flex justify-center'>
-          { image ? (
+         { image ? (
             <Image
             width={500}
             height={500}
