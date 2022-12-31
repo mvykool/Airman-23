@@ -46,9 +46,9 @@ const ProductDetails = ({ product, products }: Props) => {
     </Head>
 
 
-    <div>
+    <div className='md:flex md:justify-around md:space-x-12 md:pl-10'>
       <div className='pt-10 relative'>
-      <div className='hidden mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 md:flex justify-center items-center ml-8' onClick={goBack}>
+      <div className='hidden mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 md:flex justify-center items-center ml-8 md:-ml-12' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 
@@ -56,18 +56,19 @@ const ProductDetails = ({ product, products }: Props) => {
         <div className='absolute left-1 mt-10 md:hidden bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
+
         {/**card */}
-         <div className='absolute bg-white shadow-2xl top-20 md:top-40 md:w-[25vw] md:right-72 py-1 px-3 md:px-10 md:py-4 rounded-md w-[60vw] right-3'>
-         <h1 className='my-5 text-base md:text-lg font-bold text-[#00708c]'>{name}</h1>
+         <div className='absolute bg-white shadow-2xl top-20 md:top-[22%] md:w-[25vw] md:left-[30%] py-1 px-3 md:px-10 md:py-4 rounded-md w-[60vw] right-3'>
+         <h1 className='my-5 text-sm md:text-lg font-bold text-[#00708c]'>{name}</h1>
        <div className='flex items-center justify-between '> 
-       <p className="font-bold text-2xl my-4"><span className='text-green-600'>$</span>{price}</p>
-         <button type="button" className="p-2 md:p-3 rounded-md bg-[#00708c] text-white font-semibold shadow-md" onClick={handleBuyNow} >Buy Now</button>
+       <p className="font-bold md:text-2xl my-4"><span className='text-green-600'>$</span>{price}</p>
+         <button type="button" className="p-2 md:p-3 rounded-md bg-[#00708c] text-white text-sm md:text-base font-semibold shadow-md" onClick={handleBuyNow} >Buy Now</button>
        </div>
          </div>
 
          {/**bg image */}
           <Image
-          className='w-full h-[50vh] md:w-[30vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
+          className='w-full h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
           width={600}
           height={1000} 
           alt='product img'
@@ -79,32 +80,32 @@ const ProductDetails = ({ product, products }: Props) => {
          {/**details and more */}
 
            
-           <div className="mx-8">
+           <div className="mx-8 md:mt-10">
       
-        <div className='md:flex md:justify-center md:space-x-4 md:items-center'>
+        <div className='md:mt-52 md:w-[30vw] md:space-x-5 '>
 
           <div>
-            <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-20 md:w-20 md:my-10 md:text-2xl'>Details</h4>
+            <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-1 md:w-20 md:my-10 md:text-2xl'>Details</h4>
 
        
-          <p className='my-4 arrival md:bg-white md:py-5 md:text-lg md:w-[40vw] md:px-8 md:rounded-lg md:shadow-xl'>{details}</p>
+          <p className='my-4 arrival md:text-lg md:w-[30vw] '>{details}</p>
           </div>
            
            {/**second image */}
-          <div className='my-10 flex justify-center'>
+          <div className='my-5 flex justify-center md:my-2'>
            <Image
           width={500}
           height={500}
           alt='product img'
           src={urlFor(image && image[index]).url()}
-          className='md:mt-10 md:mr-10 md:h-64 md:w-64'
+          className=' md:mr-10 md:h-64 md:w-64'
           />
           </div>
 
         </div>
         
          {/**qtny and add to cart */}
-          <div className="flex space-x-6 my-10  items-end md:ml-[20%] md:mb-20">
+          <div className="flex space-x-6 -mt-10 items-end md:ml-5 mb-20">
           <div >
             <h3 className='my-5 font-semibold border-b-4 border-[#00708c] w-20'>Quantity</h3>
             <p className="my-6 flex space-x-3 items-center">
@@ -122,8 +123,8 @@ const ProductDetails = ({ product, products }: Props) => {
 
       
 
-      <div className='py-5 bg-gradient md:w-screen md:pr-[20%] md:pb-20'>
-        <h2 className='ml-6 md:ml-52 md:text-lg md:w-40 md:my-10 text-white w-36 font-semibold my-5'>You may also like</h2>
+      <div className='py-5 border-t-4 border-b-4 border-[#00708c] md:w-screen md:pr-[20%] md:pb-20 md:mb-20'>
+        <h2 className='ml-6 md:ml-52 md:text-lg md:w-40 md:my-10 text-[#00708c] w-36 font-semibold my-5'>You may also like</h2>
         <div className='md:flex md:justify-center'>
             <div className='grid  grid-cols-2 md:grid-cols-4 mx-3'>
                {products.slice(0,4).map((item: any) => (
