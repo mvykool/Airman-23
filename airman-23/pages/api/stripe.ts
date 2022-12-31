@@ -6,7 +6,7 @@ const stripe = new Stripe('sk_test_51M8tcrBTNSBQlNFyvTtdxnIijcgCkUGVk7B00uQhYM6L
 
 export default async function handler(req: any, res: any) {
 
-  console.log(req.body)
+  
 
   if (req.method === 'POST') {
     try {
