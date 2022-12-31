@@ -10,7 +10,7 @@ const Hero = () => {
 
          <div className='pt-16 md:pt-10 flex justify-center'>
          <Link href={'/shop'} >
-         <p className='text-white text-lg border-b-2'>Go to shop</p>
+         <p className='text-white text-lg border-b-2 duration-100 hover:scale-125'>Go to shop</p>
          </Link>
        </div>
          </div>

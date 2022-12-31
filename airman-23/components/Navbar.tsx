@@ -84,7 +84,7 @@ if (typeof window !== "undefined") {
           value={search} 
           onChange={(e) => setSearch(e.target.value)} 
           placeholder='Search..' className='border-b-2 focus:outline-none w-48 md:w-[40vw]' />
-          <button type='submit' className='bg-gray-400 text-white p-2 rounded-md'><FaSearch/></button>
+          <button type='submit' className='bg-gray-400 text-white hover:scale-105 hover:bg-gray-500 p-2 rounded-md duration-100'><FaSearch/></button>
          </form>
        </div>
 
@@ -95,7 +95,7 @@ if (typeof window !== "undefined") {
     <div className='flex space-x-4'>
 
            <button type='button' className='h-6 w-6 md:mr-4' onClick={() => setShowCart(true)}>
-         <RiShoppingCartLine className='h-5 w-5 md:h-8 md:w-8'/>
+         <RiShoppingCartLine className='h-5 w-5 md:h-8 md:w-8 hover:scale-125 duration-100'/>
          <span className='absolute text-xs pt-[1px] -mt-6 md:-mt-8 md:ml-2 bg-red-500 rounded-full w-4 h-4 text-white'>{totalQuantities}</span>
       </button>
 
@@ -110,10 +110,10 @@ if (typeof window !== "undefined") {
 
       <div className='hidden md:block'>
         <div className='flex space-x-4 border-l-2 border-gray-400 pl-7 items-center'>
-          <FaTiktok className='h-6 w-6 text-black cursor-pointer' />
-          <FaTwitterSquare className='h-7 w-7 text-blue-300 cursor-pointer' />
-          <ImFacebook2 className='h-6 w-6 text-blue-800 cursor-pointer' />
-          <RiInstagramFill className='h-7 w-7 text-red-400 cursor-pointer' />
+          <FaTiktok className='h-6 w-6 text-black cursor-pointer hover:scale-125 duration-100' />
+          <FaTwitterSquare className='h-7 w-7 text-blue-300 cursor-pointer hover:scale-125 duration-100' />
+          <ImFacebook2 className='h-6 w-6 text-blue-800 cursor-pointer hover:scale-125 duration-100' />
+          <RiInstagramFill className='h-7 w-7 text-red-400 cursor-pointer hover:scale-125 duration-100 rounded-full' />
         </div>
       </div>     
       

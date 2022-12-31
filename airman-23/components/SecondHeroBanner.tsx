@@ -8,7 +8,7 @@ interface Props{
 
 const SecondHeroBanner = ({heroBanner}: Props) => {
   return (
-    <div className='mx-5 bg-red-400 rounded-sm my-10 md:w-[22vw]'>
+    <div className='mx-5 bg-red-400 rounded-sm my-10 md:w-[22vw] hover:scale-105 duration-300 hover:bg-red-500 hover:shadow-md'>
     <div  className='md:px-5'>
         <div className='flex justify-between mx-5 md:mx-4 pt-2'>
         <div className='mt-5'>

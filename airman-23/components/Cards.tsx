@@ -9,7 +9,7 @@ const Cards = () => {
   return (
     <div className='mt-10 md:w-[60vw] md:flex md:justify-center md:space-x-5'>
         {/**card 1 */}
-        <div className='bg-white mb-10 rounded-sm shadow-lg'>
+        <div className='bg-white mb-10 rounded-sm shadow-lg hover:scale-105 duration-300 hover:shadow-2xl'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >
               
            <div className='md:flex md:justify-center'>
@@ -25,7 +25,7 @@ const Cards = () => {
 
             </div>
         <Link href={'/shipping'}>
-            <button className='text-white font-semibold h-10 md:h-14 bg-[#00708c] w-full rounded-b-sm'>
+            <button className='text-white font-semibold h-10 md:h-14 bg-[#00708c] duration-100 hover:bg-[#005469] w-full rounded-b-sm'>
                     Check more info
             </button>
         </Link>
@@ -33,7 +33,7 @@ const Cards = () => {
         </div>
 
          {/**card 2 */}
-         <div className='bg-white mb-10 rounded-sm shadow-lg'>
+         <div className='bg-white mb-10 rounded-sm shadow-lg  hover:scale-105 duration-300 hover:shadow-2xl'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >
               
            <div className='md:flex md:justify-center'>
@@ -49,7 +49,7 @@ const Cards = () => {
 
             </div>
         <Link href={'/refund'}>
-            <button className='text-white font-semibold h-10 md:h-14 bg-[#00708c] w-full rounded-b-sm'>
+            <button className='text-white font-semibold h-10 md:h-14 bg-[#00708c] duration-100 hover:bg-[#005469] w-full rounded-b-sm'>
                     Check more info
             </button>
         </Link>
@@ -58,7 +58,7 @@ const Cards = () => {
 
           {/**card 3 */}
 
-          <div className='bg-white mb-10 rounded-sm shadow-lg'>
+          <div className='bg-white mb-10 rounded-sm shadow-lg  hover:scale-105 duration-300 hover:shadow-2xl'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >
               
            <div className='md:flex md:justify-center'>
@@ -74,7 +74,7 @@ const Cards = () => {
 
             </div>
         <Link href={'/support/chat'}>
-            <button className='text-white font-semibold h-10 md:h-14 bg-[#00708c] w-full rounded-b-sm'>
+            <button className='text-white font-semibold h-10 md:h-14 bg-[#00708c] duration-100 hover:bg-[#005469] w-full rounded-b-sm'>
                     Ask any question!
             </button>
         </Link>

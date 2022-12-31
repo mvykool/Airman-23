@@ -65,16 +65,16 @@ const Sidebar = () => {
       </div>
 
               {/**menu  */}
-       <div className='flex flex-col md:space-y-4 ml-10 gap-5 md:pt-20'>
-       <Link href={`/`} onClick={() => setOpenMenu(false)}>
-         <div className='flex items-center space-x-2 md:space-x-4'>
+       <div className='flex flex-col md:space-y-4 overflow-hidden md:pt-20'>
+       <Link href={`/`} onClick={() => setOpenMenu(false)} className='md:side-icons md:flex md:items-center' >
+         <div className='flex items-center space-x-2 md:space-x-4 '>
           <AiFillHome className='text-xl md:text-2xl text-[#00708C]'/>
          <button className='text-xl font-semibold text-[#00708C]'>Home</button>
          </div>
        </Link>
 
        {/**categories */}
-       <Link href={{ pathname: `/categories`}} onClick={() => setOpenMenu(false)} className='flex md:space-x-4 items-center space-x-2'>
+       <Link href={{ pathname: `/categories`}} onClick={() => setOpenMenu(false)} className='md:side-icons md:flex md:items-center space-x-2'>
          <MdCategory className='text-xl md:text-2xl text-[#00708C]'/>
          <button className='text-xl  font-semibold text-[#00708C]'>Categories</button> 
        </Link>
@@ -82,7 +82,7 @@ const Sidebar = () => {
        {/**blog */}
 
        <Link href={'/blog/posts'} onClick={() => setOpenMenu(false)}>
-         <div className='flex  items-center md:space-x-4 space-x-2'>
+         <div className='md:side-icons md:flex md:items-center space-x-2'>
            <MdArticle className='text-xl md:text-2xl text-[#00708C]'/>
            <button className='text-xl font-semibold text-[#00708C]'>Blog</button>
          </div>
@@ -90,27 +90,27 @@ const Sidebar = () => {
 
        {/**shop */}
        <Link href={'/shop'} onClick={() => setOpenMenu(false)}>
-         <div className='flex items-center md:space-x-4 space-x-2'>
+         <div className='md:side-icons md:flex md:items-center space-x-2'>
            <RiShoppingBagFill className='text-xl md:text-2xl text-[#00708C]'/>
            <button className='text-xl   font-semibold text-[#00708C]'>Shop</button>
          </div>
        </Link>
 
        {/**contact us */}
-       <Link href={'/contact'} onClick={() => setOpenMenu(false)} className='flex  items-center md:space-x-4 space-x-2'> 
+       <Link href={'/contact'} onClick={() => setOpenMenu(false)} className='md:side-icons md:flex md:items-center space-x-2'> 
         <MdContacts className='text-xl  md:text-2xl text-[#00708C]'/>
         <button className='text-xl font-semibold text-[#00708C]'>Contact us</button>
        </Link>
 
        {/**customer support */} 
-       <Link href={'/support/chat'} onClick={() => setOpenMenu(false)} className='flex md:space-x-4 items-center space-x-2'> 
+       <Link href={'/support/chat'} onClick={() => setOpenMenu(false)} className='md:side-icons md:flex md:items-center space-x-2'> 
          <MdSupportAgent className='text-xl md:text-2xl text-[#00708C]' />
          <button className='text-xl font-semibold text-[#00708C]'> Support</button>
        </Link>
 
        {/**log out */} 
        {user ? (
-        <div className='flex  items-center space-x-2 md:space-x-4'> 
+        <div className='md:side-icons md:flex md:items-center space-x-2'> 
         <MdLogout className='text-xl  md:text-2xl text-[#00708C]'/>
         <button type='button'  onClick={logOut} className='text-xl  font-semibold text-[#00708C]'>Log out</button>
         </div>

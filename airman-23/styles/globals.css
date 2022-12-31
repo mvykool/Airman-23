@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .side-icons {
+  @apply  hover:bg-gray-100 py-2 pl-10 transition duration-150 hover:scale-105 cursor-pointer}
+  
+
+}
 
 html,
 body{
@@ -11,6 +17,7 @@ body{
 :root {
   --bg-wrapper: rgba(0,0,0, 0.7);
   --bg-blog: rgba(0,0,0, 0.3);
+  --bg-blog-hover: rgba(0,0,0, 0.1);
   --bg-loader: rgba(255, 255, 255, 0.9);
 }
 
