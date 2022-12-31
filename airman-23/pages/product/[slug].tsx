@@ -35,9 +35,10 @@ interface Props{
 
 const ProductDetails = ({ product, products }: Props) => {
 
-   const {  name, details, price } = product;
-
-   const { image } = product || {};
+  const { image } = product || {};
+  const { name } = product || {};
+  const { details } = product || {};
+  const { price } = product || {};
 
    const [index, setIndex] = useState(0);
 
