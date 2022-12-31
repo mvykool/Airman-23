@@ -3,7 +3,7 @@ import React from 'react'
 
 const notPage = () => {
   return (
-    <div className='bg-gray-200 w-screen h-screen'>
+    <div className='bg-gray-200 w-screen h-screen md:pr-[10%]'>
 
         <div className='flex justify-center pt-[20%]'>
             <h1 className='text-lg font-bold'>Error 404 | Not page Found
@@ -15,7 +15,7 @@ const notPage = () => {
          </div>
 
           <Link href={'/'} className='flex justify-center'>
-                <button className='text-white bg-[#00708c] p-4 rounded-sm shadow-md'>Go back Home</button>
+                <button className='text-white bg-[#00708c] p-4 rounded-lg shadow-xl hover:scale-105 duration-300'>Go back Home</button>
           </Link>
 
     </div>

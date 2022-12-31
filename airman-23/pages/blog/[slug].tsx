@@ -8,6 +8,18 @@ import { PortableText } from '@portabletext/react';
 import { RichTextComponents } from '../../components/RichTextComponent';
 import Link from 'next/link';
 import ScrollToTop from '../../components/ScrollTop';
+import { motion} from 'framer-motion'
+
+
+/**framer motion variants */
+ 
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 0.5, delay: 0.3}
+  } 
+}
+   
 
 interface Props{
    post: any
@@ -30,18 +42,25 @@ const page = ({post}: Props) => {
       <title>{post.title}</title>
     </Head>   
 
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+    <div className='mt-10 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
       
      {/**title */}
-       <div className='my-10 md:my-16 mx-8 text-xl text-center p-2 font-bold border-b-4 border-[#00708c]'>
+       <div className='my-10 mx-8 text-xl text-center p-2 font-bold border-b-4 border-[#00708c]'>
            <h1 className='md:text-2xl'>{post.title}</h1>
        </div>
 
        {/**image */}
-         
-       <Image width={1000} height={1000} src={urlFor(post.mainImage.asset).url()} className='h-[30vh] w-full md:h-[60vh] md:w-[75vw] md:flex md:justify-center md:ml-[5%] md:rounded-md md:shadow-lg' alt="picture" />
+        <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+        >
+        <Image width={1000} height={1000} src={urlFor(post.mainImage.asset).url()} className='h-[30vh] w-full md:h-[60vh] md:w-[75vw] md:flex md:justify-center md:ml-[5%] md:rounded-md md:shadow-lg' alt="picture" />
+
+        </motion.div>
 
        {/**date and author */}
        <div className='my-10 text-sm text-gray-500 mx-10 flex justify-center space-x-3 items-center'>
@@ -62,7 +81,11 @@ const page = ({post}: Props) => {
        {/**body */}
 
        
-       <section className='mx-8 md:mx-52 md:px-10 md:py-12 bg-white rounded-lg p-4'>
+       <motion.section 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }} className='mx-8 md:mx-52 md:px-10 md:py-12 bg-white rounded-lg p-4'>
         <PortableText value={post.body}  components={RichTextComponents} />
           {/**link to the post */}
 
@@ -70,7 +93,7 @@ const page = ({post}: Props) => {
           <h3 className='text-gray-400'>Go to the original blog</h3>
           <Link className='text-green-500' href={`${post.link}`}>Here</Link>
         </div>
-       </section>
+       </motion.section>
 
      
     </div>

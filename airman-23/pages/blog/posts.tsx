@@ -22,20 +22,20 @@ const blogPost = ({posts}: postsProps) => {
 
  
   return (
-    <div className='pt-10 bg-gray-200 pb-20 md:pb-40 md:h-screen '>
+    <div className='pt-10 bg-gray-200 pb-20 md:pb-40 '>
 
     <Head>
       <title>Air man 23 | Blog</title>
     </Head>   
 
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
+    <div className='mt-10 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 
 
    
      <div className='md:flex md:justify-center'>
-     <h1 className='font-bold text-black border-b-4 w-44 border-[#00708c] text-2xl md:text-4xl md:w-[18%] md:text-center my-10 mx-8'>Air man's Blog</h1>
+     <h1 className='font-bold text-black border-b-4 w-44 border-[#00708c] text-2xl md:text-xl md:w-[18%] md:text-center my-10 mx-8'>Air man's Blog</h1>
      </div>
      
 

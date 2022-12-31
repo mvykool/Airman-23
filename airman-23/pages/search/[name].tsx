@@ -52,11 +52,11 @@ return (
         <title>Air man 23 | {query}</title>
     </Head>
 
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
+    <div className='mt-10 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
     
-      <div className='ml-8 md:ml-20 my-10 text-2xl flex items-center space-x-3'>
+      <div className='ml-8 md:ml-20 my-10 md:mb-2 text-2xl flex items-center space-x-3'>
        <p className=''>Results of :</p> 
       <h1 className='font-bold'>{query}</h1>
       </div>
@@ -64,13 +64,13 @@ return (
 
        <div className='md:flex md:justify-center md:mr-[20%]'>
        {filtered.length > 0 ? 
-       <div className='grid grid-cols-2 xl:grid-cols-3 mt-10 mx-3'>
+       <div className='grid grid-cols-2 md:grid-cols-3 mt-10 mx-3'>
 
         { filtered.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
        </div> :
          filteredCol.length > 0 
          ? ( 
-            <div className='grid grid-cols-2 xl:grid-cols-3 mt-10 mx-3'>
+            <div className='grid grid-cols-2 md:grid-cols-3 mt-10 mx-3'>
 
             { filteredCol.map((product: any)=> <ProductCol key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
            </div> )

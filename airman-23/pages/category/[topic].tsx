@@ -53,7 +53,7 @@ return (
   <h1 className='font-bold text-white text-2xl'>{title}</h1>
   </div>
 
-  <div className='md:flex md:justify-center md:mr-[20%] md:mt-10'>
+  <div className='md:flex md:justify-center md:mr-[20%] md:my-10'>
       <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14 md:w-[18%] md:text-center md:text-2xl' >{title}</h2>
       </div>
 
