@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import Head from 'next/head';
-import { AiFillStar, AiOutlineStar, AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
+import {  AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
 import  Product  from '../../components/Product';
 import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
-import ProductCol from '../../components/ProductCol';
 import { motion} from 'framer-motion'
 import ScrollToTop from '../../components/ScrollTop';
 
