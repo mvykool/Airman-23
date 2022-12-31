@@ -6,8 +6,11 @@ import SendMessage from '../../components/SendMessage';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+import { useStateContext } from '../../context/StateContext';
 
 const Chat = () => {
+
+   const { user} = useStateContext()
  
     const [messages, setMessages] = useState([]);
     const scroll = useRef<HTMLFormElement>(null);
@@ -33,7 +36,9 @@ const Chat = () => {
     router.back()
   }
 
-
+  if(!user){
+    router.push('/login')
+  }
 
 
   return (
