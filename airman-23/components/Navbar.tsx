@@ -69,7 +69,7 @@ if (typeof window !== "undefined") {
          <div className='mx-2'>
            <Link href={'/'} onClick={() => setOpenMenu(false)}>
             <div className='md:flex md:items-center md:space-x-3'>
-             <p className='hidden md:block md:text-3xl logo-font'>Air man-23</p> 
+             <p className='hidden md:block md:text-3xl text-gray-500 logo-font'>Air man-23</p> 
             <Image src={'/fireball.png'} alt='logo' width={35} height={35} className='md:h-10 md:w-10'  />
             </div>
        </Link>
