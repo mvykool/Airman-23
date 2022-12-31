@@ -22,9 +22,9 @@ const Hero = () => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-         className='flex justify-center pt-48 md:pt-64 md:text-5xl text-3xl text-white  logo-font'>Air Man 23</motion.h1>
+         className='flex justify-center pt-48 md:pt-36 md:text-4xl text-3xl text-white  logo-font'>Air Man 23</motion.h1>
 
-         <div className='pt-16 md:pt-10 flex justify-center'>
+         <div className='pt-16 md:pt-5 flex justify-center'>
          <Link href={'/shop'} >
          <motion.p
         variants={sectionVariant}

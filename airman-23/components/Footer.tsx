@@ -29,8 +29,8 @@ const Footer = () => {
 
   
       <div className='hidden md:flex space-x-2'>
-          <h1 className='text-3xl mt-5 font-thin arrival-text text-gray-400 logo-font'> Airman-23</h1>
-          <img src="/fireball.png" className='h-20' alt="" />
+          <h1 className='text-xl mt-5 font-thin arrival-text text-gray-400 logo-font'> Airman-23</h1>
+          <img src="/fireball.png" className='h-16' alt="" />
         </div>
 
       <div className='flex flex-col ml-10'>

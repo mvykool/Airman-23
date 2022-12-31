@@ -34,7 +34,7 @@ const Arrivals = ({ products} : Product) => {
 
 
   return (
-    <div className='my-10 md:w-[70vw]'>
+    <div className='my-10 md:w-[60vw]'>
 
       {/** first collection */}  
      <div  className='homeGrid mt-2'>
@@ -44,7 +44,7 @@ const Arrivals = ({ products} : Product) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-      className='a md:w-[97%] bg-white rounded-sm shadow-lg flex items-center duration-150 hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'>
+      className='a md:w-[95%] bg-white rounded-sm shadow-lg flex items-center duration-150 hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'>
       <Link href={`/collection/${items[0].slug.current}`}  >
       <img src={urlFor(items[0].image[0]).url()} alt="" />
       </Link>
@@ -109,7 +109,7 @@ const Arrivals = ({ products} : Product) => {
        whileInView="show"
        viewport={{ once: true }}
       className='hidden md:flex md:justify-center md:items-center md:mt-40'>
-        <h3 className='r border-b-4 px-2 border-[#00708c] text-4xl arrival-text logo-font'>Latest</h3>
+        <h3 className='r border-b-4 px-2 border-[#00708c] text-2xl arrival-text logo-font'>Latest</h3>
       </motion.div>
 
       </div>
@@ -185,7 +185,7 @@ const Arrivals = ({ products} : Product) => {
        whileInView="show"
        viewport={{ once: true }}
       className='hidden md:flex md:justify-center md:items-center md:mt-40'>
-        <h3 className='r border-b-4 px-2 border-[#00708c] text-4xl arrival-text logo-font'>Releases</h3>
+        <h3 className='r border-b-4 px-2 border-[#00708c] text-2xl arrival-text logo-font'>Releases</h3>
       </motion.div>
 
 

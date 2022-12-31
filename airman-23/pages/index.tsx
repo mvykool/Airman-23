@@ -48,7 +48,7 @@ export default function Home({ products, bannerData, posts}: Props) {
       <h1 className='font-semibold border-b-4 md:text-2xl border-[#00708C] w-28 md:w-40'>Discounts 🔥</h1>
     </div>
 
-    <div className='mx-3 md:my-20 md:flex md:justify-center md:mx-10'>
+    <div className='mx-3 md:my-20 md:flex md:justify-center'>
     <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
 
