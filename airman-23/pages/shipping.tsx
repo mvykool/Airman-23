@@ -20,10 +20,10 @@ const shipping = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+      <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
-      </div>
-
+      </div> 
+      
       <div className='my-10 flex bg-[#00708c] justify-center p-4 mx-8'>
         <h1 className='text-xl text-white font-semibold'>Shipping Policy</h1>
       </div>

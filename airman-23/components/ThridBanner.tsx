@@ -4,14 +4,14 @@ import { urlFor } from '../lib/client'
 import { motion} from 'framer-motion'
 
 /**framer motion variants */
-
+ 
 const sectionVariant = {
   hidden : { opacity: 0},
   show: { opacity: 1,
   transition: { duration: 1, delay: 0.7}
   }
 }
-
+ 
 
 interface Props{
     heroBanner: any

@@ -3,13 +3,28 @@ import { MdLocalShipping } from 'react-icons/md'
 import { FaMoneyBillAlt } from 'react-icons/fa'
 import { MdSupportAgent } from 'react-icons/md'
 import Link from 'next/link'
+import { motion} from 'framer-motion'
+
+/**framer motion variants */
+
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.7}
+  }
+}
 
 
 const Cards = () => {
   return (
     <div className='mt-10 md:w-[60vw] md:flex md:justify-center md:space-x-5'>
         {/**card 1 */}
-        <div className='bg-white mb-10 rounded-sm shadow-lg hover:scale-105 duration-300 hover:shadow-2xl'>
+        <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+        className='bg-white mb-10 rounded-sm shadow-lg hover:scale-105 duration-300 hover:shadow-2xl'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >
               
            <div className='md:flex md:justify-center'>
@@ -30,10 +45,15 @@ const Cards = () => {
             </button>
         </Link>
 
-        </div>
+        </motion.div>
 
          {/**card 2 */}
-         <div className='bg-white mb-10 rounded-sm shadow-lg  hover:scale-105 duration-300 hover:shadow-2xl'>
+         <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+         className='bg-white mb-10 rounded-sm shadow-lg  hover:scale-105 duration-300 hover:shadow-2xl'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >
               
            <div className='md:flex md:justify-center'>
@@ -54,11 +74,16 @@ const Cards = () => {
             </button>
         </Link>
 
-        </div>
+        </motion.div>
 
           {/**card 3 */}
 
-          <div className='bg-white mb-10 rounded-sm shadow-lg  hover:scale-105 duration-300 hover:shadow-2xl'>
+          <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+          className='bg-white mb-10 rounded-sm shadow-lg  hover:scale-105 duration-300 hover:shadow-2xl'>
             <div className='p-4 md:p-6 md:h-[25vh] flex justify-between md:block md:px-14' >
               
            <div className='md:flex md:justify-center'>
@@ -79,7 +104,7 @@ const Cards = () => {
             </button>
         </Link>
 
-        </div>
+        </motion.div>
     </div>
   )
 }

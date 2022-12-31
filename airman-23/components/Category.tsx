@@ -1,7 +1,17 @@
 import React from 'react'
 import { topics } from '../utils/topics'
 import Link from 'next/link'
+import { motion} from 'framer-motion'
 
+/**framer motion variants */
+ 
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.7}
+  }
+}
+ 
 
 const Category = () => {
   return (
@@ -13,13 +23,18 @@ const Category = () => {
 
         </div>
 
-       <div className='flex overflow-x-auto h-16 pb-4 mt-5 mb-10 md:flex md:justify-center md:flex-wrap md:space-x-5] md:h-20 md:w-[85vw]'>
+       <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+       className='flex overflow-x-auto h-16 py-2 mt-5 mb-10 md:flex md:justify-center md:flex-wrap md:space-x-5]  md:h-20 md:w-[85vw]'>
         {topics.map((topic) => (
-          <Link href={{ pathname: `/category/${topic.name}`}} key={topic.name} className='bg-white shadow-md text-[#00708c] md:w-[9vw] font-semibold border-2 border-[#00708c] mx-4 flex justify-center items-center rounded-md'>
+          <Link href={{ pathname: `/category/${topic.name}`}} key={topic.name} className='bg-white shadow-md text-[#00708c] md:w-[9vw] font-semibold border-2 border-[#00708c] mx-4 flex justify-center items-center rounded-md hover:scale-105 hover:bg-gray-100 cursor-pointer duration-300'>
             <p className='m-4'>{topic.name}</p>
           </Link>
         ))}
-       </div>
+       </motion.div>
     </div>
   )
 }
