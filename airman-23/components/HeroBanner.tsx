@@ -1,6 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
 import { urlFor } from '../lib/client'
+import { motion} from 'framer-motion'
+
+/**framer motion variants */
+
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.5}
+  }
+}
+
 
 interface Props{
     heroBanner: any  
@@ -8,7 +19,13 @@ interface Props{
 
 const HeroBanner = ({heroBanner}: Props) => {
   return (
-    <div className='mx-5 bg-orange-400 rounded-sm my-10 md:w-[22vw] hover:scale-105 duration-300 hover:bg-orange-500 hover:shadow-md'>
+    <>
+    <motion.div 
+        variants={sectionVariant}
+       initial="hidden"
+       whileInView="show"
+       viewport={{ once: true }}
+    className='mx-5 bg-orange-400 rounded-sm my-10 md:w-[22vw] hover:scale-105 duration-300 hover:bg-orange-500 hover:shadow-md'>
         <div className='md:px-5'>
             <div className='flex justify-between mx-5 pt-2'>
           <div className='mt-5'>
@@ -37,7 +54,8 @@ const HeroBanner = ({heroBanner}: Props) => {
             </div>
 
       </div>
-    </div>
+    </motion.div>
+    </>
   )
 }
 
