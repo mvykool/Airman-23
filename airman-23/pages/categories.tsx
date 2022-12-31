@@ -5,6 +5,7 @@ import { topics } from '../utils/topics'
 import {MdOutlineKeyboardBackspace} from 'react-icons/md'
 import Head from 'next/head';
 import { motion} from 'framer-motion'
+import ScrollToTop from '../components/ScrollTop'
 
 /**framer motion variants */
  
@@ -66,6 +67,8 @@ const categories = () => {
            </Link>
         ))}
       </div>
+
+      <ScrollToTop/>
 
       {/**desktop view */}
 

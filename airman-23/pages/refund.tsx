@@ -3,6 +3,7 @@ import router from 'next/router'
 import React from 'react'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 import { motion} from 'framer-motion'
+import ScrollToTop from '../components/ScrollTop'
 
 /**framer motion variants */
 
@@ -38,6 +39,8 @@ const refund = () => {
         <h1 className='text-xl text-white font-semibold'>Refund Policy</h1>
       </div>
           
+    <ScrollToTop/>
+
         <motion.div
         variants={sectionVariant}
        initial="hidden"

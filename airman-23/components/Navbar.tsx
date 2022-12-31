@@ -110,10 +110,22 @@ if (typeof window !== "undefined") {
 
       <div className='hidden md:block'>
         <div className='flex space-x-4 border-l-2 border-gray-400 pl-7 items-center'>
-          <FaTiktok className='h-6 w-6 text-black cursor-pointer hover:scale-125 duration-100' />
-          <FaTwitterSquare className='h-7 w-7 text-blue-300 cursor-pointer hover:scale-125 duration-100' />
-          <ImFacebook2 className='h-6 w-6 text-blue-800 cursor-pointer hover:scale-125 duration-100' />
-          <RiInstagramFill className='h-7 w-7 text-red-400 cursor-pointer hover:scale-125 duration-100 rounded-full' />
+        <a href="https://www.tiktok.com/@23airman23"  target="_blank">
+        <FaTiktok className='h-6 w-6 text-black cursor-pointer hover:scale-125 duration-100' />
+        </a>
+          
+        <a href="https://twitter.com/airman27766886" target="_blank">
+        <FaTwitterSquare className='h-7 w-7 text-blue-300 cursor-pointer hover:scale-125 duration-100' />
+          
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100088716747015" target="_blank">
+        <ImFacebook2 className='h-6 w-6 text-blue-800 cursor-pointer hover:scale-125 duration-100' />
+        </a>
+
+        <a href="https://www.instagram.com/23airman23/" target="_blank">
+        <RiInstagramFill className='h-7 w-7 text-red-400 cursor-pointer hover:scale-125 duration-100 rounded-full' />
+        </a>
         </div>
       </div>     
       

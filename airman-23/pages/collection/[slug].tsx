@@ -9,6 +9,7 @@ import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
 import ProductCol from '../../components/ProductCol';
 import { motion} from 'framer-motion'
+import ScrollToTop from '../../components/ScrollTop';
 
 /**framer motion variants */
  
@@ -70,7 +71,7 @@ const ProductDetails = ({ product, products }: Props) => {
       </div>
 
         <div className='flex justify-center '>
-        <div className='absolute left-1 mt-10 md:hidden bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
+        <div className='absolute z-20 left-1 mt-10 md:hidden bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 
@@ -97,7 +98,7 @@ const ProductDetails = ({ product, products }: Props) => {
        viewport={{ once: true }}
           >
           <Image
-          className='w-full h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
+          className='w-screen h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
           width={600}
           height={1000} 
           alt='product img'
@@ -155,7 +156,7 @@ const ProductDetails = ({ product, products }: Props) => {
         </motion.div>
       </div>
 
-
+      <ScrollToTop/>
       
 
       <div className='py-5 border-t-4 border-b-4 border-[#00708c] md:w-screen md:pr-[20%] md:pb-20 md:mb-20'>

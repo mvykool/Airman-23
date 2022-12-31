@@ -5,6 +5,7 @@ import Category from '../components/Category'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
 import router from 'next/router'
 import Head from 'next/head'
+import ScrollToTop from '../components/ScrollTop'
 
 
 interface Props {
@@ -39,13 +40,16 @@ const shop = ({ products}: Props) => {
 
      {/**categories */}
      <Category/>
-
+ 
 
          {/**latest feed */}
       
       <div className='md:flex md:justify-center'>
-      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-14 md:w-[18%] md:text-center md:text-2xl md:mt-20' >In Stock</h2>
+      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-20 md:w-[18%] md:text-center md:text-2xl md:mt-20' >In Stock</h2>
       </div>
+      
+
+      <ScrollToTop/>
 
      <div className='md:flex md:justify-center'>
      <div className='grid grid-cols-2 xl:grid-cols-3 mx-3 md:px-10'>

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { PortableText } from '@portabletext/react';
 import { RichTextComponents } from '../../components/RichTextComponent';
 import Link from 'next/link';
+import ScrollToTop from '../../components/ScrollTop';
 
 interface Props{
    post: any
@@ -55,6 +56,8 @@ const page = ({post}: Props) => {
             })}
         </p>
        </div>
+
+       <ScrollToTop/>
 
        {/**body */}
 
