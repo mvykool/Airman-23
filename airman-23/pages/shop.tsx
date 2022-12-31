@@ -28,13 +28,13 @@ const shop = ({ products}: Props) => {
     </Head>   
 
     
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
+    <div className='mt-10 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 
 
-    <div className='flex justify-center mx-8 p-5 rounded-lg my-10 bg-[#00708C] md:mx-20 '>
-      <h1 className='font-bold text-white text-2xl'>Shop</h1>
+    <div className='flex justify-center mx-8 p-5 md:p-2 rounded-lg my-10 bg-[#00708C] md:mx-20 '>
+      <h1 className='font-bold text-white text-2xl md:text-lg'>Shop</h1>
       </div>
 
 
@@ -45,14 +45,14 @@ const shop = ({ products}: Props) => {
          {/**latest feed */}
       
       <div className='md:flex md:justify-center'>
-      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-20 md:w-[18%] md:text-center md:text-2xl md:mt-20' >In Stock</h2>
+      <h2 className='ml-8 text-lg my-4 font-bold border-b-4 border-[#00708c] w-20 md:w-[18%] md:text-center md:text-xl md:mt-5' >In Stock</h2>
       </div>
       
 
       <ScrollToTop/>
 
      <div className='md:flex md:justify-center'>
-     <div className='grid grid-cols-2 xl:grid-cols-3 mx-3 md:px-10'>
+     <div className='grid grid-cols-2 md:grid-cols-3 mx-3 md:px-10'>
         { products?.map((product: any)=> <Product key={product._id} product={product} image={undefined} name={''} price={0} slug={''} />)}
        </div>
      </div>

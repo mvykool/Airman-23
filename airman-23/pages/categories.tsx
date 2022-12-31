@@ -36,7 +36,7 @@ const categories = () => {
 
 
      
-    <div className='mt-10 md:mt-20 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
+    <div className='mt-10 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
 
@@ -44,7 +44,7 @@ const categories = () => {
 
      
 
-      <h1 className='font-bold text-white text-2xl'>Categories</h1>
+      <h1 className='font-bold text-white text-2xl md:text-lg'>Categories</h1>
       </div>
 
       {/**display categories */}
@@ -74,7 +74,7 @@ const categories = () => {
 
       <div className='hidden md:block'>
          
-      <div className='flex pl-[8%] mt-28'>
+      <div className='flex pl-[5%] mt-28'>
       <div className='flex flex-wrap space-x-5] mx-20'>
       {topics.map((item: any) => (
           <Link href={{ pathname: `/category/${item.name}`}} key={item.name} className='my-2  relative w-[30vw] mx-2 hover:scale-105 duration-300 hover:shadow-2xl'>
