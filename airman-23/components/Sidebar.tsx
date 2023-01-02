@@ -49,7 +49,7 @@ const Sidebar = () => {
        />
       <div className='flex flex-col'>
          <h2 className='mx-auto md:mx-2 font-bold text-white text-md md:text-sm'>{user.displayName ? user.displayName : "Demo User "} 🏀</h2>
-        <p className='mx-3 md:mx-2 md:text-[10px] text-gray-300 text-xs cursor-pointer'>{user.email ? user.email : "demouser@hotmail.com"}</p>
+        <p className='mx-3 md:mx-2 md:text-[9px] text-gray-300 text-xs cursor-pointer'>{user.email ? user.email : "demouser@hotmail.com"}</p>
       </div>
 
    </div>

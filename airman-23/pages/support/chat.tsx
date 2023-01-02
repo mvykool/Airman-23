@@ -55,7 +55,7 @@ const Chat = () => {
       </div>
 
       
-    <div className='mx-2 bg-white h-[55vh] rounded-md relative overflow-y-scroll md:h-[65vh] md:w-[60vw] md:ml-[15%] md:mt-8'>
+    <div className='mx-2 mt-10  bg-white h-[55vh] rounded-md relative overflow-y-scroll md:h-[65vh] md:w-[60vw] md:ml-[15%] md:mt-2'>
     <div className='flex justify-center mb-5 bg-[#00708c] py-4 rounded-t-md'>
       <h1 className='font-bold text-white text-lg'>Welcome to Airman-23 suppport</h1>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { BsFacebook, BsTwitter, BsInstagram, BsReddit } from 'react-icons/bs'
+import { BsFacebook, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { SiTiktok } from 'react-icons/si'
 
 const Footer = () => {
@@ -18,11 +18,22 @@ const Footer = () => {
 
 
         <div className='text-gray-300 flex flex-wrap space-x-3 mt-7 md:text-2xl'>
-          <BsFacebook/>
-          <BsInstagram/>
-          <BsReddit/>
-          <BsTwitter/>
-          <SiTiktok/>
+        <a href="https://www.tiktok.com/@23airman23"  target="_blank">
+        <SiTiktok className='h-5 w-5 cursor-pointer hover:scale-125 duration-100' />
+        </a>
+          
+        <a href="https://twitter.com/airman27766886" target="_blank">
+        <BsTwitter className='h-5 w-5  cursor-pointer hover:scale-125 duration-100' />
+          
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100088716747015" target="_blank">
+        <BsFacebook className='h-5 w-5  cursor-pointer hover:scale-125 duration-100' />
+        </a>
+
+        <a href="https://www.instagram.com/23airman23/" target="_blank">
+        <BsInstagram className='h-5 w-5 cursor-pointer hover:scale-125 duration-100' />
+        </a>
         </div>
 
       </div>
@@ -88,9 +99,9 @@ const Footer = () => {
          </div>
         
         <div className='flex space-x-3'>
-          <p className='text-xs md:text-base text-gray-300'>Privacy Policy</p>
+          <Link href={'/refund'} className='text-xs md:text-base text-gray-300'>Privacy Policy</Link>
           <p className='text-xs md:text-base text-gray-300'>|</p>
-          <p className='text-xs md:text-base text-gray-300'> Terms & Condition</p>
+          <Link href={'/refund'} className='text-xs md:text-base text-gray-300'> Terms & Condition</Link>
         </div>
       </div>
     </div>

@@ -44,7 +44,7 @@ body{
 
 .homeGrid {
   display: grid; 
-  grid-template-columns: 1fr 0.5fr 0.5fr; 
+  grid-template-columns: 1.1fr 0.5fr 0.5fr; 
   grid-template-rows: 1fr 1fr; 
   gap: 6px 6px; 
   grid-template-areas: 
