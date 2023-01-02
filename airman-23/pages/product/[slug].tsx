@@ -101,7 +101,7 @@ const ProductDetails = ({ product, products }: Props) => {
        viewport={{ once: true }}
           >
           <Image
-          className='w-screen h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
+          className='w-[111vw] h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
           width={600}
           height={1000} 
           alt='product img'
@@ -137,7 +137,7 @@ const ProductDetails = ({ product, products }: Props) => {
           height={500}
           alt='product img'
           src={urlFor(image && image[index]).url()}
-          className=' md:mr-10 md:h-40 md:w-40'
+          className=' md:mr-10 h-40 w-40'
           />
           </div>
 
