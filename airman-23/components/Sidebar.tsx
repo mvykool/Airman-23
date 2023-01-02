@@ -41,11 +41,11 @@ const Sidebar = () => {
       
       <div className='flex mx-4 items-center ml-4'>
       <Image
-      width={50}
-      height={50}
+      width={100}
+      height={100}
       src={user.photoURL ? user.photoURL
        : "https://cdn-icons-png.flaticon.com/512/6073/6073873.png" } alt="profile pic"
-       className='h-12 md:h-10 md:border-2 border-4 rounded-full border-green-400'
+       className='h-12 md:h-10 md:w-10 md:border-2 border-4 rounded-full border-green-400'
        />
       <div className='flex flex-col'>
          <h2 className='mx-auto md:mx-2 font-bold text-white text-md md:text-sm'>{user.displayName ? user.displayName : "Demo User "} 🏀</h2>
