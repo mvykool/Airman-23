@@ -42,12 +42,13 @@ const page = ({post}: Props) => {
       <title>{post.title}</title>
     </Head>   
 
-    <div className='mt-10 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8' onClick={goBack}>
+    <div className='mt-10 bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
+
       
      {/**title */}
-       <div className='my-10 mx-8 text-xl text-center p-2 font-bold border-b-4 border-[#00708c]'>
+       <div className='my-10 md:my-8 mx-8 text-xl text-center p-2 font-bold border-b-4 border-[#00708c]'>
            <h1 className='md:text-2xl'>{post.title}</h1>
        </div>
 
@@ -58,7 +59,7 @@ const page = ({post}: Props) => {
        whileInView="show"
        viewport={{ once: true }}
         >
-        <Image width={1000} height={1000} src={urlFor(post.mainImage.asset).url()} className='h-[30vh] w-full md:h-[60vh] md:w-[75vw] md:flex md:justify-center md:ml-[5%] md:rounded-md md:shadow-lg' alt="picture" />
+        <Image width={1000} height={1000} src={urlFor(post.mainImage.asset).url()} className='h-[30vh] w-full md:h-[65vh] md:w-[75vw] md:flex md:justify-center md:ml-[5%] md:rounded-md md:shadow-lg' alt="picture" />
 
         </motion.div>
 
