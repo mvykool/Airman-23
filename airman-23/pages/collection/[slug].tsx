@@ -131,7 +131,7 @@ const ProductDetails = ({ product, products }: Props) => {
             <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-1 md:w-20 md:my-10 md:text-base'>Details</h4>
 
        
-          <p className='my-4 arrival md:text-sm md:w-[30vw] '>{details}</p>
+          <p className='my-4 arrival text-sm md:w-[30vw] '>{details}</p>
           </div>
            
            {/**second image */}
