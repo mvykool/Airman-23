@@ -101,7 +101,7 @@ if (typeof window !== "undefined") {
       </button>
 
       <div className='block md:hidden'>
-          <TiThMenu className='h-5 w-5 block md:hidden'  onClick={() => setOpenMenu(true)}/>
+          <TiThMenu className='h-6 w-6 block md:hidden'  onClick={() => setOpenMenu(true)}/>
         </div>
          
 
