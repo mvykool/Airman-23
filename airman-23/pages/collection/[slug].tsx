@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import Head from 'next/head';
-import { AiFillStar, AiOutlineStar, AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
+import {  AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
 import  Product  from '../../components/Product';
 import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
-import ProductCol from '../../components/ProductCol';
 import { motion} from 'framer-motion'
 import ScrollToTop from '../../components/ScrollTop';
 
@@ -143,7 +142,7 @@ const ProductDetails = ({ product, products }: Props) => {
           height={500}
           alt='product img'
           src={urlFor(image && image[index]).url()}
-          className='h-40 w-40 md:mr-10 md:h-40 md:w-40'
+          className=' md:mr-10 h-40 w-40'
           />
          ) : (
           'no image'

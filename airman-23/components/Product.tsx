@@ -44,7 +44,7 @@ const Product = ({ product} : Product) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-    className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5 md:w-[18vw] h-[32vh] md:h-[45vh]   md:my-10 hover:scale-110 hover:shadow-2xl duration-300'>
+    className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5 md:w-[18vw] md:h-[45vh]   md:my-10 hover:scale-110 hover:shadow-2xl duration-300'>
         <div>
         <div className='flex justify-center m-2 '> 
         <Image loader={() => src} src={src} alt='product image' width={400} height={400} className='h-24 md:h-32 w-24 md:w-32'/>

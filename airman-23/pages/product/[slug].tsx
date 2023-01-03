@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head';
-import { AiFillStar, AiOutlineStar, AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
-import  Product  from '../../components/Product';
+import {  AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
 import { useStateContext } from '../../context/StateContext'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
