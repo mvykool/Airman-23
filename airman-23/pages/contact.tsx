@@ -44,11 +44,9 @@ const contact = () => {
 
 //hide result
 
- setTimeout(() => {
-  setResult(false)
- }, 4000);
-
- 
+setTimeout(() => {
+   setResult(false)
+}, 4500);
 
    //go back
 
@@ -82,11 +80,11 @@ const contact = () => {
     <div className='flex flex-col mx-8 justify-center md:flex md:justify-center'>  
     <div>
       {result ? 
-      <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-screen top-0 left-0 flex justify-center items-center'>
-        <div className='mx-4 md:w-[30vw] md:py-20 flex flex-col bg-white rounded-md p-8 fixed text-green-500 font-semibold'>
-         <p className='md:flex md:justify-center md:text-lg'>Your message has been successfully sent.</p> 
+      <div className='absolute bg-[var(--bg-wrapper)] z-40 w-full h-full top-0 left-0 flex justify-center items-center'>
+        <div className='mx-4 md:w-[30vw] md:py-20 top-40 flex flex-col bg-white rounded-md p-8 fixed text-green-500 font-semibold'>
+         <p className='md:flex md:justify-center text-sm'>Your message has been successfully sent.</p> 
          <hr className='w-full my-4'/>
-        <h3 className='md:flex md:justify-center md:text-lg' >I will be reaching you back within 24-48</h3>
+        <h3 className='md:flex md:justify-center text-sm' >I will be reaching you back within 24-48</h3>
 
         </div>
       </div> 
