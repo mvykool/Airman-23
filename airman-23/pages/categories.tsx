@@ -32,6 +32,8 @@ const categories = () => {
 
     <Head>
       <title>Air man 23 | Catagories</title>
+      <meta name="theme-color" content="#00708c" />
+
     </Head>
 
 

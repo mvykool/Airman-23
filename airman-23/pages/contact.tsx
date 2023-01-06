@@ -63,6 +63,8 @@ setTimeout(() => {
 
     <Head>
       <title>Air man 23 | Contact</title>
+      <meta name="theme-color" content="#00708c" />
+
     </Head>   
 
     <div className='mt-10  bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>

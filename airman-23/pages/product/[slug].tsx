@@ -63,6 +63,8 @@ const ProductDetails = ({ product, products }: Props) => {
   
     <Head>
       <title>Air man 23 | details</title>
+      <meta name="theme-color" content="#00708c" />
+
     </Head>
  
 

@@ -25,6 +25,8 @@ const shop = ({ products}: Props) => {
 
     <Head>
       <title>Air man 23 | Shop</title>
+      <meta name="theme-color" content="#00708c" />
+
     </Head>   
 
     
