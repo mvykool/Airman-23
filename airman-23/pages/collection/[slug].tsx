@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import Head from 'next/head';
 import {  AiOutlineMinus, AiOutlinePlus  } from 'react-icons/ai';
 import  Product  from '../../components/Product';
@@ -9,6 +9,7 @@ import { client, urlFor } from '../../lib/client'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md';
 import { motion} from 'framer-motion'
 import ScrollToTop from '../../components/ScrollTop';
+import { Dialog, Transition } from '@headlessui/react'
 
 /**framer motion variants */
  
@@ -59,6 +60,22 @@ const ProductDetails = ({ product, products }: Props) => {
     router.back()
   }
 
+  /**modal open when you click on add to cart */
+
+  let [isOpen, setIsOpen] = useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+    onAdd(product, qty)
+  }
+
+
+
+
   return (
     <div className='bg-gray-200 pb-10 md:w-screen md:pr-[20%]'>
   
@@ -79,6 +96,61 @@ const ProductDetails = ({ product, products }: Props) => {
         <div className='absolute z-20 left-1 mt-10 md:hidden bg-white shadow-md rounded-full h-10 md:h-12 w-10 md:w-12 flex justify-center items-center ml-8 hover:scale-125 duration-300 cursor-pointer' onClick={goBack}>
         <MdOutlineKeyboardBackspace className='text-xl' />
       </div>
+
+
+      {/** modal when you add a product */}
+
+
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    as="h4"
+                    className="text-base p-2 font-medium leading-6 text-gray-900"
+                  >
+                      A item was added to your cart successfully ✅
+                  </Dialog.Title>
+                  
+                  <div className="mt-4">
+                    <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-[#00708c] px-4 py-2 text-sm font-medium text-white hover:bg-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={closeModal}
+                    >
+                      Got it, thanks!
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
+
 
         {/**card */}
          <motion.div 
@@ -125,26 +197,25 @@ const ProductDetails = ({ product, products }: Props) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-           className="mx-8 md:mt-10">
+       className="mx-8 md:mt-36 md:bg-white md:h-[70vh] md:rounded-lg md:shadow-xl px-2">
       
-        <div className='md:mt-40 md:w-[30vw] md:space-x-5 '>
+        <div className='md:mt-10 md:w-[30vw] md:space-x-5 '>
 
           <div>
-            <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-1 md:w-20 md:my-10 md:text-base'>Details</h4>
+          <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-7 md:w-20 md:my-10 md:text-base'>Details</h4>
 
-       
-          <p className='my-4 arrival text-sm md:w-[30vw] '>{details}</p>
+            <p className='my-4 md:px-8 arrival font-semibold text-sm md:w-[30vw] '>{details}</p>
           </div>
            
            {/**second image */}
-          <div className='my-5 flex justify-center'>
+          <div className='my-4 flex justify-center'>
          { image ? (
           <Image
           width={500}
           height={500}
           alt='product img'
           src={urlFor(image && image[index]).url()}
-          className=' md:mr-10 h-40 w-40'
+          className=' md:mr-10 h-36 w-36'
           />
          ) : (
           'no image'
@@ -163,7 +234,7 @@ const ProductDetails = ({ product, products }: Props) => {
               <span className="text-white bg-black p-1 rounded-sm cursor-pointer hover:bg-gray-700"  onClick={incQty} ><AiOutlinePlus /></span>
             </p>
           </div>
-            <button type="button" className="p-2 my-5  rounded-md border-2 border-[#00708c] shadow-sm bg-white md:text-sm font-semibold text-[#00708c] duration-300 hover:scale-105" onClick={() => onAdd(product, qty)}>Add to Cart</button>
+            <button type="button" className="p-2 my-5  rounded-md border-2 border-[#00708c] shadow-sm bg-white md:text-sm font-semibold text-[#00708c] duration-300 hover:scale-105"  onClick={openModal}>Add to Cart</button>
     
           </div>
         </motion.div>
@@ -172,8 +243,8 @@ const ProductDetails = ({ product, products }: Props) => {
 
       <ScrollToTop/>
 
-      <div className='py-5 border-t-4 border-b-4 border-[#00708c] md:w-screen md:pr-[20%] md:pb-20 md:mb-20'>
-        <h2 className='ml-6 md:ml-20 md:text-lg md:w-40 md:my-10 text-[#00708c] w-36 font-semibold my-5'>You may also like</h2>
+      <div className='py-4 bg-[#00708c]  md:w-screen md:pr-[20%] md:pb-20 md:mb-20'>
+        <h2 className='ml-6 md:ml-20 md:text-lg md:w-40 md:my-10 text-white w-36 font-semibold my-5'>You may also like</h2>
         <div className='md:flex md:justify-center'>
             <div className='grid  grid-cols-2 md:grid-cols-4 mx-5'>
                {products.slice(0,4).map((item: any) => (
