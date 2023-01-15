@@ -46,7 +46,7 @@ const Arrivals = ({ products} : Product) => {
        viewport={{ once: true }}
       className='a md:w-[95%] bg-white rounded-sm shadow-lg flex items-center duration-150 hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'>
       <Link href={`/collection/${items[0].slug.current}`}  >
-      <img src={urlFor(items[0].image[0]).url()} alt="" />
+      <img src={urlFor(items[0].image[0]).url()} alt="" className='md:p-4'  />
       </Link>
       </motion.div>
 
@@ -60,7 +60,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white md:-ml-3  rounded-sm shadow-lg b flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[1].slug.current}`}  >
-      <img  src={urlFor(items[1].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[1].image[0]).url()} alt="arrivals" className='md:p-4' />
       </Link>
       </motion.div>
 
@@ -74,7 +74,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white  rounded-sm shadow-lg c flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[2].slug.current}`}  >
-      <img  src={urlFor(items[2].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[2].image[0]).url()} alt="" className='md:p-4'  />
       </Link>
       </motion.div>
 
@@ -87,7 +87,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white md:-ml-3  rounded-sm shadow-lg d flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[3].slug.current}`}  >
-      <img  src={urlFor(items[3].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[3].image[0]).url()} alt=""  className='md:p-4' />
       </Link>
       </motion.div>
 
@@ -99,7 +99,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white  rounded-sm shadow-lg e flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[4].slug.current}`}  >
-      <img  src={urlFor(items[4].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[4].image[0]).url()} alt="" className='md:p-4'   />
       </Link>
       </motion.div>
 
@@ -126,7 +126,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white  rounded-sm shadow-lg f flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[5].slug.current}`}  >
-      <img  src={urlFor(items[5].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[5].image[0]).url()} alt="" className='md:p-4'  />
       </Link>
       </motion.div>
 
@@ -138,7 +138,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white  rounded-sm shadow-lg g flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[6].slug.current}`}  >
-      <img  src={urlFor(items[6].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[6].image[0]).url()} alt="" className='md:p-4'   />
       </Link>
       </motion.div>
 
@@ -151,7 +151,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white  rounded-sm shadow-lg h flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[7].slug.current}`}  >
-      <img  src={urlFor(items[7].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[7].image[0]).url()} alt="" className='md:p-4'   />
       </Link>
       </motion.div>
        
@@ -163,7 +163,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white  rounded-sm shadow-lg i flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[8].slug.current}`}  >
-      <img  src={urlFor(items[8].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[8].image[0]).url()} alt="" className='md:p-4'   />
       </Link>
       </motion.div>
 
@@ -175,7 +175,7 @@ const Arrivals = ({ products} : Product) => {
       className='bg-white  rounded-sm shadow-lg j flex items-center duration-150   hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-blue-300'
       >
       <Link href={`/collection/${items[9].slug.current}`}  >
-      <img  src={urlFor(items[9].image[0]).url()} alt=""  />
+      <img  src={urlFor(items[9].image[0]).url()} alt="" className='md:p-4'   />
       </Link>
       </motion.div>
 

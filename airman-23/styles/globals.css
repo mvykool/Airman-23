@@ -9,6 +9,33 @@
 
 }
 
+/*scroll bar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0399be; 
+  border-radius: 10px;
+  border: 1px white solid;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00708c; 
+  border: 1px white solid;
+}
+
+
 html,
 body{
   overflow-x: hidden;

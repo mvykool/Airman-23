@@ -93,16 +93,19 @@ const Footer = () => {
        </div>
 
        <hr className='my-8 w-[100vw]' />
-      <div className='flex justify-between md:ml-96'> 
-         <div>
-          <p className='text-white font-bold'>Airman-23&copy;</p>
-         </div>
-        
-        <div className='flex space-x-3'>
-          <Link href={'/refund'} className='text-xs md:text-base text-gray-300'>Privacy Policy</Link>
-          <p className='text-xs md:text-base text-gray-300'>|</p>
-          <Link href={'/refund'} className='text-xs md:text-base text-gray-300'> Terms & Condition</Link>
-        </div>
+      <div className='flex justify-around md:ml-40'> 
+  
+          <ul className='flex space-x-2 md:space-x-4 px-4'>
+            <li className='text-gray-400 text-xs md:text-sm'>Q/A</li>
+            <li className='text-gray-400 md:text-sm text-xs'>Terms & conditions</li>
+            <li className='text-gray-400  md:text-sm text-xs'>Privacy</li>
+            <li className='text-gray-400 md:text-sm text-xs'>Contact</li>
+          </ul>
+
+      <div className='py-1 flex justify-center'>
+           <p className='text-gray-300 text-xs'>&copy;Airman23 | 2023</p>
+     
+      </div>
       </div>
     </div>
   )
