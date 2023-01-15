@@ -8,7 +8,7 @@ import { motion} from 'framer-motion'
 const sectionVariant = {
   hidden : { opacity: 0},
   show: { opacity: 1,
-  transition: { duration: 1, delay: 0.6}
+  transition: { duration: 1, delay: 0.2}
   }
 }
 

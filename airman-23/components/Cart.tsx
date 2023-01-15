@@ -108,7 +108,7 @@ const Cart = () => {
          <div className='product-container'>
            {cartItems.length >= 1 && cartItems.map((item: any) => (
              <div className='product' key={item._id}>
-                 <div className='flex justify-center mx-6 bg-[#00708c] shadow-md rounded-sm my-5'>
+                 <div className='flex justify-center mx-16 bg-[#00708c] shadow-md rounded-sm my-5'>
                  <img src={urlFor(item.image && item.image[0]).url()} 
                className='h-24 w-24'/>
                  </div>

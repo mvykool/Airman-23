@@ -5,6 +5,17 @@ import { useRouter } from 'next/router';
 import { GoogleAuthProvider, signInWithRedirect, signInAnonymously } from 'firebase/auth'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Image from 'next/image';
+import { motion} from 'framer-motion'
+
+
+/**framer motion variants */
+ 
+const sectionVariant = {
+  hidden : { opacity: 0},
+  show: { opacity: 1,
+  transition: { duration: 1, delay: 0.2}
+  }
+}
 
 const Login = () => {
 
@@ -48,7 +59,12 @@ return (
         className='w-screen h-screen object-cover'
     />
 
-    <div className='absolute grid place-items-center py-14 px-10 mx-[20%] md:w-[22vw] md:py-5 md:h-[55vh] login-card bg-white mt-36 rounded-md shadow-lg'>
+    <motion.div
+      variants={sectionVariant}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    className='absolute grid place-items-center py-14 px-10 mx-[20%] md:w-[22vw] md:py-5 md:h-[55vh] login-card bg-white mt-36 rounded-md shadow-lg'>
 
 <div>
    <img src="/fireball.png" alt="logo" className='h-20' />
@@ -62,7 +78,7 @@ return (
   <button type='button' onClick={signInAsGuess}  className='mt-10 cursor-pointer p-2  bg-app hover:scale-110 transition duration-100 hover:bg-gray-200 rounded-xl text-[#00708c] border-2 border-[#00708c] text-center font-semibold md:text-sm'>Login as demo</button>
 
 </div>
-</div>
+</motion.div>
 
 </div>
 

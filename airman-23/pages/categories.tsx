@@ -12,7 +12,7 @@ import ScrollToTop from '../components/ScrollTop'
 const sectionVariant = {
   hidden : { opacity: 0},
   show: { opacity: 1,
-  transition: { duration: 1, delay: 0.5}
+  transition: { duration: 1, delay: 0.2}
   }
 }
 
