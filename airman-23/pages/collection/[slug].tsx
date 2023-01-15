@@ -197,14 +197,15 @@ const ProductDetails = ({ product, products }: Props) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-       className="mx-8 md:mt-36 md:bg-white md:h-[70vh] md:rounded-lg md:shadow-xl px-2">
+       className="mx-8 md:mt-36 md:bg-white mb-10 md:rounded-lg md:shadow-xl px-2">
       
         <div className='md:mt-10 md:w-[30vw] md:space-x-5 '>
 
-          <div>
-          <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-7 md:w-20 md:my-10 md:text-base'>Details</h4>
+        <div>
+            <h4 className='border-b-4 border-[#00708c] w-14 my-5 font-semibold md:ml-7 md:w-20 md:my-5 md:text-base'>Details</h4>
 
-            <p className='my-4 md:px-8 arrival font-semibold text-sm md:w-[30vw] '>{details}</p>
+       
+          <p className='my-4 md:px-5 arrival text-sm md:w-[30vw] '>{details}</p>
           </div>
            
            {/**second image */}
@@ -225,7 +226,7 @@ const ProductDetails = ({ product, products }: Props) => {
         </div>
         
          {/**qtny and add to cart */}
-          <div className="flex space-x-10 -mt-10 items-end md:ml-5 mb-20">
+          <div className="flex space-x-10 -mt-10 items-end md:ml-5 mb-20 md:mb-1">
           <div >
             <h3 className='my-5 font-semibold border-b-4 border-[#00708c] w-20'>Quantity</h3>
             <p className="my-6 flex space-x-3 items-center">
