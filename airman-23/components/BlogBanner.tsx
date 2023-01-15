@@ -5,7 +5,7 @@ import BlogCard from './BlogCard'
 const BlogBanner = ({posts}: any) => {
   return (
     <div >
-    <div className='bg-[#00708C] md:w-[50VW]  mx-8 my-14 p-5 rounded-lg'>
+    <div className='bg-[#00708C] md:w-[50VW]  mx-16 my-14 p-5 rounded-lg'>
     <div className='flex justify-center m-3'>
       <h1 className='font-bold text-white text-lg'>What's new in the blog?</h1>
     </div>
