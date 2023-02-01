@@ -67,7 +67,7 @@ const Sidebar = () => {
               {/**menu  */}
        <div className='flex flex-col md:space-y-2 overflow-hidden md:pt-8'>
        <Link href={`/`} onClick={() => setOpenMenu(false)} className='md:side-icons md:flex md:items-center' >
-         <div className='flex items-center space-x-2 md:space-x-4 '>
+         <div className='flex items-center space-x-2 '>
           <AiFillHome className='text-xl md:text-base  text-[#00708C]'/>
          <button className='text-xl md:text-base font-semibold text-[#00708C]'>Home</button>
          </div>
