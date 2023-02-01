@@ -40,7 +40,7 @@ const Footer = () => {
 
   
       <div className='hidden md:flex space-x-2'>
-          <h1 className='text-xl mt-5 font-thin arrival-text text-gray-400 logo-font'> Airman-23</h1>
+          <h1 className='text-xl mt-5 font-thin arrival-text text-gray-300 logo-font'> Airman-23</h1>
           <img src="/fireball.png" className='h-16' alt="" />
         </div>
 
@@ -96,9 +96,9 @@ const Footer = () => {
       <div className='flex justify-around md:ml-40 items-center'> 
   
           <ul className='flex space-x-4 px-4'>
-            <li className='text-gray-400 text-xs md:text-sm'>Q/A</li>
-            <li className='text-gray-400  md:text-sm text-xs'>Privacy</li>
-            <li className='text-gray-400 md:text-sm text-xs'>Contact</li>
+            <li className='text-gray-300 text-xs md:text-sm'>Q/A</li>
+            <li className='text-gray-300  md:text-sm text-xs'>Privacy</li>
+            <li className='text-gray-300 md:text-sm text-xs'>Contact</li>
           </ul>
 
       <div className='py-1 flex justify-center'>
