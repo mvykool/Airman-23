@@ -34,8 +34,8 @@ const Sidebar = () => {
   
 
   return (
-    <div className=' w-[16vw] h-screen hidden overflow-hidden md:block z-40'>
-        <div className='hidden md:flex flex-col fixed bg-white w-[16vw] h-screen shadow-lg'>
+    <div className=' w-[16vw] h-screen overflow-hidden md:block z-40'>
+        <div className='md:flex flex-col fixed bg-white w-[16vw] h-screen shadow-lg'>
       <div className='mt-10 bg-[#00708c] py-10 relative'>
       {user ? (  
       
