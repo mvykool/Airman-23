@@ -25,11 +25,11 @@ const ThridBanner = ({heroBanner}: Props)  => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-    className='mx-5 md:mx-2 bg-[#ACBCCF] rounded-sm my-10 md:h-[30vh] md:w-[20vw] hover:scale-105 duration-300 hover:bg-[#8ba0b9] hover:shadow-md'>
+    className='mx-5 md:mx-2 bg-[#ACBCCF] rounded-sm my-10 md:h-[25vh] md:w-[20vw] hover:scale-105 duration-300 hover:bg-[#8ba0b9] hover:shadow-md'>
      <div className='md:px-2'>
             <div className='flex justify-between mx-4  pt-2'>
           <div className='mt-5'>
-            <img src={urlFor(heroBanner.image).url()} alt="img" className='h-28 md:h-16 mt-10 md:mt-20' />
+            <img src={urlFor(heroBanner.image).url()} alt="img" className='h-28 mt-10 md:my-10' />
           </div>
 
           <div className='mt-5'>

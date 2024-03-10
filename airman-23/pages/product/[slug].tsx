@@ -172,7 +172,7 @@ const ProductDetails = ({ product, products }: Props) => {
        viewport={{ once: true }}
           >
           <Image
-          className='w-[111vw] h-[45vh] md:w-[28vw] md:h-[60vh] md:shadow-2xl md:my-20 md:rounded-lg '
+          className='w-[111vw] h-[45vh] md:w-[28vw] md:h-[50vh] md:shadow-2xl md:my-20 md:rounded-lg '
           width={600}
           height={1000} 
           alt='product img'
@@ -190,7 +190,7 @@ const ProductDetails = ({ product, products }: Props) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-           className="mx-8 md:mt-36 md:bg-white mb-10 md:rounded-lg md:shadow-xl px-2">
+           className="mx-8 md:mt-36 md:h-auto md:bg-white mb-10 md:rounded-lg md:shadow-xl px-2">
       
         <div className='md:mt-10 md:w-[30vw] md:space-x-5 '>
 

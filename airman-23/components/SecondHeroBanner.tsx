@@ -25,11 +25,11 @@ const SecondHeroBanner = ({heroBanner}: Props) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-    className='mx-5 hidden md:block md:mx-2 bg-red-400 rounded-sm my-10 md:h-[30vh] md:w-[20vw] hover:scale-105 duration-300 hover:bg-red-500 hover:shadow-md relative overflow-hidden'>
+    className='mx-5 hidden md:block md:mx-2 bg-red-400 rounded-sm my-10 md:h-[25vh] md:w-[20vw] hover:scale-105 duration-300 hover:bg-red-500 hover:shadow-md relative overflow-hidden'>
      <div className='md:px-2'>
             <div className='flex justify-between mx-4  pt-2'>
           <div className='mt-9'>
-            <img src={urlFor(heroBanner.image).url()} alt="img" className='h-28 md:h-12 mt-10 transform -scale-x-100 md:mt-20' />
+            <img src={urlFor(heroBanner.image).url()} alt="img" className='h-28 mt-10 transform -scale-x-100 md:my-10' />
           </div>
 
           <div className='mt-5'>

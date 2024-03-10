@@ -39,7 +39,7 @@ const ProductCol = ({ product} : Product) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-       className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5 md:w-[15vw] md:h-[40vh] md:my-10 hover:scale-110 hover:shadow-2xl duration-300 relative overflow-hidden'>
+       className='bg-white rounded-2xl shadow-lg my-4 mx-4 p-5 md:w-[15vw] md:h-[27vh] md:my-10 hover:scale-110 hover:shadow-2xl duration-300 relative overflow-hidden'>
        <div>
        <div className='flex justify-center m-2 '> 
        <Image loader={() => src} src={src} alt='product image' width={400} height={400} className='h-24 md:h-28 w-24 md:w-28'/>
