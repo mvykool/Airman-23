@@ -197,7 +197,7 @@ const ProductDetails = ({ product, products }: Props) => {
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-       className="mx-8 md:mt-36 md:bg-white mb-10 md:rounded-lg md:shadow-xl px-2">
+       className="mx-8 md:mt-36  mb-10 md:rounded-lg px-2">
       
         <div className='md:mt-10 md:w-[30vw] md:space-x-5 '>
 
