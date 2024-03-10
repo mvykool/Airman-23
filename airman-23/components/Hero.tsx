@@ -16,15 +16,15 @@ const Hero = () => {
   return (
     <div>
     <div className='hero md:pr-[15%] '>
-       <div className='bg-[var(--bg-wrapper)] h-[50vh]'>
+       <div className='bg-[var(--bg-wrapper)] h-[40vh]'>
          <motion.h1
         variants={sectionVariant}
        initial="hidden"
        whileInView="show"
        viewport={{ once: true }}
-         className='flex justify-center pt-48 md:pt-36 md:text-4xl text-3xl text-white  logo-font'>Air Man 23</motion.h1>
+         className='flex justify-center pt-24 md:pt-36 md:text-4xl text-3xl text-white  logo-font'>Air Man 23</motion.h1>
 
-         <div className='pt-16 md:pt-5 flex justify-center'>
+         <div className='pt-8 md:pt-5 flex justify-center'>
          <Link href={'/shop'} >
          <motion.p
         variants={sectionVariant}

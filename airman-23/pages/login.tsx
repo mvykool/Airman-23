@@ -56,6 +56,7 @@ return (
         width={2000}
         height={2000}
         alt='login bg'
+        priority
         className='w-screen h-screen object-cover'
     />
 
@@ -64,17 +65,15 @@ return (
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-    className='absolute grid place-items-center py-14 px-10 mx-[20%] md:w-[22vw] md:py-5 md:h-[55vh] login-card bg-white mt-36 rounded-md shadow-lg'>
+    className='absolute flex flex-col justify-center items-center place-items-center py-14 px-10 mx-[20%] md:w-[20vw] md:py-5 md:h-[50vh] login-card bg-white mt-36 rounded-md shadow-lg'>
 
-<div>
+<div className='flex justify-center'>
    <img src="/fireball.png" alt="logo" className='h-20' />
  </div>
- <h1 className='font-bold text-xl text-[#00708c] md:font-thin md:-mt-14 logo-font md:text-xl arrival-text'>Airman-23</h1>
+ <h1 className='font-bold text-xl text-[#00708c] md:font-thin md:mt-6 logo-font md:text-xl arrival-text'>Airman-23</h1>
 
-
-
-  <div className='flex-col flex md:space-x-1'>
-  <button type='button' onClick={googleSignIn}  className='mt-10 md:-mt-1 cursor-pointer p-3  bg-[#00708c] hover:scale-110 transition duration-100 hover:bg-gray-900 rounded-xl text-white font-semibold text-center md:text-sm'>Login with Google</button>
+  <div className='flex-col flex my-8'>
+  <button type='button' onClick={googleSignIn}  className='mt-10 cursor-pointer p-3  bg-[#00708c] hover:scale-110 transition duration-100 hover:bg-gray-900 rounded-xl text-white font-semibold text-center md:text-sm'>Login with Google</button>
   <button type='button' onClick={signInAsGuess}  className='mt-10 cursor-pointer p-2  bg-app hover:scale-110 transition duration-100 hover:bg-gray-200 rounded-xl text-[#00708c] border-2 border-[#00708c] text-center font-semibold md:text-sm'>Login as demo</button>
 
 </div>

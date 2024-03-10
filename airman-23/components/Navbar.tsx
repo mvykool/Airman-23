@@ -63,7 +63,7 @@ if (typeof window !== "undefined") {
 
 
   return (
-      <div className='flex  shadow-md h-14 md:h-[8%] justify-around md:justify-between md:px-8 md:pt-2 md:pb-3 bg-white items-center fixed w-screen z-30 top-0 ' >
+      <div className='flex  shadow-md h-14 md:h-[8vh] justify-around md:justify-between md:px-8 md:pt-2 md:pb-3 bg-white items-center fixed w-screen z-30 top-0 ' >
 
          {/**Logo */}
 

@@ -25,11 +25,11 @@ const Layout = ({ children }: Props) => {
       </header>
 
      <div className='flex'>
-     <section>
+     <section className='mt-[8vh]'>
       <Sidebar/>
      </section>
 
-      <main>
+      <main className='md:mt-[8vh]'>
         {children}
       </main>
      </div>
